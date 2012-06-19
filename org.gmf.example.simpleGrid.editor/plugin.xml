@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="simpleGrid.presentation.SimpleGridModelWizardID"
+            name="%_UI_SimpleGridModelWizard_label"
+            class="simpleGrid.presentation.SimpleGridModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimpleGridModelFile.gif">
+         <description>%_UI_SimpleGridModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="simpleGrid.presentation.SimpleGridEditorID"
+            name="%_UI_SimpleGridEditor_label"
+            icon="icons/full/obj16/SimpleGridModelFile.gif"
+            extensions="simplegrid"
+            class="simpleGrid.presentation.SimpleGridEditor"
+            contributorClass="simpleGrid.presentation.SimpleGridActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
