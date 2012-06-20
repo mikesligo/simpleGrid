@@ -16,7 +16,6 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -234,11 +233,6 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTriplex_line_conductorNameFigure;
-
-		/**
-		 * @generated
-		 */
 		public Triplex_line_conductorFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -253,26 +247,6 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_line_conductorNameFigure = new WrappingLabel();
-			fFigureTriplex_line_conductorNameFigure.setText("<...>");
-
-			this.add(fFigureTriplex_line_conductorNameFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_line_conductorNameFigure() {
-			return fFigureTriplex_line_conductorNameFigure;
 		}
 
 	}

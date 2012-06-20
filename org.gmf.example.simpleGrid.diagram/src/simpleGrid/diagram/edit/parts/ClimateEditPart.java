@@ -16,7 +16,6 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -231,11 +230,6 @@ public class ClimateEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureClimateName;
-
-		/**
-		 * @generated
-		 */
 		public ClimateFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -250,26 +244,6 @@ public class ClimateEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureClimateName = new WrappingLabel();
-			fFigureClimateName.setText("<...>");
-
-			this.add(fFigureClimateName);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureClimateName() {
-			return fFigureClimateName;
 		}
 
 	}

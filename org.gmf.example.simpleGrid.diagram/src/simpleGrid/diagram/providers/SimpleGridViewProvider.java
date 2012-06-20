@@ -23,11 +23,9 @@ import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
 import org.eclipse.gmf.runtime.notation.Connector;
-import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.FontStyle;
-import org.eclipse.gmf.runtime.notation.Location;
 import org.eclipse.gmf.runtime.notation.MeasurementUnit;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.NotationFactory;
@@ -550,15 +548,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5001 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID));
-		label5001.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5001 = (Location) label5001.getLayoutConstraint();
-		location5001.setX(0);
-		location5001.setY(5);
 		return node;
 	}
 
@@ -603,15 +592,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID));
-		label5003.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5003 = (Location) label5003.getLayoutConstraint();
-		location5003.setX(0);
-		location5003.setY(5);
 		return node;
 	}
 
@@ -786,15 +766,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5006 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID));
-		label5006.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5006 = (Location) label5006.getLayoutConstraint();
-		location5006.setX(0);
-		location5006.setY(5);
 		return node;
 	}
 
@@ -1745,16 +1716,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 					.put("modelID", simpleGrid.diagram.edit.parts.GridEditPart.MODEL_ID); //$NON-NLS-1$
 			target.getEAnnotations().add(shortcutAnnotation);
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private Node createLabel(View owner, String hint) {
-		DecorationNode rv = NotationFactory.eINSTANCE.createDecorationNode();
-		rv.setType(hint);
-		ViewUtil.insertChildView(owner, rv, ViewUtil.APPEND, true);
-		return rv;
 	}
 
 	/**

@@ -17,7 +17,6 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
@@ -266,38 +265,8 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureNodeNameFigure;
-
-		/**
-		 * @generated
-		 */
 		public NodeFigure() {
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			WrappingLabel lollabel0 = new WrappingLabel();
-			lollabel0.setText("lololol");
-
-			this.add(lollabel0);
-
-			fFigureNodeNameFigure = new WrappingLabel();
-			fFigureNodeNameFigure.setText("<...>");
-
-			this.add(fFigureNodeNameFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeNameFigure() {
-			return fFigureNodeNameFigure;
 		}
 
 	}

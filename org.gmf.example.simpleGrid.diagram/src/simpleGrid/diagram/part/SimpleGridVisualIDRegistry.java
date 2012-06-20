@@ -228,21 +228,6 @@ public class SimpleGridVisualIDRegistry {
 				return true;
 			}
 			break;
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		}
 		return false;
 	}

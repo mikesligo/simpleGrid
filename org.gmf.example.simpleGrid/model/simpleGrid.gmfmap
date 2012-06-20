@@ -63,13 +63,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Triplex_Line_configuration"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Triplex_Line_configurationName"/>
-        <features
-            href="simpleGrid.ecore#//Triplex_Line_configuration/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.1"/>
@@ -83,13 +76,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Waterheater"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#WaterheaterName"/>
-        <features
-            href="simpleGrid.ecore#//Waterheater/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
@@ -142,13 +128,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Triplex_line"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Triplex_lineName"/>
-        <features
-            href="simpleGrid.ecore#//Triplex_line/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.15"/>

@@ -1,31 +1,22 @@
 package simpleGrid.diagram.edit.parts;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -36,8 +27,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class Triplex_Line_configurationEditPart extends
-		AbstractBorderedShapeEditPart {
+public class Triplex_Line_configurationEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
@@ -81,24 +71,6 @@ public class Triplex_Line_configurationEditPart extends
 
 		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
 
-			protected EditPolicy createChildEditPolicy(EditPart child) {
-				View childView = (View) child.getModel();
-				switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getVisualID(childView)) {
-				case simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID:
-					return new BorderItemSelectionEditPolicy() {
-
-						protected List createSelectionHandles() {
-							MoveHandle mh = new MoveHandle(
-									(GraphicalEditPart) getHost());
-							mh.setBorder(null);
-							return Collections.singletonList(mh);
-						}
-					};
-				}
-				return super.createChildEditPolicy(child);
-			}
-
 			protected Command createAddCommand(EditPart child, EditPart after) {
 				return null;
 			}
@@ -132,21 +104,6 @@ public class Triplex_Line_configurationEditPart extends
 	/**
 	 * @generated
 	 */
-	protected void addBorderItem(IFigure borderItemContainer,
-			IBorderItemEditPart borderItemEditPart) {
-		if (borderItemEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.SOUTH);
-			locator.setBorderItemOffset(new Dimension(-20, -20));
-			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
-		} else {
-			super.addBorderItem(borderItemContainer, borderItemEditPart);
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
@@ -160,7 +117,7 @@ public class Triplex_Line_configurationEditPart extends
 	 * 
 	 * @generated
 	 */
-	protected NodeFigure createMainFigure() {
+	protected NodeFigure createNodeFigure() {
 		NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -223,14 +180,6 @@ public class Triplex_Line_configurationEditPart extends
 		if (primaryShape instanceof Shape) {
 			((Shape) primaryShape).setLineStyle(style);
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -317,11 +266,6 @@ public class Triplex_Line_configurationEditPart extends
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTriplex_Line_configurationNameFigure;
-
-		/**
-		 * @generated
-		 */
 		public Triplex_Line_configurationFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -336,26 +280,6 @@ public class Triplex_Line_configurationEditPart extends
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_Line_configurationNameFigure = new WrappingLabel();
-			fFigureTriplex_Line_configurationNameFigure.setText("<...>");
-
-			this.add(fFigureTriplex_Line_configurationNameFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_Line_configurationNameFigure() {
-			return fFigureTriplex_Line_configurationNameFigure;
 		}
 
 	}
