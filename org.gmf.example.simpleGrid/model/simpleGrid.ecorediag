@@ -426,7 +426,7 @@
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Triplex_Line_configuration/triplex_line_conductor"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugJmoblPEeGdt7huuT-RCg" points="[0, 0, -168, 268]$[168, -268, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEELlPEeGdt7huuT-RCg" id="(0.5,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEEblPEeGdt7huuT-RCg" id="(0.24472573839662448,0.9999999999999991)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEEblPEeGdt7huuT-RCg" id="(0.24472573839662448,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugJmprlPEeGdt7huuT-RCg" type="3002" source="_uf9ZYLlPEeGdt7huuT-RCg" target="_uf-AdrlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugKNsLlPEeGdt7huuT-RCg" type="4011">
@@ -439,8 +439,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugJmqLlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Node/transformer"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugJmqblPEeGdt7huuT-RCg" points="[0, 0, -152, 60]$[152, -60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEErlPEeGdt7huuT-RCg" id="(0.49624060150375854,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEE7lPEeGdt7huuT-RCg" id="(0.2727272727272719,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEErlPEeGdt7huuT-RCg" id="(0.49624060150375937,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiDEE7lPEeGdt7huuT-RCg" id="(0.2727272727272727,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugKNtLlPEeGdt7huuT-RCg" type="3002" source="_uf-AdrlPEeGdt7huuT-RCg" target="_uf7kMLlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugKNuLlPEeGdt7huuT-RCg" type="4011">
@@ -467,8 +467,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugK0w7lPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Transformer/triplex_node"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugK0xLlPEeGdt7huuT-RCg" points="[0, 0, -127, 140]$[127, -140, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiESMLlPEeGdt7huuT-RCg" id="(0.6666666666666659,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiESMblPEeGdt7huuT-RCg" id="(0.2631578947368421,0.9999999999999986)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiESMLlPEeGdt7huuT-RCg" id="(0.6666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiESMblPEeGdt7huuT-RCg" id="(0.2631578947368421,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugK0yblPEeGdt7huuT-RCg" type="3002" source="_uf_OlLlPEeGdt7huuT-RCg" target="_ugHKablPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugLb0LlPEeGdt7huuT-RCg" type="4011">
@@ -482,7 +482,7 @@
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Triplex_node/triplex_line"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugK0zLlPEeGdt7huuT-RCg" points="[0, 0, -150, 60]$[150, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiBO4LlPEeGdt7huuT-RCg" id="(0.49624060150375937,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiBO4blPEeGdt7huuT-RCg" id="(0.26315789473684037,0.9999999999999986)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiBO4blPEeGdt7huuT-RCg" id="(0.2631578947368421,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugLb1LlPEeGdt7huuT-RCg" type="3002" source="_ugAcsrlPEeGdt7huuT-RCg" target="_ugBq0rlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugLb2LlPEeGdt7huuT-RCg" type="4011">
@@ -510,7 +510,7 @@
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//House/waterheater"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugMC47lPEeGdt7huuT-RCg" points="[0, 0, -1003, 60]$[1003, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5QLlPEeGdt7huuT-RCg" id="(0.5,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5QblPEeGdt7huuT-RCg" id="(0.24561403508771928,0.9999999999999999)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5QblPEeGdt7huuT-RCg" id="(0.24561403508771928,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugMC6LlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf5H8LlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugMC7LlPEeGdt7huuT-RCg" type="4011">
@@ -523,7 +523,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugMC6rlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/climate"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugMC67lPEeGdt7huuT-RCg" points="[0, 0, 886, 60]$[-886, -60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiB18LlPEeGdt7huuT-RCg" id="(0.0784313725490185,-5.4136589391245725E-15)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiB18LlPEeGdt7huuT-RCg" id="(0.0784313725490196,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiB18blPEeGdt7huuT-RCg" id="(0.4966887417218543,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugMp8rlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf9ZYLlPEeGdt7huuT-RCg">
@@ -537,8 +537,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugMp9LlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/node"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugMp9blPEeGdt7huuT-RCg" points="[0, 0, 243, 60]$[-243, -60, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiCdALlPEeGdt7huuT-RCg" id="(0.4117647058823529,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiCdAblPEeGdt7huuT-RCg" id="(0.49624060150375854,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiCdALlPEeGdt7huuT-RCg" id="(0.4117647058823529,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiCdAblPEeGdt7huuT-RCg" id="(0.49624060150375937,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugMp-rlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf-AdrlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugNRALlPEeGdt7huuT-RCg" type="4011">
@@ -551,8 +551,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugMp_LlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/transformer"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugMp_blPEeGdt7huuT-RCg" points="[0, 0, 63, 201]$[-63, -61, 0, 140]$[-63, -201, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYLlPEeGdt7huuT-RCg" id="(0.5,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYblPEeGdt7huuT-RCg" id="(0.5530303030303022,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYLlPEeGdt7huuT-RCg" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYblPEeGdt7huuT-RCg" id="(0.553030303030303,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugNRBLlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf7kMLlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugNRCLlPEeGdt7huuT-RCg" type="4011">
@@ -565,7 +565,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugNRBrlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/transformer_configuration"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugNRB7lPEeGdt7huuT-RCg" points="[0, 0, 420, 342]$[-420, -61, 0, 281]$[-420, -342, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiFgULlPEeGdt7huuT-RCg" id="(0.3333333333333333,-5.4136589391245725E-15)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiFgULlPEeGdt7huuT-RCg" id="(0.3333333333333333,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiFgUblPEeGdt7huuT-RCg" id="(0.32460732984293195,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugN4ELlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf_OlLlPEeGdt7huuT-RCg">
@@ -579,8 +579,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugN4ErlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/triplex_nodes"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugN4E7lPEeGdt7huuT-RCg" points="[0, 0, -107, 422]$[107, -61, 0, 361]$[107, -422, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYrlPEeGdt7huuT-RCg" id="(0.5784313725490197,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGucLlPEeGdt7huuT-RCg" id="(0.5338345864661654,0.9999999999999986)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGHYrlPEeGdt7huuT-RCg" id="(0.5784313725490197,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGucLlPEeGdt7huuT-RCg" id="(0.5338345864661654,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugN4GLlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_uf6WErlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugN4HLlPEeGdt7huuT-RCg" type="4011">
@@ -593,7 +593,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugN4GrlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/triplex_line_configuration"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugN4G7lPEeGdt7huuT-RCg" points="[0, 0, -625, 704]$[625, -61, 0, 643]$[625, -704, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5QrlPEeGdt7huuT-RCg" id="(0.8235294117647058,-5.4136589391245725E-15)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5QrlPEeGdt7huuT-RCg" id="(0.8235294117647058,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiE5Q7lPEeGdt7huuT-RCg" id="(0.27314814814814814,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugOfIrlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_ugIYgrlPEeGdt7huuT-RCg">
@@ -607,8 +607,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugOfJLlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/triplex_line_conductor"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugOfJblPEeGdt7huuT-RCg" points="[0, 0, -892, 1053]$[797, -61, -95, 992]$[892, -705, 0, 348]$[892, -1053, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjorlPEeGdt7huuT-RCg" id="(0.9117647058823529,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiJKsLlPEeGdt7huuT-RCg" id="(0.4936708860759484,0.9999999999999991)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjorlPEeGdt7huuT-RCg" id="(0.9117647058823529,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiJKsLlPEeGdt7huuT-RCg" id="(0.4936708860759494,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugOfKrlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_ugHKablPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugPGMLlPEeGdt7huuT-RCg" type="4011">
@@ -621,8 +621,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugOfLLlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/triplex_line"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugOfLblPEeGdt7huuT-RCg" points="[0, 0, -279, 563]$[279, -61, 0, 502]$[279, -563, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjoLlPEeGdt7huuT-RCg" id="(0.6666666666666666,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjoblPEeGdt7huuT-RCg" id="(0.5338345864661654,0.9999999999999986)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjoLlPEeGdt7huuT-RCg" id="(0.6666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiIjoblPEeGdt7huuT-RCg" id="(0.5338345864661654,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugPGNLlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_ugAcsrlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugPGOLlPEeGdt7huuT-RCg" type="4011">
@@ -635,7 +635,7 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugPGNrlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/triplex_meter"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugPGN7lPEeGdt7huuT-RCg" points="[0, 0, 592, 704]$[-592, -61, 0, 643]$[-592, -704, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGucblPEeGdt7huuT-RCg" id="(0.24509803921568626,-5.4136589391245725E-15)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGucblPEeGdt7huuT-RCg" id="(0.24509803921568626,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiGucrlPEeGdt7huuT-RCg" id="(0.31794871794871793,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugPtQLlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_ugBq0rlPEeGdt7huuT-RCg">
@@ -649,8 +649,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugPtQrlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/house"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugPtQ7lPEeGdt7huuT-RCg" points="[0, 0, 608, 845]$[-732, -61, -124, 784]$[-732, -785, -124, 60]$[-608, -845, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiHVgLlPEeGdt7huuT-RCg" id="(0.16666666666666666,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiHVgblPEeGdt7huuT-RCg" id="(0.24786324786324762,1.0)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiHVgLlPEeGdt7huuT-RCg" id="(0.16666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiHVgblPEeGdt7huuT-RCg" id="(0.24786324786324787,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugPtSLlPEeGdt7huuT-RCg" type="3002" source="_ugGjVLlPEeGdt7huuT-RCg" target="_ugEuIblPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugQUULlPEeGdt7huuT-RCg" type="4011">
@@ -663,8 +663,8 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_ugPtSrlPEeGdt7huuT-RCg" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Grid/waterheater"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugPtS7lPEeGdt7huuT-RCg" points="[0, 0, -452, 1178]$[452, -61, 0, 1117]$[452, -1178, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiH8kLlPEeGdt7huuT-RCg" id="(0.7450980392156863,-5.4136589391245725E-15)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiH8kblPEeGdt7huuT-RCg" id="(0.4956140350877193,0.9999999999999999)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiH8kLlPEeGdt7huuT-RCg" id="(0.7450980392156863,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiH8kblPEeGdt7huuT-RCg" id="(0.4956140350877193,1.0)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_ugQUVLlPEeGdt7huuT-RCg" type="3002" source="_ugHKablPEeGdt7huuT-RCg" target="_uf6WErlPEeGdt7huuT-RCg">
     <children xmi:type="notation:Node" xmi:id="_ugQUWLlPEeGdt7huuT-RCg" type="4011">
@@ -692,6 +692,6 @@
     <element xmi:type="ecore:EReference" href="simpleGrid.ecore#//Triplex_line/triplex_meter"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ugQ7YblPEeGdt7huuT-RCg" points="[0, 0, 821, 60]$[-821, -60, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiAAwrlPEeGdt7huuT-RCg" id="(0.3308270676691729,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiAn0LlPEeGdt7huuT-RCg" id="(0.6564102564102561,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uiAn0LlPEeGdt7huuT-RCg" id="(0.6564102564102564,1.0)"/>
   </edges>
 </notation:Diagram>

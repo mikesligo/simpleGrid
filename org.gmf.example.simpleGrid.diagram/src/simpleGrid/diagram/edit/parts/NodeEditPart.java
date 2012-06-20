@@ -1,34 +1,41 @@
 package simpleGrid.diagram.edit.parts;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.RectangleFigure;
+import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
+import org.eclipse.gef.GraphicalEditPart;
+import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
+import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
+import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class NodeEditPart extends ShapeNodeEditPart {
+public class NodeEditPart extends AbstractBorderedShapeEditPart {
 
 	/**
 	 * @generated
@@ -69,15 +76,32 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
-		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+			protected EditPolicy createChildEditPolicy(EditPart child) {
+				View childView = (View) child.getModel();
+				switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+						.getVisualID(childView)) {
+				case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
+					return new BorderItemSelectionEditPolicy() {
 
-			protected Command createAddCommand(EditPart child, EditPart after) {
-				return null;
+						protected List createSelectionHandles() {
+							MoveHandle mh = new MoveHandle(
+									(GraphicalEditPart) getHost());
+							mh.setBorder(null);
+							return Collections.singletonList(mh);
+						}
+					};
+				}
+				EditPolicy result = child
+						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
+				if (result == null) {
+					result = new NonResizableEditPolicy();
+				}
+				return result;
 			}
 
-			protected Command createMoveChildCommand(EditPart child,
-					EditPart after) {
+			protected Command getMoveChildrenCommand(Request request) {
 				return null;
 			}
 
@@ -105,50 +129,16 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof simpleGrid.diagram.edit.parts.NodeNameEditPart) {
-			((simpleGrid.diagram.edit.parts.NodeNameEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureNodeNameFigure());
-			return true;
+	protected void addBorderItem(IFigure borderItemContainer,
+			IBorderItemEditPart borderItemEditPart) {
+		if (borderItemEditPart instanceof simpleGrid.diagram.edit.parts.NodeNameEditPart) {
+			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
+					PositionConstants.SOUTH);
+			locator.setBorderItemOffset(new Dimension(-20, -20));
+			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
+		} else {
+			super.addBorderItem(borderItemContainer, borderItemEditPart);
 		}
-		return false;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof simpleGrid.diagram.edit.parts.NodeNameEditPart) {
-			return true;
-		}
-		return false;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected void addChildVisual(EditPart childEditPart, int index) {
-		if (addFixedChild(childEditPart)) {
-			return;
-		}
-		super.addChildVisual(childEditPart, -1);
-	}
-
-	/**
-	 * @generated
-	 */
-	protected void removeChildVisual(EditPart childEditPart) {
-		if (removeFixedChild(childEditPart)) {
-			return;
-		}
-		super.removeChildVisual(childEditPart);
-	}
-
-	/**
-	 * @generated
-	 */
-	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		return getContentPane();
 	}
 
 	/**
@@ -167,7 +157,7 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * 
 	 * @generated
 	 */
-	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodeFigure() {
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createMainFigure() {
 		org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -183,11 +173,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure setupContentPane(IFigure nodeShape) {
-		if (nodeShape.getLayoutManager() == null) {
-			ConstrainedToolbarLayout layout = new ConstrainedToolbarLayout();
-			layout.setSpacing(5);
-			nodeShape.setLayoutManager(layout);
-		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
 
@@ -282,14 +267,14 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(8);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		return types;
 	}
 
@@ -298,21 +283,21 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
+		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
 		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
 		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
 		}
 		return types;
@@ -321,37 +306,13 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class NodeFigure extends RectangleFigure {
-
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodePhasesFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeBustypeFigure;
+	public class NodeFigure extends SVGFigure {
 
 		/**
 		 * @generated
 		 */
 		public NodeFigure() {
-
-			FlowLayout layoutThis = new FlowLayout();
-			layoutThis.setStretchMinorAxis(false);
-			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
-
-			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
-			layoutThis.setMajorSpacing(5);
-			layoutThis.setMinorSpacing(5);
-			layoutThis.setHorizontal(true);
-
-			this.setLayoutManager(layoutThis);
-
+			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg");
 			createContents();
 		}
 
@@ -360,42 +321,11 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureNodeNameFigure = new WrappingLabel();
-			fFigureNodeNameFigure.setText("<...>");
+			WrappingLabel lollabel0 = new WrappingLabel();
+			lollabel0.setText("lololol");
 
-			this.add(fFigureNodeNameFigure);
+			this.add(lollabel0);
 
-			fFigureNodePhasesFigure = new WrappingLabel();
-			fFigureNodePhasesFigure.setText("<...>");
-
-			this.add(fFigureNodePhasesFigure);
-
-			fFigureNodeBustypeFigure = new WrappingLabel();
-			fFigureNodeBustypeFigure.setText("<...>");
-
-			this.add(fFigureNodeBustypeFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeNameFigure() {
-			return fFigureNodeNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodePhasesFigure() {
-			return fFigureNodePhasesFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeBustypeFigure() {
-			return fFigureNodeBustypeFigure;
 		}
 
 	}

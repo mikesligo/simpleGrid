@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
@@ -17,10 +16,10 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
+import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
@@ -187,15 +186,15 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configurationTriplex_line_conductor_4008);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configurationTriplex_line_conductor_4008);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		return types;
 	}
 
@@ -204,23 +203,23 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
+		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configurationTriplex_line_conductor_4008) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
 		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
 		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configurationTriplex_line_conductor_4008) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
 		}
 		return types;
@@ -229,16 +228,7 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class Triplex_line_conductorFigure extends RectangleFigure {
-
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_line_conductorResistanceFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_line_conductorGeometric_mean_radiusFigure;
+	public class Triplex_line_conductorFigure extends SVGFigure {
 
 		/**
 		 * @generated
@@ -256,39 +246,7 @@ public class Triplex_line_conductorEditPart extends ShapeNodeEditPart {
 
 			this.setLayoutManager(layoutThis);
 
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_line_conductorResistanceFigure = new WrappingLabel();
-			fFigureTriplex_line_conductorResistanceFigure.setText("<...>");
-
-			this.add(fFigureTriplex_line_conductorResistanceFigure);
-
-			fFigureTriplex_line_conductorGeometric_mean_radiusFigure = new WrappingLabel();
-			fFigureTriplex_line_conductorGeometric_mean_radiusFigure
-					.setText("<...>");
-
-			this.add(fFigureTriplex_line_conductorGeometric_mean_radiusFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_line_conductorResistanceFigure() {
-			return fFigureTriplex_line_conductorResistanceFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_line_conductorGeometric_mean_radiusFigure() {
-			return fFigureTriplex_line_conductorGeometric_mean_radiusFigure;
+			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg");
 		}
 
 	}

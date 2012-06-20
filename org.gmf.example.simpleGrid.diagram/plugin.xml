@@ -217,8 +217,8 @@
       <viewProvider class="simpleGrid.diagram.providers.SimpleGridViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="SimpleGrid"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2007,2005,2010,2002,2001,2003,2011,2009,2008,2006,2004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4015,4010,4004,4016,4014,4013,4017,4003,4005,4001,4007,4006,4011,4008,4002,4009,4012"/>
       </viewProvider>
    </extension>
 
@@ -230,13 +230,13 @@
             <method name="getType()" value="SimpleGrid"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011"/>
+            <method name="getType()" value="2007,2005,2010,2002,2001,2003,2011,2009,2008,2006,2004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017"/>
+            <method name="getType()" value="4015,4010,4004,4016,4014,4013,4017,4003,4005,4001,4007,4006,4011,4008,4002,4009,4012"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010"/>
+            <method name="getType()" value="5007,5005,5009,5002,5001,5003,5010,5008,5006,5004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -250,18 +250,18 @@
       <modelingAssistantProvider class="simpleGrid.diagram.providers.SimpleGridModelingAssistantProvider">
          <Priority name="Lowest"/>
          <object class="simpleGrid.diagram.edit.parts.GridEditPart" id="Grid_1000"/>
-         <object class="simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart" id="Triplex_Line_configuration_2001"/>
-         <object class="simpleGrid.diagram.edit.parts.Triplex_nodeEditPart" id="Triplex_node_2002"/>
-         <object class="simpleGrid.diagram.edit.parts.WaterheaterEditPart" id="Waterheater_2003"/>
-         <object class="simpleGrid.diagram.edit.parts.Transformer_configurationEditPart" id="Transformer_configuration_2004"/>
-         <object class="simpleGrid.diagram.edit.parts.Triplex_meterEditPart" id="Triplex_meter_2005"/>
-         <object class="simpleGrid.diagram.edit.parts.Triplex_lineEditPart" id="Triplex_line_2006"/>
          <object class="simpleGrid.diagram.edit.parts.NodeEditPart" id="Node_2007"/>
-         <object class="simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart" id="Triplex_line_conductor_2008"/>
-         <object class="simpleGrid.diagram.edit.parts.ClimateEditPart" id="Climate_2009"/>
+         <object class="simpleGrid.diagram.edit.parts.Triplex_meterEditPart" id="Triplex_meter_2005"/>
          <object class="simpleGrid.diagram.edit.parts.TransformerEditPart" id="Transformer_2010"/>
+         <object class="simpleGrid.diagram.edit.parts.Triplex_nodeEditPart" id="Triplex_node_2002"/>
+         <object class="simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart" id="Triplex_Line_configuration_2001"/>
+         <object class="simpleGrid.diagram.edit.parts.WaterheaterEditPart" id="Waterheater_2003"/>
          <object class="simpleGrid.diagram.edit.parts.HouseEditPart" id="House_2011"/>
-         <context elements="Grid_1000,Triplex_Line_configuration_2001,Triplex_node_2002,Waterheater_2003,Transformer_configuration_2004,Triplex_meter_2005,Triplex_line_2006,Node_2007,Triplex_line_conductor_2008,Climate_2009,Transformer_2010,House_2011"/>
+         <object class="simpleGrid.diagram.edit.parts.ClimateEditPart" id="Climate_2009"/>
+         <object class="simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart" id="Triplex_line_conductor_2008"/>
+         <object class="simpleGrid.diagram.edit.parts.Triplex_lineEditPart" id="Triplex_line_2006"/>
+         <object class="simpleGrid.diagram.edit.parts.Transformer_configurationEditPart" id="Transformer_configuration_2004"/>
+         <context elements="Grid_1000,Node_2007,Triplex_meter_2005,Transformer_2010,Triplex_node_2002,Triplex_Line_configuration_2001,Waterheater_2003,House_2011,Climate_2009,Triplex_line_conductor_2008,Triplex_line_2006,Transformer_configuration_2004"/>
       </modelingAssistantProvider>
    </extension>
 
@@ -293,42 +293,12 @@
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"
-               name="%metatype.name.Triplex_Line_configuration_2001"
+               id="org.gmf.example.simpleGrid.diagram.Node_2007"
+               name="%metatype.name.Node_2007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Triplex_Line_configuration"
-               edithelper="simpleGrid.diagram.edit.helpers.Triplex_Line_configurationEditHelper">
-            <param name="semanticHint" value="2001"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_node_2002"
-               name="%metatype.name.Triplex_node_2002"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Triplex_node"
-               edithelper="simpleGrid.diagram.edit.helpers.Triplex_nodeEditHelper">
-            <param name="semanticHint" value="2002"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Waterheater_2003"
-               name="%metatype.name.Waterheater_2003"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Waterheater"
-               edithelper="simpleGrid.diagram.edit.helpers.WaterheaterEditHelper">
-            <param name="semanticHint" value="2003"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"
-               name="%metatype.name.Transformer_configuration_2004"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Transformer_configuration"
-               edithelper="simpleGrid.diagram.edit.helpers.Transformer_configurationEditHelper">
-            <param name="semanticHint" value="2004"/>
+               eclass="Node"
+               edithelper="simpleGrid.diagram.edit.helpers.NodeEditHelper">
+            <param name="semanticHint" value="2007"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
@@ -343,32 +313,52 @@
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_line_2006"
-               name="%metatype.name.Triplex_line_2006"
+               id="org.gmf.example.simpleGrid.diagram.Transformer_2010"
+               name="%metatype.name.Transformer_2010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Triplex_line"
-               edithelper="simpleGrid.diagram.edit.helpers.Triplex_lineEditHelper">
-            <param name="semanticHint" value="2006"/>
+               eclass="Transformer"
+               edithelper="simpleGrid.diagram.edit.helpers.TransformerEditHelper">
+            <param name="semanticHint" value="2010"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Node_2007"
-               name="%metatype.name.Node_2007"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_node_2002"
+               name="%metatype.name.Triplex_node_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Node"
-               edithelper="simpleGrid.diagram.edit.helpers.NodeEditHelper">
-            <param name="semanticHint" value="2007"/>
+               eclass="Triplex_node"
+               edithelper="simpleGrid.diagram.edit.helpers.Triplex_nodeEditHelper">
+            <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_line_conductor_2008"
-               name="%metatype.name.Triplex_line_conductor_2008"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"
+               name="%metatype.name.Triplex_Line_configuration_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Triplex_line_conductor"
-               edithelper="simpleGrid.diagram.edit.helpers.Triplex_line_conductorEditHelper">
-            <param name="semanticHint" value="2008"/>
+               eclass="Triplex_Line_configuration"
+               edithelper="simpleGrid.diagram.edit.helpers.Triplex_Line_configurationEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <metamodelType
+               id="org.gmf.example.simpleGrid.diagram.Waterheater_2003"
+               name="%metatype.name.Waterheater_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Waterheater"
+               edithelper="simpleGrid.diagram.edit.helpers.WaterheaterEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <metamodelType
+               id="org.gmf.example.simpleGrid.diagram.House_2011"
+               name="%metatype.name.House_2011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="House"
+               edithelper="simpleGrid.diagram.edit.helpers.HouseEditHelper">
+            <param name="semanticHint" value="2011"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
@@ -383,103 +373,41 @@
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.Transformer_2010"
-               name="%metatype.name.Transformer_2010"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_line_conductor_2008"
+               name="%metatype.name.Triplex_line_conductor_2008"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Transformer"
-               edithelper="simpleGrid.diagram.edit.helpers.TransformerEditHelper">
-            <param name="semanticHint" value="2010"/>
+               eclass="Triplex_line_conductor"
+               edithelper="simpleGrid.diagram.edit.helpers.Triplex_line_conductorEditHelper">
+            <param name="semanticHint" value="2008"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <metamodelType
-               id="org.gmf.example.simpleGrid.diagram.House_2011"
-               name="%metatype.name.House_2011"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_line_2006"
+               name="%metatype.name.Triplex_line_2006"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="House"
-               edithelper="simpleGrid.diagram.edit.helpers.HouseEditHelper">
-            <param name="semanticHint" value="2011"/>
+               eclass="Triplex_line"
+               edithelper="simpleGrid.diagram.edit.helpers.Triplex_lineEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <metamodelType
+               id="org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"
+               name="%metatype.name.Transformer_configuration_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Transformer_configuration"
+               edithelper="simpleGrid.diagram.edit.helpers.Transformer_configurationEditHelper">
+            <param name="semanticHint" value="2004"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_meterHouse_4001"
-               name="%metatype.name.Triplex_meterHouse_4001"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTo_4015"
+               name="%metatype.name.Triplex_lineTo_4015"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4001"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.HouseParent_4002"
-               name="%metatype.name.HouseParent_4002"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4002"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_lineFrom_4003"
-               name="%metatype.name.Triplex_lineFrom_4003"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4003"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeFrom_4004"
-               name="%metatype.name.Triplex_nodeFrom_4004"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4004"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeTriplex_line_4005"
-               name="%metatype.name.Triplex_nodeTriplex_line_4005"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4005"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"
-               name="%metatype.name.TransformerTransformer_configuration_4006"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4006"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_meter_4007"
-               name="%metatype.name.Triplex_lineTriplex_meter_4007"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4007"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"
-               name="%metatype.name.Triplex_Line_configurationTriplex_line_conductor_4008"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4008"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeTo_4009"
-               name="%metatype.name.Triplex_nodeTo_4009"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4009"/>
+            <param name="semanticHint" value="4015"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
@@ -493,47 +421,11 @@
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"
-               name="%metatype.name.Triplex_lineTriplex_line_configuration_4011"
+               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeFrom_4004"
+               name="%metatype.name.Triplex_nodeFrom_4004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4011"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.TransformerTo_4012"
-               name="%metatype.name.TransformerTo_4012"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4012"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"
-               name="%metatype.name.TransformerTriplex_node_4013"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4013"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"
-               name="%metatype.name.NodeTransformer_4014"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4014"/>
-         </specializationType>
-      </metamodel>
-      <metamodel nsURI="http://tcd.ie">
-         <specializationType
-               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTo_4015"
-               name="%metatype.name.Triplex_lineTo_4015"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4015"/>
+            <param name="semanticHint" value="4004"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
@@ -547,11 +439,119 @@
       </metamodel>
       <metamodel nsURI="http://tcd.ie">
          <specializationType
+               id="org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"
+               name="%metatype.name.NodeTransformer_4014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4014"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"
+               name="%metatype.name.TransformerTriplex_node_4013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4013"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
                id="org.gmf.example.simpleGrid.diagram.HouseWaterheater_4017"
                name="%metatype.name.HouseWaterheater_4017"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
             <param name="semanticHint" value="4017"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_lineFrom_4003"
+               name="%metatype.name.Triplex_lineFrom_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeTriplex_line_4005"
+               name="%metatype.name.Triplex_nodeTriplex_line_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_meterHouse_4001"
+               name="%metatype.name.Triplex_meterHouse_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_meter_4007"
+               name="%metatype.name.Triplex_lineTriplex_meter_4007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4007"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"
+               name="%metatype.name.TransformerTransformer_configuration_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"
+               name="%metatype.name.Triplex_lineTriplex_line_configuration_4011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4011"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"
+               name="%metatype.name.Triplex_Line_configurationTriplex_line_conductor_4008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4008"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.HouseParent_4002"
+               name="%metatype.name.HouseParent_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.Triplex_nodeTo_4009"
+               name="%metatype.name.Triplex_nodeTo_4009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4009"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://tcd.ie">
+         <specializationType
+               id="org.gmf.example.simpleGrid.diagram.TransformerTo_4012"
+               name="%metatype.name.TransformerTo_4012"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4012"/>
          </specializationType>
       </metamodel>
    </extension>
@@ -567,34 +567,34 @@
       </clientContext> 
       <binding context="org.gmf.example.simpleGrid.diagram.TypeContext">
          <elementType ref="org.gmf.example.simpleGrid.diagram.Grid_1000"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_node_2002"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Waterheater_2003"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_meter_2005"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_line_2006"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.Node_2007"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_line_conductor_2008"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Climate_2009"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_meter_2005"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.Transformer_2010"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_node_2002"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Waterheater_2003"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.House_2011"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_meterHouse_4001"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.HouseParent_4002"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineFrom_4003"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeFrom_4004"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeTriplex_line_4005"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_meter_4007"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeTo_4009"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.WaterheaterHeating_element_capacity_4010"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTo_4012"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"/>
-         <elementType ref="org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Climate_2009"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_line_conductor_2008"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_line_2006"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineTo_4015"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.WaterheaterHeating_element_capacity_4010"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeFrom_4004"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerFrom_4016"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"/>
          <elementType ref="org.gmf.example.simpleGrid.diagram.HouseWaterheater_4017"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineFrom_4003"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeTriplex_line_4005"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_meterHouse_4001"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_meter_4007"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.HouseParent_4002"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.Triplex_nodeTo_4009"/>
+         <elementType ref="org.gmf.example.simpleGrid.diagram.TransformerTo_4012"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

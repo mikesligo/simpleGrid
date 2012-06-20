@@ -31,37 +31,11 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 			case simpleGrid.diagram.edit.parts.GridEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.GridEditPart(view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart(
-						view);
+			case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.NodeEditPart(view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.WaterheaterEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.WaterheaterNameEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Transformer_configurationEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart(
-						view);
+			case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.NodeNameEditPart(view);
 
 			case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_meterEditPart(
@@ -69,31 +43,6 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 
 			case simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_lineEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.NodeEditPart(view);
-
-			case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.NodeNameEditPart(view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.ClimateEditPart(view);
-
-			case simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.ClimateNameEditPart(
 						view);
 
 			case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
@@ -104,78 +53,129 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 				return new simpleGrid.diagram.edit.parts.TransformerNameEditPart(
 						view);
 
+			case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_nodeEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.WaterheaterEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.WaterheaterNameEditPart(
+						view);
+
 			case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.HouseEditPart(view);
 
 			case simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.HouseNameEditPart(view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart(
+			case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.ClimateEditPart(view);
+
+			case simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.ClimateNameEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.HouseParentEditPart(
+			case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart(
+			case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_lineEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart(
+			case simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart(
+			case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Transformer_configurationEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.TransformerToEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.NodeTransformerEditPart(
+			case simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart(
 						view);
 
 			case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_lineToEditPart(
 						view);
 
+			case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart(
+						view);
+
 			case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.TransformerFromEditPart(
 						view);
 
+			case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.NodeTransformerEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart(
+						view);
+
 			case simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.HouseParentEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart(
+						view);
+
+			case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
+				return new simpleGrid.diagram.edit.parts.TransformerToEditPart(
 						view);
 
 			}

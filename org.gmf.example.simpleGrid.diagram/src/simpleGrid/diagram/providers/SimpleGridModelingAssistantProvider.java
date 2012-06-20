@@ -35,17 +35,17 @@ public class SimpleGridModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof simpleGrid.diagram.edit.parts.GridEditPart) {
 			ArrayList<IElementType> types = new ArrayList<IElementType>(11);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -57,36 +57,36 @@ public class SimpleGridModelingAssistantProvider extends
 	public List getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
 			return ((simpleGrid.diagram.edit.parts.Triplex_meterEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
-					.getMARelTypesOnSource();
-		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
 			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
 			return ((simpleGrid.diagram.edit.parts.HouseEditPart) sourceEditPart)
+					.getMARelTypesOnSource();
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
 					.getMARelTypesOnSource();
 		}
 		return Collections.EMPTY_LIST;
@@ -98,48 +98,48 @@ public class SimpleGridModelingAssistantProvider extends
 	public List getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) targetEditPart)
-					.getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) targetEditPart)
-					.getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) targetEditPart)
-					.getMARelTypesOnTarget();
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.NodeEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
 			return ((simpleGrid.diagram.edit.parts.Triplex_meterEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
+			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.NodeEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
+			return ((simpleGrid.diagram.edit.parts.HouseEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
 			return ((simpleGrid.diagram.edit.parts.ClimateEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
-			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
-			return ((simpleGrid.diagram.edit.parts.HouseEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) targetEditPart)
+					.getMARelTypesOnTarget();
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) targetEditPart)
 					.getMARelTypesOnTarget();
 		}
 		return Collections.EMPTY_LIST;
@@ -154,36 +154,36 @@ public class SimpleGridModelingAssistantProvider extends
 				.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
 			return ((simpleGrid.diagram.edit.parts.Triplex_meterEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
-					.getMARelTypesOnSourceAndTarget(targetEditPart);
-		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
 			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
 			return ((simpleGrid.diagram.edit.parts.HouseEditPart) sourceEditPart)
+					.getMARelTypesOnSourceAndTarget(targetEditPart);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
 					.getMARelTypesOnSourceAndTarget(targetEditPart);
 		}
 		return Collections.EMPTY_LIST;
@@ -196,48 +196,48 @@ public class SimpleGridModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) targetEditPart)
-					.getMATypesForSource(relationshipType);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.NodeEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
 			return ((simpleGrid.diagram.edit.parts.Triplex_meterEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
+			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.NodeEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
+			return ((simpleGrid.diagram.edit.parts.HouseEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
 			return ((simpleGrid.diagram.edit.parts.ClimateEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
-			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
-			return ((simpleGrid.diagram.edit.parts.HouseEditPart) targetEditPart)
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) targetEditPart)
+					.getMATypesForSource(relationshipType);
+		}
+		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) targetEditPart)
 					.getMATypesForSource(relationshipType);
 		}
 		return Collections.EMPTY_LIST;
@@ -250,36 +250,36 @@ public class SimpleGridModelingAssistantProvider extends
 			IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
 			return ((simpleGrid.diagram.edit.parts.Triplex_meterEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
-		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			return ((simpleGrid.diagram.edit.parts.NodeEditPart) sourceEditPart)
-					.getMATypesForTarget(relationshipType);
-		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
 			return ((simpleGrid.diagram.edit.parts.TransformerEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			return ((simpleGrid.diagram.edit.parts.WaterheaterEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
 		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
 			return ((simpleGrid.diagram.edit.parts.HouseEditPart) sourceEditPart)
+					.getMATypesForTarget(relationshipType);
+		}
+		if (sourceEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			return ((simpleGrid.diagram.edit.parts.Triplex_lineEditPart) sourceEditPart)
 					.getMATypesForTarget(relationshipType);
 		}
 		return Collections.EMPTY_LIST;

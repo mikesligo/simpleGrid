@@ -60,27 +60,27 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Triplex_line_configuration());
-			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Triplex_nodes());
-			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Waterheater());
-			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Transformer_configuration());
+					.getGrid_Node());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
 					.getGrid_Triplex_meter());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Triplex_line());
+					.getGrid_Transformer());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Node());
+					.getGrid_Triplex_nodes());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Triplex_line_conductor());
+					.getGrid_Triplex_line_configuration());
+			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
+					.getGrid_Waterheater());
+			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
+					.getGrid_House());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
 					.getGrid_Climate());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_Transformer());
+					.getGrid_Triplex_line_conductor());
 			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
-					.getGrid_House());
+					.getGrid_Triplex_line());
+			myFeaturesToSynchronize.add(simpleGrid.SimpleGridPackage.eINSTANCE
+					.getGrid_Transformer_configuration());
 		}
 		return myFeaturesToSynchronize;
 	}
@@ -116,17 +116,17 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 		int visualID = simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 				.getVisualID(view);
 		switch (visualID) {
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
 		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
-		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
 		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
 		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
+		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
 			return true;
 		}
 		return false;
@@ -293,43 +293,10 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTriplex_Line_configuration_2001ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
-		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTriplex_node_2002ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
-		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getWaterheater_2003ContainedLinks(view));
-			}
-			if (!domain2NotationMap.containsKey(view.getElement())
-					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
-				domain2NotationMap.put(view.getElement(), view);
-			}
-			break;
-		}
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID: {
-			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTransformer_configuration_2004ContainedLinks(view));
+						.getNode_2007ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -348,10 +315,10 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTriplex_line_2006ContainedLinks(view));
+						.getTransformer_2010ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -359,10 +326,10 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getNode_2007ContainedLinks(view));
+						.getTriplex_node_2002ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -370,10 +337,32 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTriplex_line_conductor_2008ContainedLinks(view));
+						.getTriplex_Line_configuration_2001ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
+						.getWaterheater_2003ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
+						.getHouse_2011ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -392,10 +381,10 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getTransformer_2010ContainedLinks(view));
+						.getTriplex_line_conductor_2008ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -403,10 +392,21 @@ public class GridCanonicalEditPolicy extends CanonicalEditPolicy {
 			}
 			break;
 		}
-		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
-						.getHouse_2011ContainedLinks(view));
+						.getTriplex_line_2006ContainedLinks(view));
+			}
+			if (!domain2NotationMap.containsKey(view.getElement())
+					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
+				domain2NotationMap.put(view.getElement(), view);
+			}
+			break;
+		}
+		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(simpleGrid.diagram.part.SimpleGridDiagramUpdater
+						.getTransformer_configuration_2004ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
