@@ -203,23 +203,7 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ClimateNameFigure"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ClimateTmyfileFigure"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="ClimateInterpolateFigure"
-            text=""/>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
-      <accessors
-          figure="//@figures.0/@descriptors.17/@actualFigure/@children.2"/>
-      <accessors
-          figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="Triplex_line_conductorFigure">

@@ -117,14 +117,14 @@ public class TransformerEditPart extends AbstractBorderedShapeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new Transformer_configurationFigure();
+		return primaryShape = new TransformerFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public Transformer_configurationFigure getPrimaryShape() {
-		return (Transformer_configurationFigure) primaryShape;
+	public TransformerFigure getPrimaryShape() {
+		return (TransformerFigure) primaryShape;
 	}
 
 	/**
@@ -408,12 +408,12 @@ public class TransformerEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	public class Transformer_configurationFigure extends SVGFigure {
+	public class TransformerFigure extends SVGFigure {
 
 		/**
 		 * @generated
 		 */
-		public Transformer_configurationFigure() {
+		public TransformerFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
 			layoutThis.setStretchMinorAxis(false);
@@ -426,7 +426,7 @@ public class TransformerEditPart extends AbstractBorderedShapeEditPart {
 
 			this.setLayoutManager(layoutThis);
 
-			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
+			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg");
 		}
 
 	}

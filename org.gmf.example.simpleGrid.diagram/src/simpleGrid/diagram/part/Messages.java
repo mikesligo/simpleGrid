@@ -443,107 +443,17 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_nodeTriplex_line_4005_target;
+	public static String NavigatorGroupName_Triplex_meter_2005_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_nodeTriplex_line_4005_source;
+	public static String NavigatorGroupName_Triplex_meter_2005_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_NodeTransformer_4014_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_NodeTransformer_4014_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TransformerTo_4012_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TransformerTo_4012_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Transformer_configuration_2004_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Node_2007_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Node_2007_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_line_2006_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_line_2006_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TransformerTriplex_node_4013_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_TransformerTriplex_node_4013_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_lineFrom_4003_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_lineFrom_4003_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_Line_configurationTriplex_line_conductor_4008_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_Line_configurationTriplex_line_conductor_4008_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_nodeTo_4009_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_nodeTo_4009_source;
+	public static String NavigatorGroupName_Triplex_line_conductor_2008_incominglinks;
 
 	/**
 	 * @generated
@@ -558,12 +468,27 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_node_2002_incominglinks;
+	public static String NavigatorGroupName_Triplex_nodeFrom_4004_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_node_2002_outgoinglinks;
+	public static String NavigatorGroupName_Triplex_nodeFrom_4004_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_NodeTransformer_4014_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_NodeTransformer_4014_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Grid_1000_links;
 
 	/**
 	 * @generated
@@ -578,12 +503,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_WaterheaterHeating_element_capacity_4010_target;
+	public static String NavigatorGroupName_Waterheater_2003_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_WaterheaterHeating_element_capacity_4010_source;
+	public static String NavigatorGroupName_Waterheater_2003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Node_2007_outgoinglinks;
 
 	/**
 	 * @generated
@@ -598,22 +533,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_meter_2005_incominglinks;
+	public static String NavigatorGroupName_Triplex_nodeTo_4009_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_meter_2005_outgoinglinks;
+	public static String NavigatorGroupName_Triplex_nodeTo_4009_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Waterheater_2003_incominglinks;
+	public static String NavigatorGroupName_Triplex_lineFrom_4003_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Waterheater_2003_outgoinglinks;
+	public static String NavigatorGroupName_Triplex_lineFrom_4003_source;
 
 	/**
 	 * @generated
@@ -628,6 +563,51 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_Triplex_meterHouse_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_meterHouse_4001_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TransformerTo_4012_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TransformerTo_4012_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_line_2006_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_line_2006_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Climate_2009_incominglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_TransformerFrom_4016_target;
 
 	/**
@@ -638,22 +618,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_nodeFrom_4004_target;
+	public static String NavigatorGroupName_WaterheaterHeating_element_capacity_4010_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_nodeFrom_4004_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Climate_2009_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Triplex_line_conductor_2008_incominglinks;
+	public static String NavigatorGroupName_WaterheaterHeating_element_capacity_4010_source;
 
 	/**
 	 * @generated
@@ -668,7 +638,27 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Grid_1000_links;
+	public static String NavigatorGroupName_TransformerTransformer_configuration_4006_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TransformerTransformer_configuration_4006_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TransformerTriplex_node_4013_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_TransformerTriplex_node_4013_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Transformer_configuration_2004_incominglinks;
 
 	/**
 	 * @generated
@@ -683,22 +673,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_meterHouse_4001_target;
+	public static String NavigatorGroupName_Triplex_nodeTriplex_line_4005_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Triplex_meterHouse_4001_source;
+	public static String NavigatorGroupName_Triplex_nodeTriplex_line_4005_source;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_TransformerTransformer_configuration_4006_target;
+	public static String NavigatorGroupName_Triplex_Line_configurationTriplex_line_conductor_4008_target;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_TransformerTransformer_configuration_4006_source;
+	public static String NavigatorGroupName_Triplex_Line_configurationTriplex_line_conductor_4008_source;
 
 	/**
 	 * @generated
@@ -709,6 +699,16 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Triplex_Line_configuration_2001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_node_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Triplex_node_2002_outgoinglinks;
 
 	/**
 	 * @generated

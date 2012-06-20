@@ -20,7 +20,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.0"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Node"/>
     </ownedChild>
@@ -40,7 +40,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.1"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.10"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_meter"/>
     </ownedChild>
@@ -60,9 +60,9 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.2"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
-          href="simpleGrid.gmfgraph#Transformer_configuration"/>
+          href="simpleGrid.gmfgraph#Transformer"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -80,7 +80,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.8"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_node"/>
     </ownedChild>
@@ -100,7 +100,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_Line_configuration"/>
     </ownedChild>
@@ -120,7 +120,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Waterheater"/>
     </ownedChild>
@@ -140,7 +140,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.12"/>
       <diagramNode
           href="simpleGrid.gmfgraph#House"/>
     </ownedChild>
@@ -173,7 +173,7 @@
           href="simpleGrid.ecore#//Triplex_line_conductor"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.8"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.18"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_line_conductor"/>
     </ownedChild>
@@ -193,7 +193,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.9"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.15"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_line"/>
     </ownedChild>
@@ -213,7 +213,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.10"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Transformer_configuration"/>
     </ownedChild>
