@@ -34,31 +34,16 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 			case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.NodeEditPart(view);
 
-			case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.NodeNameEditPart(view);
-
 			case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_meterEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart(
 						view);
 
 			case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.TransformerEditPart(
 						view);
 
-			case simpleGrid.diagram.edit.parts.TransformerNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.TransformerNameEditPart(
-						view);
-
 			case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_nodeEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart(
 						view);
 
 			case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
@@ -80,15 +65,8 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 			case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.HouseEditPart(view);
 
-			case simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.HouseNameEditPart(view);
-
 			case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.ClimateEditPart(view);
-
-			case simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.ClimateNameEditPart(
-						view);
 
 			case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart(
@@ -104,10 +82,6 @@ public class SimpleGridEditPartFactory implements EditPartFactory {
 
 			case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
 				return new simpleGrid.diagram.edit.parts.Transformer_configurationEditPart(
-						view);
-
-			case simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID:
-				return new simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart(
 						view);
 
 			case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:

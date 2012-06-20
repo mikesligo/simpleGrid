@@ -25,6 +25,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPo
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -316,6 +317,11 @@ public class Triplex_Line_configurationEditPart extends
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureTriplex_Line_configurationNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public Triplex_Line_configurationFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -330,6 +336,26 @@ public class Triplex_Line_configurationEditPart extends
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureTriplex_Line_configurationNameFigure = new WrappingLabel();
+			fFigureTriplex_Line_configurationNameFigure.setText("<...>");
+
+			this.add(fFigureTriplex_Line_configurationNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTriplex_Line_configurationNameFigure() {
+			return fFigureTriplex_Line_configurationNameFigure;
 		}
 
 	}

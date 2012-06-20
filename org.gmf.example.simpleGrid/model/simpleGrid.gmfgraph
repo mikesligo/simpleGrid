@@ -39,7 +39,13 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_Line_configurationNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="Triplex_Line_configurationTriplex_line_conductorFigure">
@@ -58,7 +64,13 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="NodeFigure">
@@ -70,7 +82,13 @@
             xsi:type="gmfgraph:Label"
             name="lollabel"
             text="lololol"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="NodeTransformerFigure">
@@ -89,7 +107,13 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="TransformerTriplex_nodeFigure">
@@ -108,6 +132,10 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodeNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -127,7 +155,13 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_meterNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="Triplex_meterHouseFigure">
@@ -146,7 +180,12 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseName"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="HouseWaterheaterFigure">
@@ -159,13 +198,19 @@
         name="WaterheaterFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
-          name="Triplex_line_waterheaterFigure"
+          name="WaterheaterFigure"
           documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg">
         <layout
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="Triplex_lineFigure">
@@ -177,6 +222,10 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_lineNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -203,7 +252,13 @@
             xsi:type="gmfgraph:FlowLayout"
             majorAlignment="CENTER"
             minorAlignment="CENTER"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ClimateName"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="Triplex_line_conductorFigure">
@@ -213,7 +268,13 @@
           documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_line_conductorNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
     </descriptors>
   </figures>
   <nodes
@@ -274,11 +335,13 @@
       name="Triplex_lineTriplex_meter"
       figure="Triplex_lineTriplex_meterFigure"/>
   <labels
-      name="ClimateName"/>
+      name="ClimateName"
+      figure="ClimateFigure"/>
   <labels
       name="ClimateTmyfile"/>
   <labels
-      name="ClimateInterpolate"/>
+      name="ClimateInterpolate"
+      figure="ClimateFigure"/>
   <labels
       name="Triplex_Line_configurationName"
       figure="Triplex_Line_configurationFigure"/>
@@ -430,7 +493,9 @@
       name="Triplex_linePhases"
       figure="Triplex_lineFigure"/>
   <labels
-      name="Triplex_line_conductorResistance"/>
+      name="Triplex_line_conductorResistance"
+      figure="Triplex_line_conductorFigure"/>
   <labels
-      name="Triplex_line_conductorGeometric_mean_radius"/>
+      name="Triplex_line_conductorGeometric_mean_radius"
+      figure="Triplex_line_conductorFigure"/>
 </gmfgraph:Canvas>

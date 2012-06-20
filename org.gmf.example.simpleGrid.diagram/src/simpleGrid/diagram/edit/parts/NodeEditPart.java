@@ -1,30 +1,22 @@
 package simpleGrid.diagram.edit.parts;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.draw2d.IFigure;
-import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gef.requests.CreateRequest;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.AbstractBorderedShapeEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IBorderItemEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPolicy;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
@@ -35,7 +27,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class NodeEditPart extends AbstractBorderedShapeEditPart {
+public class NodeEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
@@ -79,20 +71,6 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
-				View childView = (View) child.getModel();
-				switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getVisualID(childView)) {
-				case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
-					return new BorderItemSelectionEditPolicy() {
-
-						protected List createSelectionHandles() {
-							MoveHandle mh = new MoveHandle(
-									(GraphicalEditPart) getHost());
-							mh.setBorder(null);
-							return Collections.singletonList(mh);
-						}
-					};
-				}
 				EditPolicy result = child
 						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
 				if (result == null) {
@@ -129,21 +107,6 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	 * @generated
 	 */
-	protected void addBorderItem(IFigure borderItemContainer,
-			IBorderItemEditPart borderItemEditPart) {
-		if (borderItemEditPart instanceof simpleGrid.diagram.edit.parts.NodeNameEditPart) {
-			BorderItemLocator locator = new BorderItemLocator(getMainFigure(),
-					PositionConstants.SOUTH);
-			locator.setBorderItemOffset(new Dimension(-20, -20));
-			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
-		} else {
-			super.addBorderItem(borderItemContainer, borderItemEditPart);
-		}
-	}
-
-	/**
-	 * @generated
-	 */
 	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
 		return result;
@@ -157,7 +120,7 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 	 * 
 	 * @generated
 	 */
-	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createMainFigure() {
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodeFigure() {
 		org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure figure = createNodePlate();
 		figure.setLayoutManager(new StackLayout());
 		IFigure shape = createNodeShape();
@@ -220,14 +183,6 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		if (primaryShape instanceof Shape) {
 			((Shape) primaryShape).setLineStyle(style);
 		}
-	}
-
-	/**
-	 * @generated
-	 */
-	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -311,6 +266,11 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureNodeNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public NodeFigure() {
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg");
 			createContents();
@@ -326,6 +286,18 @@ public class NodeEditPart extends AbstractBorderedShapeEditPart {
 
 			this.add(lollabel0);
 
+			fFigureNodeNameFigure = new WrappingLabel();
+			fFigureNodeNameFigure.setText("<...>");
+
+			this.add(fFigureNodeNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeNameFigure() {
+			return fFigureNodeNameFigure;
 		}
 
 	}

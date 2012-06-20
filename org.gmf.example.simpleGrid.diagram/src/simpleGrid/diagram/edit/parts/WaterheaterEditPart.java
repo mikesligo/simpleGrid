@@ -25,6 +25,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.BorderItemSelectionEditPo
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.figures.BorderItemLocator;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -355,6 +356,11 @@ public class WaterheaterEditPart extends AbstractBorderedShapeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureWaterheaterNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public WaterheaterFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -369,6 +375,26 @@ public class WaterheaterEditPart extends AbstractBorderedShapeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureWaterheaterNameFigure = new WrappingLabel();
+			fFigureWaterheaterNameFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterNameFigure() {
+			return fFigureWaterheaterNameFigure;
 		}
 
 	}

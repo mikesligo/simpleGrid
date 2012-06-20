@@ -11,11 +11,7 @@
   </nodeTraces>
   <nodeTraces
       visualID="2002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_nodes')">
-    <nodeLabelTraces
-        visualID="5002"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_nodes')"/>
   <nodeTraces
       visualID="2003"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Waterheater') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'waterheater')">
@@ -25,18 +21,10 @@
   </nodeTraces>
   <nodeTraces
       visualID="2004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Transformer_configuration') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'transformer_configuration')">
-    <nodeLabelTraces
-        visualID="5004"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Transformer_configuration') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'transformer_configuration')"/>
   <nodeTraces
       visualID="2005"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_meter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_meter')">
-    <nodeLabelTraces
-        visualID="5005"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_meter') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_meter')"/>
   <nodeTraces
       visualID="2006"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_line') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_line')">
@@ -46,35 +34,19 @@
   </nodeTraces>
   <nodeTraces
       visualID="2007"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'node')">
-    <nodeLabelTraces
-        visualID="5007"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Node') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'node')"/>
   <nodeTraces
       visualID="2008"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_line_conductor') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'triplex_line_conductor')"/>
   <nodeTraces
       visualID="2009"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Climate') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'climate')">
-    <nodeLabelTraces
-        visualID="5008"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Climate') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'climate')"/>
   <nodeTraces
       visualID="2010"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Transformer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'transformer')">
-    <nodeLabelTraces
-        visualID="5009"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Transformer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'transformer')"/>
   <nodeTraces
       visualID="2011"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'House') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'house')">
-    <nodeLabelTraces
-        visualID="5010"
-        queryText="true"/>
-  </nodeTraces>
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'House') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Grid') and _containmentMF_.name = 'house')"/>
   <linkTraces
       visualID="4001"
       queryText="modelFacet.oclIsKindOf(gmfgen::FeatureLinkModelFacet) and (let _feature_:ecore::EStructuralFeature = modelFacet.oclAsType(gmfgen::FeatureLinkModelFacet).metaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _feature_.eContainingClass in _eClass_.ePackage.nsURI = 'http://tcd.ie' and _eClass_.name = 'Triplex_meter') and _feature_.name = 'house')"/>

@@ -228,26 +228,6 @@ public class SimpleGridVisualIDRegistry {
 				return true;
 			}
 			break;
-		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.TransformerNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
 			if (simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -258,23 +238,8 @@ public class SimpleGridVisualIDRegistry {
 				return true;
 			}
 			break;
-		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
 			if (simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
-			if (simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

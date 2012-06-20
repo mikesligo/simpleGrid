@@ -11,13 +11,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Node"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#NodeName"/>
-        <features
-            href="simpleGrid.ecore#//Node/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.4"/>
@@ -31,13 +24,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Triplex_meter"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Triplex_meterName"/>
-        <features
-            href="simpleGrid.ecore#//Triplex_meter/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.10"/>
@@ -51,13 +37,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Transformer"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Transformer_configurationName"/>
-        <features
-            href="simpleGrid.ecore#//Transformer/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.6"/>
@@ -71,13 +50,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Triplex_node"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Triplex_nodeLength"/>
-        <features
-            href="simpleGrid.ecore#//Triplex_node/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.8"/>
@@ -131,13 +103,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//House"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#HouseName"/>
-        <features
-            href="simpleGrid.ecore#//House/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.12"/>
@@ -151,13 +116,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Climate"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#ClimateName"/>
-        <features
-            href="simpleGrid.ecore#//Climate/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.0"/>
@@ -204,13 +162,6 @@
     <ownedChild>
       <domainMetaElement
           href="simpleGrid.ecore#//Transformer_configuration"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="simpleGrid.gmfgraph#Transformer_configurationName"/>
-        <features
-            href="simpleGrid.ecore#//Transformer_configuration/name"/>
-      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simpleGrid.gmftool#//@palette/@tools.0/@tools.3"/>

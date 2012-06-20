@@ -618,6 +618,11 @@ public class WaterheaterNameEditPart extends LabelEditPart implements
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureWaterheaterNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public WaterheaterFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -632,6 +637,26 @@ public class WaterheaterNameEditPart extends LabelEditPart implements
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureWaterheaterNameFigure = new WrappingLabel();
+			fFigureWaterheaterNameFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterNameFigure() {
+			return fFigureWaterheaterNameFigure;
 		}
 
 	}

@@ -374,15 +374,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5007 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID));
-		label5007.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5007 = (Location) label5007.getLayoutConstraint();
-		location5007.setX(0);
-		location5007.setY(5);
 		return node;
 	}
 
@@ -427,15 +418,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5005 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID));
-		label5005.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5005 = (Location) label5005.getLayoutConstraint();
-		location5005.setX(0);
-		location5005.setY(5);
 		return node;
 	}
 
@@ -480,15 +462,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5009 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.TransformerNameEditPart.VISUAL_ID));
-		label5009.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5009 = (Location) label5009.getLayoutConstraint();
-		location5009.setX(0);
-		location5009.setY(5);
 		return node;
 	}
 
@@ -533,15 +506,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID));
-		label5002.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5002 = (Location) label5002.getLayoutConstraint();
-		location5002.setX(0);
-		location5002.setY(5);
 		return node;
 	}
 
@@ -691,15 +655,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5010 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID));
-		label5010.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5010 = (Location) label5010.getLayoutConstraint();
-		location5010.setX(0);
-		location5010.setY(5);
 		return node;
 	}
 
@@ -743,15 +698,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5008 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID));
-		label5008.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5008 = (Location) label5008.getLayoutConstraint();
-		location5008.setX(0);
-		location5008.setY(5);
 		return node;
 	}
 
@@ -893,15 +839,6 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.setStructuralFeatureValue(node,
 				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(
-				node,
-				simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-						.getType(simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID));
-		label5004.setLayoutConstraint(NotationFactory.eINSTANCE
-				.createLocation());
-		Location location5004 = (Location) label5004.getLayoutConstraint();
-		location5004.setX(0);
-		location5004.setY(5);
 		return node;
 	}
 

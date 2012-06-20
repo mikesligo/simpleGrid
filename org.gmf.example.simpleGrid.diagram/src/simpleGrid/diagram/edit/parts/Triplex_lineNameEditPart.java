@@ -632,6 +632,19 @@ public class Triplex_lineNameEditPart extends LabelEditPart implements
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			WrappingLabel triplex_lineNameFigure0 = new WrappingLabel();
+			triplex_lineNameFigure0.setText("<...>");
+
+			this.add(triplex_lineNameFigure0);
+
 		}
 
 	}

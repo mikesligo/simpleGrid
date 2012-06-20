@@ -618,6 +618,11 @@ public class Triplex_Line_configurationNameEditPart extends LabelEditPart
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureTriplex_Line_configurationNameFigure;
+
+		/**
+		 * @generated
+		 */
 		public Triplex_Line_configurationFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -632,6 +637,26 @@ public class Triplex_Line_configurationNameEditPart extends LabelEditPart
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureTriplex_Line_configurationNameFigure = new WrappingLabel();
+			fFigureTriplex_Line_configurationNameFigure.setText("<...>");
+
+			this.add(fFigureTriplex_Line_configurationNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTriplex_Line_configurationNameFigure() {
+			return fFigureTriplex_Line_configurationNameFigure;
 		}
 
 	}
