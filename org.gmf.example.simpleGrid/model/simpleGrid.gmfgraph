@@ -34,12 +34,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_Line_configurationFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_Line_configurationTriplex_line_conductorFigure">
@@ -53,12 +48,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Transformer_configurationFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg"/>
     </descriptors>
     <descriptors
         name="NodeFigure">
@@ -79,12 +69,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="TransformerFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg"/>
     </descriptors>
     <descriptors
         name="TransformerTriplex_nodeFigure">
@@ -98,12 +83,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_nodeFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_node.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_node.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_nodeTriplex_lineFigure">
@@ -117,12 +97,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_meterFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_meter.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_meter.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_meterHouseFigure">
@@ -136,12 +111,7 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="HouseFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/house.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/house.svg"/>
     </descriptors>
     <descriptors
         name="HouseWaterheaterFigure">
@@ -155,24 +125,14 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="WaterheaterFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_lineFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_lineFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_lineTriplex_line_configurationFigure">
@@ -193,22 +153,14 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="ClimateFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            majorAlignment="CENTER"
-            minorAlignment="CENTER"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg"/>
     </descriptors>
     <descriptors
         name="Triplex_line_conductorFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_line_conductorFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"/>
-      </actualFigure>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg"/>
     </descriptors>
   </figures>
   <nodes

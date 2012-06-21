@@ -26,7 +26,7 @@
           href="simpleGrid.ecore#//Triplex_meter"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.10"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.9"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_meter"/>
     </ownedChild>
@@ -78,7 +78,7 @@
           href="simpleGrid.ecore#//Waterheater"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.13"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Waterheater"/>
     </ownedChild>
@@ -91,7 +91,7 @@
           href="simpleGrid.ecore#//House"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.12"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.11"/>
       <diagramNode
           href="simpleGrid.gmfgraph#House"/>
     </ownedChild>
@@ -117,7 +117,7 @@
           href="simpleGrid.ecore#//Triplex_line_conductor"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.18"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.17"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_line_conductor"/>
     </ownedChild>
@@ -130,7 +130,7 @@
           href="simpleGrid.ecore#//Triplex_line"/>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.15"/>
+          href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
       <diagramNode
           href="simpleGrid.gmfgraph#Triplex_line"/>
     </ownedChild>
@@ -151,7 +151,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.11"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.10"/>
     <diagramLink
         href="simpleGrid.gmfgraph#Triplex_Line_configurationTriplex_line_conductor"/>
     <linkMetaFeature
@@ -161,7 +161,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.12"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.11"/>
     <diagramLink
         href="simpleGrid.gmfgraph#HouseWaterheater"/>
     <linkMetaFeature
@@ -171,7 +171,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.13"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.12"/>
     <diagramLink
         href="simpleGrid.gmfgraph#TransformerTriplex_node"/>
     <linkMetaFeature
@@ -181,7 +181,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.13"/>
     <diagramLink
         href="simpleGrid.gmfgraph#NodeTransformer"/>
     <linkMetaFeature
@@ -191,7 +191,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.15"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.14"/>
     <diagramLink
         href="simpleGrid.gmfgraph#NodeTransformer"/>
     <linkMetaFeature
@@ -201,7 +201,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.16"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.15"/>
     <diagramLink
         href="simpleGrid.gmfgraph#NodeTransformer"/>
     <linkMetaFeature
@@ -211,7 +211,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.17"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.16"/>
     <diagramLink
         href="simpleGrid.gmfgraph#Triplex_meterHouse"/>
     <linkMetaFeature
@@ -221,7 +221,7 @@
   <links>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.18"/>
+        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.17"/>
     <diagramLink
         href="simpleGrid.gmfgraph#Triplex_Line_configurationTriplex_line_conductor"/>
     <linkMetaFeature
@@ -229,9 +229,6 @@
         href="simpleGrid.ecore#//Triplex_line/from"/>
   </links>
   <links>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="simpleGrid.gmftool#//@palette/@tools.0/@tools.0"/>
     <diagramLink
         href="simpleGrid.gmfgraph#TransformerTriplex_node"/>
     <linkMetaFeature

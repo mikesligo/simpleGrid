@@ -42,17 +42,16 @@ public class SimpleGridPaletteFactory {
 		paletteContainer.add(createTransformer7CreationTool());
 		paletteContainer.add(createTransformerTriplex_node8CreationTool());
 		paletteContainer.add(createTriplex_node9CreationTool());
-		paletteContainer.add(createTriplex_nodeTriplex_line10CreationTool());
-		paletteContainer.add(createTriplex_meter11CreationTool());
-		paletteContainer.add(createTriplex_meterHouse12CreationTool());
-		paletteContainer.add(createHouse13CreationTool());
-		paletteContainer.add(createHouseWaterheater14CreationTool());
-		paletteContainer.add(createWaterheater15CreationTool());
-		paletteContainer.add(createTriplex_line16CreationTool());
+		paletteContainer.add(createTriplex_meter10CreationTool());
+		paletteContainer.add(createTriplex_meterHouse11CreationTool());
+		paletteContainer.add(createHouse12CreationTool());
+		paletteContainer.add(createHouseWaterheater13CreationTool());
+		paletteContainer.add(createWaterheater14CreationTool());
+		paletteContainer.add(createTriplex_line15CreationTool());
 		paletteContainer
-				.add(createTriplex_lineTriplex_line_configuration17CreationTool());
-		paletteContainer.add(createTriplex_lineTriplex_meter18CreationTool());
-		paletteContainer.add(createTriplex_line_conductor19CreationTool());
+				.add(createTriplex_lineTriplex_line_configuration16CreationTool());
+		paletteContainer.add(createTriplex_lineTriplex_meter17CreationTool());
+		paletteContainer.add(createTriplex_line_conductor18CreationTool());
 		return paletteContainer;
 	}
 
@@ -203,26 +202,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_nodeTriplex_line10CreationTool() {
-		ToolEntry entry = new ToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_nodeTriplex_line10CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_nodeTriplex_line10CreationTool_desc,
-				null, null) {
-		};
-		entry.setId("createTriplex_nodeTriplex_line10CreationTool"); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private ToolEntry createTriplex_meter11CreationTool() {
+	private ToolEntry createTriplex_meter10CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_meter11CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_meter11CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_meter10CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_meter10CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005));
-		entry.setId("createTriplex_meter11CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_meter10CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -232,13 +218,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_meterHouse12CreationTool() {
+	private ToolEntry createTriplex_meterHouse11CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_meterHouse12CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_meterHouse12CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_meterHouse11CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_meterHouse11CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015));
-		entry.setId("createTriplex_meterHouse12CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_meterHouse11CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -248,13 +234,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createHouse13CreationTool() {
+	private ToolEntry createHouse12CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				simpleGrid.diagram.part.Messages.House13CreationTool_title,
-				simpleGrid.diagram.part.Messages.House13CreationTool_desc,
+				simpleGrid.diagram.part.Messages.House12CreationTool_title,
+				simpleGrid.diagram.part.Messages.House12CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011));
-		entry.setId("createHouse13CreationTool"); //$NON-NLS-1$
+		entry.setId("createHouse12CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -264,13 +250,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createHouseWaterheater14CreationTool() {
+	private ToolEntry createHouseWaterheater13CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				simpleGrid.diagram.part.Messages.HouseWaterheater14CreationTool_title,
-				simpleGrid.diagram.part.Messages.HouseWaterheater14CreationTool_desc,
+				simpleGrid.diagram.part.Messages.HouseWaterheater13CreationTool_title,
+				simpleGrid.diagram.part.Messages.HouseWaterheater13CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004));
-		entry.setId("createHouseWaterheater14CreationTool"); //$NON-NLS-1$
+		entry.setId("createHouseWaterheater13CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -280,13 +266,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createWaterheater15CreationTool() {
+	private ToolEntry createWaterheater14CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				simpleGrid.diagram.part.Messages.Waterheater15CreationTool_title,
-				simpleGrid.diagram.part.Messages.Waterheater15CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Waterheater14CreationTool_title,
+				simpleGrid.diagram.part.Messages.Waterheater14CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003));
-		entry.setId("createWaterheater15CreationTool"); //$NON-NLS-1$
+		entry.setId("createWaterheater14CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -296,13 +282,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_line16CreationTool() {
+	private ToolEntry createTriplex_line15CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_line16CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_line16CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_line15CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_line15CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006));
-		entry.setId("createTriplex_line16CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_line15CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -312,13 +298,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_lineTriplex_line_configuration17CreationTool() {
+	private ToolEntry createTriplex_lineTriplex_line_configuration16CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_line_configuration17CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_line_configuration17CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_line_configuration16CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_line_configuration16CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013));
-		entry.setId("createTriplex_lineTriplex_line_configuration17CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_lineTriplex_line_configuration16CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -328,13 +314,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_lineTriplex_meter18CreationTool() {
+	private ToolEntry createTriplex_lineTriplex_meter17CreationTool() {
 		LinkToolEntry entry = new LinkToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_meter18CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_meter18CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_meter17CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_lineTriplex_meter17CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017));
-		entry.setId("createTriplex_lineTriplex_meter18CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_lineTriplex_meter17CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -344,13 +330,13 @@ public class SimpleGridPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createTriplex_line_conductor19CreationTool() {
+	private ToolEntry createTriplex_line_conductor18CreationTool() {
 		NodeToolEntry entry = new NodeToolEntry(
-				simpleGrid.diagram.part.Messages.Triplex_line_conductor19CreationTool_title,
-				simpleGrid.diagram.part.Messages.Triplex_line_conductor19CreationTool_desc,
+				simpleGrid.diagram.part.Messages.Triplex_line_conductor18CreationTool_title,
+				simpleGrid.diagram.part.Messages.Triplex_line_conductor18CreationTool_desc,
 				Collections
 						.singletonList(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008));
-		entry.setId("createTriplex_line_conductor19CreationTool"); //$NON-NLS-1$
+		entry.setId("createTriplex_line_conductor18CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(simpleGrid.diagram.providers.SimpleGridElementTypes
 				.getImageDescriptor(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008));
 		entry.setLargeIcon(entry.getSmallIcon());

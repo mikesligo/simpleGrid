@@ -91,15 +91,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Triplex_nodeTriplex_line"
-          description="Create new Triplex_nodeTriplex_line">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Triplex_meter"
           description="Create new Triplex_meter">
         <smallIcon
