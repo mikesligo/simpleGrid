@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -243,19 +242,6 @@ public class Triplex_Line_configurationEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTriplex_Line_configurationNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_Line_configurationInsulation_thicknessFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_Line_configurationDiameterFigure;
-
-		/**
-		 * @generated
-		 */
 		public Triplex_Line_configurationFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -270,51 +256,6 @@ public class Triplex_Line_configurationEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_Line_configurationNameFigure = new WrappingLabel();
-			fFigureTriplex_Line_configurationNameFigure.setText("<...>");
-
-			this.add(fFigureTriplex_Line_configurationNameFigure);
-
-			fFigureTriplex_Line_configurationInsulation_thicknessFigure = new WrappingLabel();
-			fFigureTriplex_Line_configurationInsulation_thicknessFigure
-					.setText("<...>");
-
-			this.add(fFigureTriplex_Line_configurationInsulation_thicknessFigure);
-
-			fFigureTriplex_Line_configurationDiameterFigure = new WrappingLabel();
-			fFigureTriplex_Line_configurationDiameterFigure.setText("<...>");
-
-			this.add(fFigureTriplex_Line_configurationDiameterFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_Line_configurationNameFigure() {
-			return fFigureTriplex_Line_configurationNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_Line_configurationInsulation_thicknessFigure() {
-			return fFigureTriplex_Line_configurationInsulation_thicknessFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_Line_configurationDiameterFigure() {
-			return fFigureTriplex_Line_configurationDiameterFigure;
 		}
 
 	}

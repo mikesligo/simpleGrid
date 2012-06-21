@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -243,19 +242,6 @@ public class Triplex_meterEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTriplex_meterNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_meterPhasesFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_meterNormal_voltagesFigure;
-
-		/**
-		 * @generated
-		 */
 		public Triplex_meterFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -270,50 +256,6 @@ public class Triplex_meterEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_meter.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_meterNameFigure = new WrappingLabel();
-			fFigureTriplex_meterNameFigure.setText("<...>");
-
-			this.add(fFigureTriplex_meterNameFigure);
-
-			fFigureTriplex_meterPhasesFigure = new WrappingLabel();
-			fFigureTriplex_meterPhasesFigure.setText("<...>");
-
-			this.add(fFigureTriplex_meterPhasesFigure);
-
-			fFigureTriplex_meterNormal_voltagesFigure = new WrappingLabel();
-			fFigureTriplex_meterNormal_voltagesFigure.setText("<...>");
-
-			this.add(fFigureTriplex_meterNormal_voltagesFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_meterNameFigure() {
-			return fFigureTriplex_meterNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_meterPhasesFigure() {
-			return fFigureTriplex_meterPhasesFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_meterNormal_voltagesFigure() {
-			return fFigureTriplex_meterNormal_voltagesFigure;
 		}
 
 	}

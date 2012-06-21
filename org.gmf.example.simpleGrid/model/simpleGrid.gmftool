@@ -28,15 +28,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Triplex_Line_configurationTriplex_line_conductor"
-          description="Create new Triplex_Line_configurationTriplex_line_conductor">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Transformer_configuration"
           description="Create new Transformer_configuration">
         <smallIcon
@@ -55,26 +46,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="NodeTransformer"
-          description="Create new NodeTransformer">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Transformer"
           description="Create new Transformer">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="TransformerTriplex_node"
-          description="Create new TransformerTriplex_node">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -100,26 +73,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Triplex_meterHouse"
-          description="Create new Triplex_meterHouse">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="House"
           description="Create new House">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="HouseWaterheater"
-          description="Create new HouseWaterheater">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -138,42 +93,6 @@
           xsi:type="gmftool:CreationTool"
           title="Triplex_line"
           description="Create new Triplex_line">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Triplex_lineTriplex_line_configuration"
-          description="Create new Triplex_lineTriplex_line_configuration">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Triplex_lineTriplex_meter"
-          description="Create new Triplex_lineTriplex_meter">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Triplex_line_conductor"
-          description="Create new Triplex_line_conductor">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
-          title="Triplex_nodeTriplex_line"
-          description="Create new Triplex_nodeTriplex_line">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

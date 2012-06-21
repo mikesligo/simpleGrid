@@ -16,7 +16,6 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -210,47 +209,6 @@ public class Transformer_configurationEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTransformer_configurationNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationConnect_typeFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationInstall_typeFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationPower_ratingFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationImpedenceFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationImpedence1Figure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationImpedence2Figure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationShunt_impedenceFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationPrimary_voltageFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTransformer_configurationSecondary_voltageFigure;
-
-		/**
-		 * @generated
-		 */
 		public Transformer_configurationFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -265,137 +223,6 @@ public class Transformer_configurationEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTransformer_configurationNameFigure = new WrappingLabel();
-			fFigureTransformer_configurationNameFigure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationNameFigure);
-
-			fFigureTransformer_configurationConnect_typeFigure = new WrappingLabel();
-			fFigureTransformer_configurationConnect_typeFigure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationConnect_typeFigure);
-
-			fFigureTransformer_configurationInstall_typeFigure = new WrappingLabel();
-			fFigureTransformer_configurationInstall_typeFigure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationInstall_typeFigure);
-
-			fFigureTransformer_configurationPower_ratingFigure = new WrappingLabel();
-			fFigureTransformer_configurationPower_ratingFigure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationPower_ratingFigure);
-
-			fFigureTransformer_configurationImpedenceFigure = new WrappingLabel();
-			fFigureTransformer_configurationImpedenceFigure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationImpedenceFigure);
-
-			fFigureTransformer_configurationImpedence1Figure = new WrappingLabel();
-			fFigureTransformer_configurationImpedence1Figure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationImpedence1Figure);
-
-			fFigureTransformer_configurationImpedence2Figure = new WrappingLabel();
-			fFigureTransformer_configurationImpedence2Figure.setText("<...>");
-
-			this.add(fFigureTransformer_configurationImpedence2Figure);
-
-			fFigureTransformer_configurationShunt_impedenceFigure = new WrappingLabel();
-			fFigureTransformer_configurationShunt_impedenceFigure
-					.setText("<...>");
-
-			this.add(fFigureTransformer_configurationShunt_impedenceFigure);
-
-			fFigureTransformer_configurationPrimary_voltageFigure = new WrappingLabel();
-			fFigureTransformer_configurationPrimary_voltageFigure
-					.setText("<...>");
-
-			this.add(fFigureTransformer_configurationPrimary_voltageFigure);
-
-			fFigureTransformer_configurationSecondary_voltageFigure = new WrappingLabel();
-			fFigureTransformer_configurationSecondary_voltageFigure
-					.setText("<...>");
-
-			this.add(fFigureTransformer_configurationSecondary_voltageFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationNameFigure() {
-			return fFigureTransformer_configurationNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationConnect_typeFigure() {
-			return fFigureTransformer_configurationConnect_typeFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationInstall_typeFigure() {
-			return fFigureTransformer_configurationInstall_typeFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationPower_ratingFigure() {
-			return fFigureTransformer_configurationPower_ratingFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationImpedenceFigure() {
-			return fFigureTransformer_configurationImpedenceFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationImpedence1Figure() {
-			return fFigureTransformer_configurationImpedence1Figure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationImpedence2Figure() {
-			return fFigureTransformer_configurationImpedence2Figure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationShunt_impedenceFigure() {
-			return fFigureTransformer_configurationShunt_impedenceFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationPrimary_voltageFigure() {
-			return fFigureTransformer_configurationPrimary_voltageFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTransformer_configurationSecondary_voltageFigure() {
-			return fFigureTransformer_configurationSecondary_voltageFigure;
 		}
 
 	}

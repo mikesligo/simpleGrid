@@ -12,7 +12,6 @@ import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
@@ -185,19 +184,6 @@ public class ClimateEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureClimateNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureClimateTmyfileFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureClimateInterpolateFigure;
-
-		/**
-		 * @generated
-		 */
 		public ClimateFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -212,50 +198,6 @@ public class ClimateEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureClimateNameFigure = new WrappingLabel();
-			fFigureClimateNameFigure.setText("<...>");
-
-			this.add(fFigureClimateNameFigure);
-
-			fFigureClimateTmyfileFigure = new WrappingLabel();
-			fFigureClimateTmyfileFigure.setText("<...>");
-
-			this.add(fFigureClimateTmyfileFigure);
-
-			fFigureClimateInterpolateFigure = new WrappingLabel();
-			fFigureClimateInterpolateFigure.setText("<...>");
-
-			this.add(fFigureClimateInterpolateFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureClimateNameFigure() {
-			return fFigureClimateNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureClimateTmyfileFigure() {
-			return fFigureClimateTmyfileFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureClimateInterpolateFigure() {
-			return fFigureClimateInterpolateFigure;
 		}
 
 	}

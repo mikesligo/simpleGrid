@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -249,27 +248,6 @@ public class Triplex_lineEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTriplex_lineNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_lineLengthFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_linePhasesFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_lineFromFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureTriplex_lineToFigure;
-
-		/**
-		 * @generated
-		 */
 		public Triplex_lineFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -284,74 +262,6 @@ public class Triplex_lineEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureTriplex_lineNameFigure = new WrappingLabel();
-			fFigureTriplex_lineNameFigure.setText("<...>");
-
-			this.add(fFigureTriplex_lineNameFigure);
-
-			fFigureTriplex_lineLengthFigure = new WrappingLabel();
-			fFigureTriplex_lineLengthFigure.setText("<...>");
-
-			this.add(fFigureTriplex_lineLengthFigure);
-
-			fFigureTriplex_linePhasesFigure = new WrappingLabel();
-			fFigureTriplex_linePhasesFigure.setText("<...>");
-
-			this.add(fFigureTriplex_linePhasesFigure);
-
-			fFigureTriplex_lineFromFigure = new WrappingLabel();
-			fFigureTriplex_lineFromFigure.setText("<...>");
-
-			this.add(fFigureTriplex_lineFromFigure);
-
-			fFigureTriplex_lineToFigure = new WrappingLabel();
-			fFigureTriplex_lineToFigure.setText("<...>");
-
-			this.add(fFigureTriplex_lineToFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_lineNameFigure() {
-			return fFigureTriplex_lineNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_lineLengthFigure() {
-			return fFigureTriplex_lineLengthFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_linePhasesFigure() {
-			return fFigureTriplex_linePhasesFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_lineFromFigure() {
-			return fFigureTriplex_lineFromFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureTriplex_lineToFigure() {
-			return fFigureTriplex_lineToFigure;
 		}
 
 	}

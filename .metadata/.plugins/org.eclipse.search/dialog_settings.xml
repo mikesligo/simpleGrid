@@ -9,8 +9,8 @@
 	<section name="DialogBounds_SearchDialog">
 		<item value="597" key="DIALOG_WIDTH"/>
 		<item value="132" key="DIALOG_Y_ORIGIN"/>
-		<item value="478" key="DIALOG_HEIGHT"/>
 		<item value="412" key="DIALOG_X_ORIGIN"/>
+		<item value="478" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">
@@ -36,44 +36,11 @@
 		<item value="false" key="CASE_SENSITIVE"/>
 		<item value="false" key="REG_EX_SEARCH"/>
 		<item value="false" key="SEARCH_DERIVED"/>
-		<item value="6" key="HISTORY_SIZE"/>
-		<section name="HISTORY2">
-			<item value="false" key="isRegExSearch"/>
-			<item value="org.gmf.example.simpleGrid.figures.ClimateFigure" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
+		<item value="7" key="HISTORY_SIZE"/>
 		<section name="EXTENSIONS">
 			<item value="*" key="0"/>
 		</section>
-		<section name="HISTORY3">
-			<item value="false" key="isRegExSearch"/>
-			<item value="ClimateFigure" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY0">
-			<item value="false" key="isRegExSearch"/>
-			<item value="climatename" key="textPattern"/>
-			<item value="0" key="scope"/>
-			<item value="true" key="ignoreCase"/>
-			<list key="fileNamePatterns">
-				<item value="*"/>
-			</list>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY1">
+		<section name="HISTORY2">
 			<item value="false" key="isRegExSearch"/>
 			<item value="climatefigure" key="textPattern"/>
 			<item value="0" key="scope"/>
@@ -84,9 +51,42 @@
 			<list key="workingSets">
 			</list>
 		</section>
+		<section name="HISTORY3">
+			<item value="false" key="isRegExSearch"/>
+			<item value="org.gmf.example.simpleGrid.figures.ClimateFigure" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY0">
+			<item value="false" key="isRegExSearch"/>
+			<item value="config.svg" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item value="false" key="isRegExSearch"/>
+			<item value="climatename" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
 		<section name="HISTORY5">
 			<item value="false" key="isRegExSearch"/>
-			<item value="extends shape" key="textPattern"/>
+			<item value="shapenodeeditpart" key="textPattern"/>
 			<item value="0" key="scope"/>
 			<item value="true" key="ignoreCase"/>
 			<list key="fileNamePatterns">
@@ -97,7 +97,18 @@
 		</section>
 		<section name="HISTORY4">
 			<item value="false" key="isRegExSearch"/>
-			<item value="shapenodeeditpart" key="textPattern"/>
+			<item value="ClimateFigure" key="textPattern"/>
+			<item value="0" key="scope"/>
+			<item value="true" key="ignoreCase"/>
+			<list key="fileNamePatterns">
+				<item value="*"/>
+			</list>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY6">
+			<item value="false" key="isRegExSearch"/>
+			<item value="extends shape" key="textPattern"/>
 			<item value="0" key="scope"/>
 			<item value="true" key="ignoreCase"/>
 			<list key="fileNamePatterns">

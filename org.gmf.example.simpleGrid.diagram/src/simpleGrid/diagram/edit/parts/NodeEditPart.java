@@ -17,7 +17,6 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
-import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
@@ -222,31 +221,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureNodeNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodePhasesFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeBustypeFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeVoltage_CFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeVoltage_BFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureNodeVoltage_AFigure;
-
-		/**
-		 * @generated
-		 */
 		public NodeFigure() {
 
 			FlowLayout layoutThis = new FlowLayout();
@@ -261,86 +235,6 @@ public class NodeEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg");
-			createContents();
-		}
-
-		/**
-		 * @generated
-		 */
-		private void createContents() {
-
-			fFigureNodeNameFigure = new WrappingLabel();
-			fFigureNodeNameFigure.setText("<...>");
-
-			this.add(fFigureNodeNameFigure);
-
-			fFigureNodePhasesFigure = new WrappingLabel();
-			fFigureNodePhasesFigure.setText("<...>");
-
-			this.add(fFigureNodePhasesFigure);
-
-			fFigureNodeBustypeFigure = new WrappingLabel();
-			fFigureNodeBustypeFigure.setText("<...>");
-
-			this.add(fFigureNodeBustypeFigure);
-
-			fFigureNodeVoltage_CFigure = new WrappingLabel();
-			fFigureNodeVoltage_CFigure.setText("<...>");
-
-			this.add(fFigureNodeVoltage_CFigure);
-
-			fFigureNodeVoltage_BFigure = new WrappingLabel();
-			fFigureNodeVoltage_BFigure.setText("<...>");
-
-			this.add(fFigureNodeVoltage_BFigure);
-
-			fFigureNodeVoltage_AFigure = new WrappingLabel();
-			fFigureNodeVoltage_AFigure.setText("<...>");
-
-			this.add(fFigureNodeVoltage_AFigure);
-
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeNameFigure() {
-			return fFigureNodeNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodePhasesFigure() {
-			return fFigureNodePhasesFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeBustypeFigure() {
-			return fFigureNodeBustypeFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeVoltage_CFigure() {
-			return fFigureNodeVoltage_CFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeVoltage_BFigure() {
-			return fFigureNodeVoltage_BFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureNodeVoltage_AFigure() {
-			return fFigureNodeVoltage_AFigure;
 		}
 
 	}
