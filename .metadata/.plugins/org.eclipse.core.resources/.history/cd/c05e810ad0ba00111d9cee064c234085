@@ -1,0 +1,27 @@
+package simpleGrid.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		simpleGrid.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+simpleGrid.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+simpleGrid.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+simpleGrid.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+simpleGrid.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

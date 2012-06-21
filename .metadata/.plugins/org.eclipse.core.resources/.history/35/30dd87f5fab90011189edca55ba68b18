@@ -1,0 +1,22 @@
+	package simpleGrid.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class Triplex_lineFromItemSemanticEditPolicy extends simpleGrid.diagram.edit.policies.SimpleGridBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public Triplex_lineFromItemSemanticEditPolicy() {
+				super(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req));
+	}
+		
+	}

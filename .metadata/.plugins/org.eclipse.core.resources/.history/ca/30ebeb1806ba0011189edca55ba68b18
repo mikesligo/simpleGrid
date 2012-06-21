@@ -1,0 +1,99 @@
+	package simpleGrid.diagram.part;
+
+	/**
+ * @generated
+ */
+public class SimpleGridDiagramEditor  extends org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocumentEditor {
+
+		/**
+ * @generated
+ */
+public static final String ID = "simpleGrid.diagram.part.SimpleGridDiagramEditorID";  //$NON-NLS-1$
+	
+	/**
+ * @generated
+ */
+public static final String CONTEXT_ID = "simpleGrid.diagram.ui.diagramContext";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+public SimpleGridDiagramEditor() {
+	super(true);
+}
+	
+		/**
+ * @generated
+ */
+protected String getContextID() {
+	return CONTEXT_ID;
+}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.palette.PaletteRoot createPaletteRoot(org.eclipse.gef.palette.PaletteRoot existingPaletteRoot) {
+	org.eclipse.gef.palette.PaletteRoot root = super.createPaletteRoot(existingPaletteRoot);
+	new simpleGrid.diagram.part.SimpleGridPaletteFactory().fillPalette(root);
+	return root;
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferencesHint() {
+	return simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+}
+	
+		/**
+ * @generated
+ */
+public String getContributorId() {
+	return simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.ID;
+}
+		
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider getDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		return simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.getInstance().getDocumentProvider();
+	}
+	return super.getDocumentProvider(input);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.transaction.TransactionalEditingDomain getEditingDomain() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument document = getEditorInput() != null ? getDocumentProvider().getDocument(getEditorInput()) : null;
+	if (document instanceof org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) {
+		return ((org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) document).getEditingDomain();
+	}
+	return super.getEditingDomain();
+}
+	
+		/**
+ * @generated
+ */
+protected void setDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		setDocumentProvider(simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.getInstance().getDocumentProvider());
+	} else {
+		super.setDocumentProvider(input);
+	}
+}
+	
+		/**
+ * @generated
+ */
+	protected void configureGraphicalViewer() {
+		super.configureGraphicalViewer();
+		simpleGrid.diagram.part.DiagramEditorContextMenuProvider provider =
+				new simpleGrid.diagram.part.DiagramEditorContextMenuProvider(this, getDiagramGraphicalViewer());
+		getDiagramGraphicalViewer().setContextMenu(provider);
+		getSite().registerContextMenu(org.eclipse.gmf.runtime.diagram.ui.actions.ActionIds.DIAGRAM_EDITOR_CONTEXT_MENU, provider, getDiagramGraphicalViewer());
+	}
+
+	
+	}

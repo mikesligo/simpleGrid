@@ -1,0 +1,272 @@
+package simpleGrid.diagram.providers;
+
+/**
+ * @generated
+ */
+public class SimpleGridParserProvider extends org.eclipse.gmf.runtime.common.core.service.AbstractProvider implements org.eclipse.gmf.runtime.common.ui.services.parser.IParserProvider {
+	
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser nodeName_5010Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getNodeName_5010Parser() {
+		if (nodeName_5010Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getNode_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								nodeName_5010Parser = parser;
+		}
+		return nodeName_5010Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser triplex_meterName_5005Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTriplex_meterName_5005Parser() {
+		if (triplex_meterName_5005Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_meter_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								triplex_meterName_5005Parser = parser;
+		}
+		return triplex_meterName_5005Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser transformerName_5009Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTransformerName_5009Parser() {
+		if (transformerName_5009Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTransformer_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								transformerName_5009Parser = parser;
+		}
+		return transformerName_5009Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser triplex_nodeName_5002Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTriplex_nodeName_5002Parser() {
+		if (triplex_nodeName_5002Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_node_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								triplex_nodeName_5002Parser = parser;
+		}
+		return triplex_nodeName_5002Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser triplex_Line_configurationName_5001Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTriplex_Line_configurationName_5001Parser() {
+		if (triplex_Line_configurationName_5001Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_Line_configuration_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								triplex_Line_configurationName_5001Parser = parser;
+		}
+		return triplex_Line_configurationName_5001Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser waterheaterName_5003Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getWaterheaterName_5003Parser() {
+		if (waterheaterName_5003Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getWaterheater_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								waterheaterName_5003Parser = parser;
+		}
+		return waterheaterName_5003Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser climateName_5008Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getClimateName_5008Parser() {
+		if (climateName_5008Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getClimate_Name()
+			};
+					org.eclipse.emf.ecore.EAttribute[] editableFeatures = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getClimate_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features, editableFeatures);
+								climateName_5008Parser = parser;
+		}
+		return climateName_5008Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser triplex_lineName_5006Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTriplex_lineName_5006Parser() {
+		if (triplex_lineName_5006Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_line_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								triplex_lineName_5006Parser = parser;
+		}
+		return triplex_lineName_5006Parser;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser transformer_configurationName_5004Parser;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.common.ui.services.parser.IParser getTransformer_configurationName_5004Parser() {
+		if (transformer_configurationName_5004Parser == null) {
+			org.eclipse.emf.ecore.EAttribute[] features = new org.eclipse.emf.ecore.EAttribute[] {
+				simpleGrid.SimpleGridPackage.eINSTANCE.getTransformer_configuration_Name()
+			};
+				simpleGrid.diagram.parsers.MessageFormatParser parser = new simpleGrid.diagram.parsers.MessageFormatParser(features);
+								transformer_configurationName_5004Parser = parser;
+		}
+		return transformer_configurationName_5004Parser;
+	}
+
+	
+	
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(int visualID) {
+		switch (visualID) {
+			case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID: return getNodeName_5010Parser();
+	case simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID: return getTriplex_meterName_5005Parser();
+	case simpleGrid.diagram.edit.parts.TransformerNameEditPart.VISUAL_ID: return getTransformerName_5009Parser();
+	case simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID: return getTriplex_nodeName_5002Parser();
+	case simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID: return getTriplex_Line_configurationName_5001Parser();
+	case simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID: return getWaterheaterName_5003Parser();
+	case simpleGrid.diagram.edit.parts.ClimateNameEditPart.VISUAL_ID: return getClimateName_5008Parser();
+	case simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID: return getTriplex_lineName_5006Parser();
+	case simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID: return getTransformer_configurationName_5004Parser();
+						}
+		return null;
+	}
+		/**
+ * Utility method that consults ParserService
+ * @generated
+ */
+	public static org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(org.eclipse.gmf.runtime.emf.type.core.IElementType type, org.eclipse.emf.ecore.EObject object, String parserHint) {
+		return org.eclipse.gmf.runtime.common.ui.services.parser.ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
+	}
+		/**
+ * @generated
+ */
+	public org.eclipse.gmf.runtime.common.ui.services.parser.IParser getParser(
+			org.eclipse.core.runtime.IAdaptable hint) {
+		String vid = (String) hint.getAdapter(String.class);
+		if (vid != null) {
+			return getParser(simpleGrid.diagram.part.SimpleGridVisualIDRegistry.getVisualID(vid));
+		}
+		org.eclipse.gmf.runtime.notation.View view =
+				(org.eclipse.gmf.runtime.notation.View) hint.getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+		if (view != null) {
+			return getParser(simpleGrid.diagram.part.SimpleGridVisualIDRegistry.getVisualID(view));
+		}
+		return null;
+	}
+
+		/**
+ * @generated
+ */
+	public boolean provides(org.eclipse.gmf.runtime.common.core.service.IOperation operation) {
+		if (operation instanceof org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) {
+			org.eclipse.core.runtime.IAdaptable hint =
+					((org.eclipse.gmf.runtime.common.ui.services.parser.GetParserOperation) operation).getHint();
+			if (simpleGrid.diagram.providers.SimpleGridElementTypes.getElement(hint) == null) {
+				return false;
+			}
+			return getParser(hint) != null;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	private static class HintAdapter extends org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter {
+
+		/**
+ * @generated
+ */
+		private final org.eclipse.gmf.runtime.emf.type.core.IElementType elementType;
+
+		/**
+ * @generated
+ */
+		public HintAdapter(org.eclipse.gmf.runtime.emf.type.core.IElementType type,
+				org.eclipse.emf.ecore.EObject object, String parserHint) {
+			super(object, parserHint);
+			assert type != null;
+			elementType = type;
+		}
+
+		/**
+ * @generated
+ */
+		public Object getAdapter(Class adapter) {
+			if (org.eclipse.gmf.runtime.emf.type.core.IElementType.class.equals(adapter)) {
+				return elementType;
+			}
+			return super.getAdapter(adapter);
+		}
+	}
+
+	}

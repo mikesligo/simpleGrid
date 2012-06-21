@@ -1,0 +1,655 @@
+package simpleGrid.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class HouseEditPart extends org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart  {
+
+			/**
+ * @generated
+ */
+	public static final int VISUAL_ID = 2011;
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure contentPane;
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure primaryShape;
+	
+		/**
+ * @generated
+ */
+	public HouseEditPart(org.eclipse.gmf.runtime.notation.View view) {
+		super(view);
+	}
+	
+		/**
+ * @generated
+ */
+	protected void createDefaultEditPolicies() {
+				super.createDefaultEditPolicies();
+			installEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.SEMANTIC_ROLE, new simpleGrid.diagram.edit.policies.HouseItemSemanticEditPolicy());
+						installEditPolicy(org.eclipse.gef.EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
+			// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
+	// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
+	}
+	
+		/**
+ * @generated
+ */
+	protected org.eclipse.gef.editpolicies.LayoutEditPolicy createLayoutEditPolicy() {
+			
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy() {
+			
+			protected org.eclipse.gef.commands.Command createAddCommand(org.eclipse.gef.EditPart child, org.eclipse.gef.EditPart after) {
+				return null;
+			}
+
+			protected org.eclipse.gef.commands.Command createMoveChildCommand(org.eclipse.gef.EditPart child, org.eclipse.gef.EditPart after) {
+				return null;
+			}
+
+			protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gef.requests.CreateRequest request) {
+				return null;
+			}
+		};
+		return lep;
+		}
+	
+		/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure createNodeShape() {
+		return primaryShape = new HouseFigure();
+	}
+
+		/**
+ * @generated
+ */
+	public HouseFigure getPrimaryShape() {
+		return (HouseFigure) primaryShape;
+	}
+	
+		/**
+ * @generated
+ */
+	protected boolean addFixedChild(org.eclipse.gef.EditPart childEditPart) {
+		if (childEditPart instanceof simpleGrid.diagram.edit.parts.HouseNameEditPart) {
+			((simpleGrid.diagram.edit.parts.HouseNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureHouseNameFigure());
+			return true;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	protected boolean removeFixedChild(org.eclipse.gef.EditPart childEditPart) {
+		if (childEditPart instanceof simpleGrid.diagram.edit.parts.HouseNameEditPart) {
+			return true;
+		}
+		return false;
+	}
+
+		/**
+ * @generated
+ */
+	protected void addChildVisual(org.eclipse.gef.EditPart childEditPart, int index) {
+		if (addFixedChild(childEditPart)) {
+			return;
+		}
+		super.addChildVisual(childEditPart, -1);
+	}
+
+		/**
+ * @generated
+ */
+	protected void removeChildVisual(org.eclipse.gef.EditPart childEditPart) {
+		if (removeFixedChild(childEditPart)){
+			return;
+		}
+		super.removeChildVisual(childEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure getContentPaneFor(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart editPart) {
+				return getContentPane();
+	}
+
+			
+		/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodePlate() {
+		org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure result = new org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure(40, 40);
+				return result;
+	}
+	
+						
+		/**
+ * Creates figure for this edit part.
+ * 
+ * Body of this method does not depend on settings in generation model
+ * so you may safely remove <i>generated</i> tag and modify it.
+ * 
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure createNodeFigure() {
+		org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure figure = createNodePlate();
+		figure.setLayoutManager(new org.eclipse.draw2d.StackLayout());
+		org.eclipse.draw2d.IFigure shape = createNodeShape();
+		figure.add(shape);
+		contentPane = setupContentPane(shape);
+		return figure;
+	}
+	
+		/**
+ * Default implementation treats passed figure as content pane.
+ * Respects layout one may have set for generated figure.
+ * @param nodeShape instance of generated figure class
+ * @generated
+ */
+	protected org.eclipse.draw2d.IFigure setupContentPane(org.eclipse.draw2d.IFigure nodeShape) {
+					if (nodeShape.getLayoutManager() == null) {
+									org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout layout =new org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout();
+					layout.setSpacing(5);
+					nodeShape.setLayoutManager(layout);
+							}
+				return nodeShape; // use nodeShape itself as contentPane
+	}
+	
+		/**
+ * @generated
+ */
+	public org.eclipse.draw2d.IFigure getContentPane() {
+		if (contentPane != null) {
+			return contentPane;
+		}
+		return super.getContentPane();
+	}
+
+		/**
+ * @generated
+ */
+	protected void setForegroundColor(org.eclipse.swt.graphics.Color color) {
+		if (primaryShape != null) {
+			primaryShape.setForegroundColor(color);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setBackgroundColor(org.eclipse.swt.graphics.Color color) {
+		if (primaryShape != null) {
+			primaryShape.setBackgroundColor(color);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setLineWidth(int width) {
+		if (primaryShape instanceof org.eclipse.draw2d.Shape) {
+			((org.eclipse.draw2d.Shape) primaryShape).setLineWidth(width);
+		}
+	}
+
+		/**
+ * @generated
+ */
+	protected void setLineType(int style) {
+		if (primaryShape instanceof org.eclipse.draw2d.Shape) {
+			((org.eclipse.draw2d.Shape) primaryShape).setLineStyle(style);
+		}
+	}
+
+				/**
+ * @generated
+ */
+		public org.eclipse.gef.EditPart getPrimaryChildEditPart() {
+			return getChildBySemanticHint(simpleGrid.diagram.part.SimpleGridVisualIDRegistry.getType(simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID));
+		}
+	
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getMARelTypesOnSource() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getMARelTypesOnSourceAndTarget(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart) {
+		java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+							if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017);
+		}
+										if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+					if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+		}
+							return types;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getMATypesForTarget(org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
+					}
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getMARelTypesOnTarget() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(9);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meterHouse_4001);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
+				types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getMATypesForSource(org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.LinkedList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meterHouse_4001) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
+					}
+		 else 		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
+						types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
+					}
+				return types;
+	}
+
+
+		
+	
+	
+	
+/**
+ * @generated
+ */
+public class HouseFigure extends org.eclipse.draw2d.RectangleFigure {
+
+
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseNameFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseSchedule_skewFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseAir_temperatureFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseFloor_areaFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseCooling_setpointFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseHeating_setpointFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseThermal_integrity_levelFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseMotor_modelFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseMotor_efficiencyFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseMass_temperatureFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseHeating_system_typeFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseHeating_COPFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseAuxiliary_strategyFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseAuxiliary_system_typeFigure; 
+	/**
+	 * @generated
+	 */
+	private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureHouseCooling_COPFigure; 
+
+
+	/**
+	 * @generated
+	 */
+	public HouseFigure() {
+		
+	org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();
+	layoutThis.setStretchMinorAxis(false);
+	layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP
+);
+
+	layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP
+);
+	layoutThis.setMajorSpacing(5);
+	layoutThis.setMinorSpacing(5);
+	layoutThis.setHorizontal(true);
+
+	this.setLayoutManager(layoutThis);
+
+				createContents();
+	}
+	/**
+	 * @generated
+	 */
+	private void createContents(){
+
+
+fFigureHouseNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseNameFigure.setText("<...>");
+
+this.add(fFigureHouseNameFigure);
+
+
+
+fFigureHouseSchedule_skewFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseSchedule_skewFigure.setText("<...>");
+
+this.add(fFigureHouseSchedule_skewFigure);
+
+
+
+fFigureHouseAir_temperatureFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseAir_temperatureFigure.setText("<...>");
+
+this.add(fFigureHouseAir_temperatureFigure);
+
+
+
+fFigureHouseFloor_areaFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseFloor_areaFigure.setText("<...>");
+
+this.add(fFigureHouseFloor_areaFigure);
+
+
+
+fFigureHouseCooling_setpointFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseCooling_setpointFigure.setText("<...>");
+
+this.add(fFigureHouseCooling_setpointFigure);
+
+
+
+fFigureHouseHeating_setpointFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseHeating_setpointFigure.setText("<...>");
+
+this.add(fFigureHouseHeating_setpointFigure);
+
+
+
+fFigureHouseThermal_integrity_levelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseThermal_integrity_levelFigure.setText("<...>");
+
+this.add(fFigureHouseThermal_integrity_levelFigure);
+
+
+
+fFigureHouseMotor_modelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseMotor_modelFigure.setText("<...>");
+
+this.add(fFigureHouseMotor_modelFigure);
+
+
+
+fFigureHouseMotor_efficiencyFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseMotor_efficiencyFigure.setText("<...>");
+
+this.add(fFigureHouseMotor_efficiencyFigure);
+
+
+
+fFigureHouseMass_temperatureFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseMass_temperatureFigure.setText("<...>");
+
+this.add(fFigureHouseMass_temperatureFigure);
+
+
+
+fFigureHouseHeating_system_typeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseHeating_system_typeFigure.setText("<...>");
+
+this.add(fFigureHouseHeating_system_typeFigure);
+
+
+
+fFigureHouseHeating_COPFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseHeating_COPFigure.setText("<...>");
+
+this.add(fFigureHouseHeating_COPFigure);
+
+
+
+fFigureHouseAuxiliary_strategyFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseAuxiliary_strategyFigure.setText("<...>");
+
+this.add(fFigureHouseAuxiliary_strategyFigure);
+
+
+
+fFigureHouseAuxiliary_system_typeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseAuxiliary_system_typeFigure.setText("<...>");
+
+this.add(fFigureHouseAuxiliary_system_typeFigure);
+
+
+
+fFigureHouseCooling_COPFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();
+fFigureHouseCooling_COPFigure.setText("<...>");
+
+this.add(fFigureHouseCooling_COPFigure);
+
+
+	}
+
+
+
+
+
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseNameFigure() {
+		return fFigureHouseNameFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseSchedule_skewFigure() {
+		return fFigureHouseSchedule_skewFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseAir_temperatureFigure() {
+		return fFigureHouseAir_temperatureFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseFloor_areaFigure() {
+		return fFigureHouseFloor_areaFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseCooling_setpointFigure() {
+		return fFigureHouseCooling_setpointFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseHeating_setpointFigure() {
+		return fFigureHouseHeating_setpointFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseThermal_integrity_levelFigure() {
+		return fFigureHouseThermal_integrity_levelFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseMotor_modelFigure() {
+		return fFigureHouseMotor_modelFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseMotor_efficiencyFigure() {
+		return fFigureHouseMotor_efficiencyFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseMass_temperatureFigure() {
+		return fFigureHouseMass_temperatureFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseHeating_system_typeFigure() {
+		return fFigureHouseHeating_system_typeFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseHeating_COPFigure() {
+		return fFigureHouseHeating_COPFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseAuxiliary_strategyFigure() {
+		return fFigureHouseAuxiliary_strategyFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseAuxiliary_system_typeFigure() {
+		return fFigureHouseAuxiliary_system_typeFigure;
+	}
+	/**
+	 * @generated
+	 */
+	public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureHouseCooling_COPFigure() {
+		return fFigureHouseCooling_COPFigure;
+	}
+
+
+}
+
+
+	
+	}

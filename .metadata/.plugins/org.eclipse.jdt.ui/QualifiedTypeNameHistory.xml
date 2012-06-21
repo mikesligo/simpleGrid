@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.eclipse.draw2d.Graphics"/>
+<fullyQualifiedTypeName name="org.eclipse.gmf.runtime.draw2d.ui.render.factory.RenderedImageFactory"/>
+<fullyQualifiedTypeName name="org.eclipse.gmf.runtime.draw2d.ui.render.figures.ScalableImageFigure"/>
+<fullyQualifiedTypeName name="org.eclipse.gmf.runtime.lite.svg.SVGFigure"/>
+</qualifiedTypeNameHistroy>

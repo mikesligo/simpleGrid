@@ -1,0 +1,256 @@
+package simpleGrid.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class SimpleGridEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+	/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry.getVisualID(view)) {
+				
+	case simpleGrid.diagram.edit.parts.GridEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.GridEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.NodeEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.NodeNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.NodeNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_meterEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_meterNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.TransformerNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_nodeEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_nodeNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.WaterheaterEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.WaterheaterNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.WaterheaterNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.HouseEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.HouseNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.HouseNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.ClimateEditPart(view);
+														
+	case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart(view);
+														
+	case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineNameEditPart(view);
+									
+	case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Transformer_configurationEditPart(view);
+					
+	case simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Transformer_configurationNameEditPart(view);
+																	
+	case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineToEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerFromEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.NodeTransformerEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.HouseParentEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart(view);
+					
+									
+	case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
+		return new simpleGrid.diagram.edit.parts.TransformerToEditPart(view);
+					
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+
+	/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+
+	/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+        if (source.getFigure() instanceof org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel)
+            return new TextCellEditorLocator((org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel) source.getFigure());
+        else {
+            return new LabelCellEditorLocator((org.eclipse.draw2d.Label) source.getFigure());
+        }
+    }
+
+	/**
+ * @generated
+ */
+	static private class TextCellEditorLocator implements org.eclipse.gef.tools.CellEditorLocator {
+
+		/**
+ * @generated
+ */
+		private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel wrapLabel;
+
+		/**
+ * @generated
+ */
+		public TextCellEditorLocator(org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel wrapLabel) {
+			this.wrapLabel = wrapLabel;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getWrapLabel() {
+			return wrapLabel;
+		}
+
+		/**
+ * @generated
+ */
+		public void relocate(org.eclipse.jface.viewers.CellEditor celleditor) {
+			org.eclipse.swt.widgets.Text text = (org.eclipse.swt.widgets.Text) celleditor.getControl();
+			org.eclipse.draw2d.geometry.Rectangle rect = getWrapLabel().getTextBounds().getCopy();
+			getWrapLabel().translateToAbsolute(rect);
+			if (!text.getFont().isDisposed()) {
+				if (getWrapLabel().isTextWrapOn() && getWrapLabel().getText().length() > 0) {
+					rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(rect.width, org.eclipse.swt.SWT.DEFAULT)));
+				} else {
+					int avr = org.eclipse.draw2d.FigureUtilities.getFontMetrics(text.getFont()).getAverageCharWidth();
+					rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(org.eclipse.swt.SWT.DEFAULT, org.eclipse.swt.SWT.DEFAULT)).expand(avr * 2, 0));
+				}
+			}
+			if (!rect.equals(new org.eclipse.draw2d.geometry.Rectangle(text.getBounds()))) {
+				text.setBounds(rect.x, rect.y, rect.width, rect.height);
+			}
+		}
+	}
+
+	/**
+ * @generated
+ */
+	private static class LabelCellEditorLocator implements org.eclipse.gef.tools.CellEditorLocator {
+
+		/**
+ * @generated
+ */
+		private org.eclipse.draw2d.Label label;
+
+		/**
+ * @generated
+ */
+		public LabelCellEditorLocator(org.eclipse.draw2d.Label label) {
+			this.label = label;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.draw2d.Label getLabel() {
+			return label;
+		}
+
+		/**
+ * @generated
+ */
+		public void relocate(org.eclipse.jface.viewers.CellEditor celleditor) {
+			org.eclipse.swt.widgets.Text text = (org.eclipse.swt.widgets.Text) celleditor.getControl();
+			org.eclipse.draw2d.geometry.Rectangle rect = getLabel().getTextBounds().getCopy();
+			getLabel().translateToAbsolute(rect);
+			if (!text.getFont().isDisposed()) {
+				int avr = org.eclipse.draw2d.FigureUtilities.getFontMetrics(text.getFont()).getAverageCharWidth();
+				rect.setSize(new org.eclipse.draw2d.geometry.Dimension(text.computeSize(org.eclipse.swt.SWT.DEFAULT, org.eclipse.swt.SWT.DEFAULT)).expand(avr * 2, 0));
+			}
+			if (!rect.equals(new org.eclipse.draw2d.geometry.Rectangle(text.getBounds()))) {
+				text.setBounds(rect.x, rect.y, rect.width, rect.height);
+			}
+		}
+	}
+}
