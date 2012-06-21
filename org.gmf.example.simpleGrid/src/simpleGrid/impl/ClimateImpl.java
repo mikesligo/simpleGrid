@@ -6,6 +6,8 @@
  */
 package simpleGrid.impl;
 
+import http.Property;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

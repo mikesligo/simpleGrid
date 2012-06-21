@@ -6,6 +6,9 @@
  */
 package simpleGrid.impl;
 
+import http.Property;
+
+import java.io.IOException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -387,6 +390,7 @@ public class HouseImpl extends EObjectImpl implements House {
 	 */
 	protected EList<Waterheater> waterheater;
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -412,6 +416,34 @@ public class HouseImpl extends EObjectImpl implements House {
 	 * @generated
 	 */
 	public String getName() {
+		if (name != null){
+			System.out.println("getName called, name is " + name);
+			Property prop = null;
+			String val = null;
+			try {
+				val = prop.getValueOfProperty(name, "air_temperature");
+			} catch (IOException e) {
+				System.out.println("Name is " + name);
+				e.printStackTrace();
+			}
+			//this.setAir_temperature(Double.parseDouble(val));
+			/*floor_area
+			cooling_setpoint
+			heating_setpoint
+			thermal_integrity_level
+			motor_model
+			motor_efficiency 
+			air_temperature
+			mass_temperature 
+			heating_system_type 
+			heating_COP
+			auxiliary_strategy
+			auxiliary_system_type
+			aux_heat_temperature_lockout
+			cooling_system_type
+			cooling_COP*/
+
+		}
 		return name;
 	}
 
@@ -421,6 +453,7 @@ public class HouseImpl extends EObjectImpl implements House {
 	 * @generated
 	 */
 	public void setName(String newName) {
+		System.out.println("setName called");
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
