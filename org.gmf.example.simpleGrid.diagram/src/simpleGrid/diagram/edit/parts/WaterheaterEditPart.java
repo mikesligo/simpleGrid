@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
-import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
-import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -68,18 +68,15 @@ public class WaterheaterEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
-			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
-				if (result == null) {
-					result = new NonResizableEditPolicy();
-				}
-				return result;
+		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+
+			protected Command createAddCommand(EditPart child, EditPart after) {
+				return null;
 			}
 
-			protected Command getMoveChildrenCommand(Request request) {
+			protected Command createMoveChildCommand(EditPart child,
+					EditPart after) {
 				return null;
 			}
 
@@ -188,89 +185,9 @@ public class WaterheaterEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMARelTypesOnSourceAndTarget(
-			IGraphicalEditPart targetEditPart) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		return types;
 	}
 
@@ -279,24 +196,8 @@ public class WaterheaterEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017) {
+		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseWaterheater_4017) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
 		}
 		return types;
 	}
@@ -309,8 +210,189 @@ public class WaterheaterEditPart extends ShapeNodeEditPart {
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureWaterheaterNameFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterTank_volumeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterTank_setpointFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterTemperatureFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterThermostat_deadbandFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterLocationFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterTank_UAFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterSchedule_skewFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterDemand_skewFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureWaterheaterHeating_element_capacityFigure;
+
+		/**
+		 * @generated
+		 */
 		public WaterheaterFigure() {
+
+			FlowLayout layoutThis = new FlowLayout();
+			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+
+			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMajorSpacing(5);
+			layoutThis.setMinorSpacing(5);
+			layoutThis.setHorizontal(true);
+
+			this.setLayoutManager(layoutThis);
+
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureWaterheaterNameFigure = new WrappingLabel();
+			fFigureWaterheaterNameFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterNameFigure);
+
+			fFigureWaterheaterTank_volumeFigure = new WrappingLabel();
+			fFigureWaterheaterTank_volumeFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterTank_volumeFigure);
+
+			fFigureWaterheaterTank_setpointFigure = new WrappingLabel();
+			fFigureWaterheaterTank_setpointFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterTank_setpointFigure);
+
+			fFigureWaterheaterTemperatureFigure = new WrappingLabel();
+			fFigureWaterheaterTemperatureFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterTemperatureFigure);
+
+			fFigureWaterheaterThermostat_deadbandFigure = new WrappingLabel();
+			fFigureWaterheaterThermostat_deadbandFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterThermostat_deadbandFigure);
+
+			fFigureWaterheaterLocationFigure = new WrappingLabel();
+			fFigureWaterheaterLocationFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterLocationFigure);
+
+			fFigureWaterheaterTank_UAFigure = new WrappingLabel();
+			fFigureWaterheaterTank_UAFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterTank_UAFigure);
+
+			fFigureWaterheaterSchedule_skewFigure = new WrappingLabel();
+			fFigureWaterheaterSchedule_skewFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterSchedule_skewFigure);
+
+			fFigureWaterheaterDemand_skewFigure = new WrappingLabel();
+			fFigureWaterheaterDemand_skewFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterDemand_skewFigure);
+
+			fFigureWaterheaterHeating_element_capacityFigure = new WrappingLabel();
+			fFigureWaterheaterHeating_element_capacityFigure.setText("<...>");
+
+			this.add(fFigureWaterheaterHeating_element_capacityFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterNameFigure() {
+			return fFigureWaterheaterNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterTank_volumeFigure() {
+			return fFigureWaterheaterTank_volumeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterTank_setpointFigure() {
+			return fFigureWaterheaterTank_setpointFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterTemperatureFigure() {
+			return fFigureWaterheaterTemperatureFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterThermostat_deadbandFigure() {
+			return fFigureWaterheaterThermostat_deadbandFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterLocationFigure() {
+			return fFigureWaterheaterLocationFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterTank_UAFigure() {
+			return fFigureWaterheaterTank_UAFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterSchedule_skewFigure() {
+			return fFigureWaterheaterSchedule_skewFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterDemand_skewFigure() {
+			return fFigureWaterheaterDemand_skewFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureWaterheaterHeating_element_capacityFigure() {
+			return fFigureWaterheaterHeating_element_capacityFigure;
 		}
 
 	}

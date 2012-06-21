@@ -87,7 +87,7 @@ public class Triplex_line_conductorItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -109,7 +109,7 @@ public class Triplex_line_conductorItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -133,8 +133,10 @@ public class Triplex_line_conductorItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Triplex_line_conductor triplex_line_conductor = (Triplex_line_conductor)object;
-		return getString("_UI_Triplex_line_conductor_type") + " " + triplex_line_conductor.getResistance();
+		String label = ((Triplex_line_conductor)object).getResistance();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Triplex_line_conductor_type") :
+			getString("_UI_Triplex_line_conductor_type") + " " + label;
 	}
 
 	/**

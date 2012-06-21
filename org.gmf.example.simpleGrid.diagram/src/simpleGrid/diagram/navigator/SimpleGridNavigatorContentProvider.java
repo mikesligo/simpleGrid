@@ -212,215 +212,33 @@ public class SimpleGridNavigatorContentProvider implements
 		switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 				.getVisualID(view)) {
 
-		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_meter_4007_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_meter_4007_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_House_2011_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_House_2011_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
+			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
+							.getType(simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
+							.getType(simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_HouseParent_4002_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_HouseParent_4002_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTo_4015_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTo_4015_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			return result.toArray();
 		}
@@ -456,262 +274,26 @@ public class SimpleGridNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Waterheater_2003_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Waterheater_2003_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_2006_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_2006_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_WaterheaterHeating_element_capacity_4010_target,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_WaterheaterHeating_element_capacity_4010_source,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
 			connectedViews = getLinksSourceByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -723,165 +305,76 @@ public class SimpleGridNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
 			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_House_2011_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_House_2011_outgoinglinks,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Node_2007_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
 			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
 
-		case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_2010_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_2010_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeFrom_4004_target,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTriplex_line_4005_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeFrom_4004_source,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTriplex_line_4005_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksSourceByType(
@@ -899,93 +392,21 @@ public class SimpleGridNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTo_4012_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTo_4012_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_configuration_2004_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
+			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
+							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			return result.toArray();
 		}
@@ -1000,19 +421,13 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
@@ -1024,7 +439,19 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
@@ -1036,13 +463,7 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			result.addAll(createNavigatorItems(connectedViews, parentElement,
-					false));
-			connectedViews = getChildrenByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
@@ -1060,38 +481,13 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
@@ -1101,12 +497,22 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
@@ -1121,35 +527,78 @@ public class SimpleGridNavigatorContentProvider implements
 			connectedViews = getDiagramLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_2006_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_2006_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTriplex_node_4013_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTriplex_node_4013_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
 			}
 			return result.toArray();
 		}
@@ -1188,504 +637,30 @@ public class SimpleGridNavigatorContentProvider implements
 		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
 			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_Line_configuration_2001_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
 					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_Line_configuration_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_Line_configuration_2001_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
+			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
+							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
 					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
 			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_conductor_2008_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_meter_2005_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_meter_2005_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_configuration_2004_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineFrom_4003_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineFrom_4003_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTriplex_line_4005_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTriplex_line_4005_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_node_2002_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_node_2002_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
@@ -1710,37 +685,6 @@ public class SimpleGridNavigatorContentProvider implements
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTransformer_configuration_4006_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTransformer_configuration_4006_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			if (!target.isEmpty()) {
@@ -1783,477 +727,164 @@ public class SimpleGridNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerFrom_4016_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerFrom_4016_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTo_4009_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_nodeTo_4009_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID: {
+		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID: {
 			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
 			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Climate_2009_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTriplex_node_4013_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTriplex_node_4013_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Node_2007_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Node_2007_outgoinglinks,
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_node_2002_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_node_2002_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
 			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
+							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
 					outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			if (!outgoinglinks.isEmpty()) {
-				result.add(outgoinglinks);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Edge sv = (Edge) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_target,
-					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_line_configuration_4011_source,
-					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getLinksTargetByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
-			target.addChildren(createNavigatorItems(connectedViews, target,
-					true));
-			connectedViews = getLinksSourceByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
-			source.addChildren(createNavigatorItems(connectedViews, source,
-					true));
-			if (!target.isEmpty()) {
-				result.add(target);
-			}
-			if (!source.isEmpty()) {
-				result.add(source);
-			}
-			return result.toArray();
-		}
-
-		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID: {
-			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_2010_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
-					simpleGrid.diagram.part.Messages.NavigatorGroupName_Transformer_2010_outgoinglinks,
-					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
 					Collections.singleton(sv),
 					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 							.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews,
 					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getIncomingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews,
-					incominglinks, true));
-			connectedViews = getOutgoingLinksByType(
-					Collections.singleton(sv),
-					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-							.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
-			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
-					outgoinglinks, true));
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
 			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup outgoinglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_meter_2005_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_meter_2005_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
+			}
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_meter_4007_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_lineTriplex_meter_4007_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup target = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTransformer_configuration_4006_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup source = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_TransformerTransformer_configuration_4006_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Waterheater_2003_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
+		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID: {
+			LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem> result = new LinkedList<simpleGrid.diagram.navigator.SimpleGridAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			simpleGrid.diagram.navigator.SimpleGridNavigatorGroup incominglinks = new simpleGrid.diagram.navigator.SimpleGridNavigatorGroup(
+					simpleGrid.diagram.part.Messages.NavigatorGroupName_Triplex_line_conductor_2008_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+							.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			return result.toArray();
 		}

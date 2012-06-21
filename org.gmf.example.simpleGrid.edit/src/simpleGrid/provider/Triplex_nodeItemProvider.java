@@ -67,9 +67,9 @@ public class Triplex_nodeItemProvider
 			addLengthPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addPhasesPropertyDescriptor(object);
+			addTriplex_linePropertyDescriptor(object);
 			addFromPropertyDescriptor(object);
 			addToPropertyDescriptor(object);
-			addTriplex_linePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,7 +91,7 @@ public class Triplex_nodeItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -141,6 +141,28 @@ public class Triplex_nodeItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Triplex line feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTriplex_linePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Triplex_node_triplex_line_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_node_triplex_line_feature", "_UI_Triplex_node_type"),
+				 SimpleGridPackage.Literals.TRIPLEX_NODE__TRIPLEX_LINE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the From feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -157,7 +179,7 @@ public class Triplex_nodeItemProvider
 				 true,
 				 false,
 				 true,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -179,29 +201,7 @@ public class Triplex_nodeItemProvider
 				 true,
 				 false,
 				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Triplex line feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTriplex_linePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Triplex_node_triplex_line_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_node_triplex_line_feature", "_UI_Triplex_node_type"),
-				 SimpleGridPackage.Literals.TRIPLEX_NODE__TRIPLEX_LINE,
-				 true,
-				 false,
-				 true,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}

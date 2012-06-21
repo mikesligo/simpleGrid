@@ -15,8 +15,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -29,7 +27,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import simpleGrid.Climate;
-import simpleGrid.SimpleGridFactory;
 import simpleGrid.SimpleGridPackage;
 
 /**
@@ -141,36 +138,6 @@ public class ClimateItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(SimpleGridPackage.Literals.CLIMATE__OBJECT);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
 	 * This returns Climate.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -212,9 +179,6 @@ public class ClimateItemProvider
 			case SimpleGridPackage.CLIMATE__INTERPOLATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SimpleGridPackage.CLIMATE__OBJECT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -229,66 +193,6 @@ public class ClimateItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.CLIMATE__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
 	}
 
 	/**

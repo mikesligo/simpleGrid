@@ -29,7 +29,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import simpleGrid.Node;
-import simpleGrid.SimpleGridFactory;
 import simpleGrid.SimpleGridPackage;
 
 /**
@@ -175,9 +174,9 @@ public class NodeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SimpleGridPackage.Literals.NODE__VOLTAGE_A);
-			childrenFeatures.add(SimpleGridPackage.Literals.NODE__VOLTAGE_B);
 			childrenFeatures.add(SimpleGridPackage.Literals.NODE__VOLTAGE_C);
+			childrenFeatures.add(SimpleGridPackage.Literals.NODE__VOLTAGE_B);
+			childrenFeatures.add(SimpleGridPackage.Literals.NODE__VOLTAGE_A);
 		}
 		return childrenFeatures;
 	}
@@ -237,9 +236,9 @@ public class NodeItemProvider
 			case SimpleGridPackage.NODE__BUSTYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SimpleGridPackage.NODE__VOLTAGE_A:
-			case SimpleGridPackage.NODE__VOLTAGE_B:
 			case SimpleGridPackage.NODE__VOLTAGE_C:
+			case SimpleGridPackage.NODE__VOLTAGE_B:
+			case SimpleGridPackage.NODE__VOLTAGE_A:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -259,207 +258,18 @@ public class NodeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
+				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
+				 ""));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
+				 ""));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_B,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.NODE__VOLTAGE_C,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == SimpleGridPackage.Literals.NODE__VOLTAGE_A ||
-			childFeature == SimpleGridPackage.Literals.NODE__VOLTAGE_B ||
-			childFeature == SimpleGridPackage.Literals.NODE__VOLTAGE_C;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				(SimpleGridPackage.Literals.NODE__VOLTAGE_A,
+				 ""));
 	}
 
 	/**

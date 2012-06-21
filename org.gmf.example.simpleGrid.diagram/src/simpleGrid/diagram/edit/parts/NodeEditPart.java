@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
-import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
@@ -67,18 +68,15 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
-			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
-				if (result == null) {
-					result = new NonResizableEditPolicy();
-				}
-				return result;
+		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+
+			protected Command createAddCommand(EditPart child, EditPart after) {
+				return null;
 			}
 
-			protected Command getMoveChildrenCommand(Request request) {
+			protected Command createMoveChildCommand(EditPart child,
+					EditPart after) {
 				return null;
 			}
 
@@ -219,54 +217,130 @@ public class NodeEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(8);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
-	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
-		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		}
-		return types;
-	}
-
-	/**
-	 * @generated
-	 */
 	public class NodeFigure extends SVGFigure {
 
 		/**
 		 * @generated
 		 */
+		private WrappingLabel fFigureNodeNameFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureNodePhasesFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureNodeBustypeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureNodeVoltage_CFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureNodeVoltage_BFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureNodeVoltage_AFigure;
+
+		/**
+		 * @generated
+		 */
 		public NodeFigure() {
+
+			FlowLayout layoutThis = new FlowLayout();
+			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+
+			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMajorSpacing(5);
+			layoutThis.setMinorSpacing(5);
+			layoutThis.setHorizontal(true);
+
+			this.setLayoutManager(layoutThis);
+
 			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureNodeNameFigure = new WrappingLabel();
+			fFigureNodeNameFigure.setText("<...>");
+
+			this.add(fFigureNodeNameFigure);
+
+			fFigureNodePhasesFigure = new WrappingLabel();
+			fFigureNodePhasesFigure.setText("<...>");
+
+			this.add(fFigureNodePhasesFigure);
+
+			fFigureNodeBustypeFigure = new WrappingLabel();
+			fFigureNodeBustypeFigure.setText("<...>");
+
+			this.add(fFigureNodeBustypeFigure);
+
+			fFigureNodeVoltage_CFigure = new WrappingLabel();
+			fFigureNodeVoltage_CFigure.setText("<...>");
+
+			this.add(fFigureNodeVoltage_CFigure);
+
+			fFigureNodeVoltage_BFigure = new WrappingLabel();
+			fFigureNodeVoltage_BFigure.setText("<...>");
+
+			this.add(fFigureNodeVoltage_BFigure);
+
+			fFigureNodeVoltage_AFigure = new WrappingLabel();
+			fFigureNodeVoltage_AFigure.setText("<...>");
+
+			this.add(fFigureNodeVoltage_AFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeNameFigure() {
+			return fFigureNodeNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodePhasesFigure() {
+			return fFigureNodePhasesFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeBustypeFigure() {
+			return fFigureNodeBustypeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeVoltage_CFigure() {
+			return fFigureNodeVoltage_CFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeVoltage_BFigure() {
+			return fFigureNodeVoltage_BFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureNodeVoltage_AFigure() {
+			return fFigureNodeVoltage_AFigure;
 		}
 
 	}

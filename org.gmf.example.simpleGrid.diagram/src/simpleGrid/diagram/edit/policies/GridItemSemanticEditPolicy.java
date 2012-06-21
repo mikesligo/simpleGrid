@@ -24,19 +24,14 @@ public class GridItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007 == req
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004 == req
 				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.NodeCreateCommand(
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Transformer_configurationCreateCommand(
 					req));
 		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005 == req
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009 == req
 				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_meterCreateCommand(
-					req));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerCreateCommand(
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.ClimateCreateCommand(
 					req));
 		}
 		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002 == req
@@ -44,9 +39,19 @@ public class GridItemSemanticEditPolicy extends
 			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_nodeCreateCommand(
 					req));
 		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001 == req
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010 == req
 				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_Line_configurationCreateCommand(
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerCreateCommand(
+					req));
+		}
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005 == req
+				.getElementType()) {
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_meterCreateCommand(
+					req));
+		}
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007 == req
+				.getElementType()) {
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.NodeCreateCommand(
 					req));
 		}
 		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003 == req
@@ -54,14 +59,9 @@ public class GridItemSemanticEditPolicy extends
 			return getGEFWrapper(new simpleGrid.diagram.edit.commands.WaterheaterCreateCommand(
 					req));
 		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011 == req
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001 == req
 				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.HouseCreateCommand(
-					req));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.ClimateCreateCommand(
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_Line_configurationCreateCommand(
 					req));
 		}
 		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008 == req
@@ -74,9 +74,9 @@ public class GridItemSemanticEditPolicy extends
 			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_lineCreateCommand(
 					req));
 		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004 == req
+		if (simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011 == req
 				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Transformer_configurationCreateCommand(
+			return getGEFWrapper(new simpleGrid.diagram.edit.commands.HouseCreateCommand(
 					req));
 		}
 		return super.getCreateCommand(req);

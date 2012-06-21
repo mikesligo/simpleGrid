@@ -34,7 +34,28 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_Line_configurationFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_Line_configurationNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_Line_configurationInsulation_thicknessFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_Line_configurationDiameterFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="Triplex_Line_configurationTriplex_line_conductorFigure">
@@ -48,14 +69,116 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Transformer_configurationFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationConnect_typeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationInstall_typeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationPower_ratingFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationImpedenceFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationImpedence1Figure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationImpedence2Figure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationShunt_impedenceFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationPrimary_voltageFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Transformer_configurationSecondary_voltageFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.5"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.6"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.7"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.8"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.9"/>
     </descriptors>
     <descriptors
         name="NodeFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="NodeFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/node.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodePhasesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeBustypeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeVoltage_CFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeVoltage_BFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="NodeVoltage_AFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.5"/>
     </descriptors>
     <descriptors
         name="NodeTransformerFigure">
@@ -69,7 +192,40 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="TransformerFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerPhasesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerGroupidFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerFromFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="TransformerToFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.4"/>
     </descriptors>
     <descriptors
         name="TransformerTriplex_nodeFigure">
@@ -83,7 +239,40 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_nodeFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_node.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_node.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodeLengthFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodeNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodePhasesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodeFromFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_nodeToFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.4"/>
     </descriptors>
     <descriptors
         name="Triplex_nodeTriplex_lineFigure">
@@ -97,7 +286,28 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_meterFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_meter.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_meter.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_meterNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_meterPhasesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_meterNormal_voltagesFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="Triplex_meterHouseFigure">
@@ -111,7 +321,112 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="HouseFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/house.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/house.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseSchedule_skewFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseAir_temperatureFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseFloor_areaFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseCooling_setpointFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseHeating_setpointFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseThermal_integrity_levelFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseMotor_modelFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseMotor_efficiencyFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseMass_temperatureFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseHeating_system_typeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseHeating_COPFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseAuxiliary_strategyFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseAuxiliary_system_typeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseCooling_COPFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseParentFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HouseAux_heat_temperature_lockoutFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.5"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.6"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.7"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.8"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.9"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.10"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.11"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.12"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.13"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.14"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.15"/>
+      <accessors
+          figure="//@figures.0/@descriptors.11/@actualFigure/@children.16"/>
     </descriptors>
     <descriptors
         name="HouseWaterheaterFigure">
@@ -125,14 +440,110 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="WaterheaterFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/waterheater.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterTank_volumeFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterTank_setpointFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterTemperatureFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterThermostat_deadbandFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterLocationFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterTank_UAFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterSchedule_skewFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterDemand_skewFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WaterheaterHeating_element_capacityFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.4"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.5"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.6"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.7"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.8"/>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.9"/>
     </descriptors>
     <descriptors
         name="Triplex_lineFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_lineFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/triplex_line.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_lineNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_lineLengthFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_linePhasesFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_lineFromFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_lineToFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.4"/>
     </descriptors>
     <descriptors
         name="Triplex_lineTriplex_line_configurationFigure">
@@ -153,14 +564,50 @@
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="ClimateFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/climate.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ClimateNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ClimateTmyfileFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ClimateInterpolateFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.17/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="Triplex_line_conductorFigure">
       <actualFigure
           xsi:type="gmfgraph:SVGFigure"
           name="Triplex_line_conductorFigure"
-          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg"/>
+          documentURI="file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/conductor.svg">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_line_conductorResistanceFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="Triplex_line_conductorGeometric_mean_radiusFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.18/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.18/@actualFigure/@children.1"/>
     </descriptors>
   </figures>
   <nodes

@@ -2,7 +2,6 @@ package simpleGrid.diagram.edit.policies;
 
 import java.util.Iterator;
 
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
@@ -325,86 +324,17 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTriplex_lineTo_4015(
-				simpleGrid.Triplex_line source, EObject target) {
+		public boolean canCreateTransformerTransformer_configuration_4006(
+				simpleGrid.Transformer source,
+				simpleGrid.Transformer_configuration target) {
 			if (source != null) {
-				if (source.getTo() != null) {
+				if (source.getTransformer_configuration().contains(target)) {
 					return false;
 				}
 			}
 
-			return canExistTriplex_lineTo_4015(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateWaterheaterHeating_element_capacity_4010(
-				simpleGrid.Waterheater source, EObject target) {
-			if (source != null) {
-				if (source.getHeating_element_capacity() != null) {
-					return false;
-				}
-			}
-
-			return canExistWaterheaterHeating_element_capacity_4010(source,
+			return canExistTransformerTransformer_configuration_4006(source,
 					target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTriplex_nodeFrom_4004(
-				simpleGrid.Triplex_node source, EObject target) {
-			if (source != null) {
-				if (source.getFrom() != null) {
-					return false;
-				}
-			}
-
-			return canExistTriplex_nodeFrom_4004(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTransformerFrom_4016(
-				simpleGrid.Transformer source, EObject target) {
-			if (source != null) {
-				if (source.getFrom() != null) {
-					return false;
-				}
-			}
-
-			return canExistTransformerFrom_4016(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateNodeTransformer_4014(simpleGrid.Node source,
-				simpleGrid.Transformer target) {
-			if (source != null) {
-				if (source.getTransformer().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistNodeTransformer_4014(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTransformerTriplex_node_4013(
-				simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
-			if (source != null) {
-				if (source.getTriplex_node().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTransformerTriplex_node_4013(source, target);
 		}
 
 		/**
@@ -424,15 +354,33 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTriplex_lineFrom_4003(
-				simpleGrid.Triplex_line source, EObject target) {
+		public boolean canCreateTriplex_Line_configurationTriplex_line_conductor_4008(
+				simpleGrid.Triplex_Line_configuration source,
+				simpleGrid.Triplex_line_conductor target) {
 			if (source != null) {
-				if (source.getFrom() != null) {
+				if (source.getTriplex_line_conductor().contains(target)) {
 					return false;
 				}
 			}
 
-			return canExistTriplex_lineFrom_4003(source, target);
+			return canExistTriplex_Line_configurationTriplex_line_conductor_4008(
+					source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateTriplex_lineTriplex_line_configuration_4011(
+				simpleGrid.Triplex_line source,
+				simpleGrid.Triplex_Line_configuration target) {
+			if (source != null) {
+				if (source.getTriplex_line_configuration().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistTriplex_lineTriplex_line_configuration_4011(source,
+					target);
 		}
 
 		/**
@@ -447,6 +395,20 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			}
 
 			return canExistTriplex_nodeTriplex_line_4005(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateNodeTransformer_4014(simpleGrid.Node source,
+				simpleGrid.Transformer target) {
+			if (source != null) {
+				if (source.getTransformer().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistNodeTransformer_4014(source, target);
 		}
 
 		/**
@@ -480,138 +442,23 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTransformerTransformer_configuration_4006(
+		public boolean canCreateTransformerTriplex_node_4013(
+				simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
+			if (source != null) {
+				if (source.getTriplex_node().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistTransformerTriplex_node_4013(source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistTransformerTransformer_configuration_4006(
 				simpleGrid.Transformer source,
 				simpleGrid.Transformer_configuration target) {
-			if (source != null) {
-				if (source.getTransformer_configuration().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTransformerTransformer_configuration_4006(source,
-					target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTriplex_lineTriplex_line_configuration_4011(
-				simpleGrid.Triplex_line source,
-				simpleGrid.Triplex_Line_configuration target) {
-			if (source != null) {
-				if (source.getTriplex_line_configuration().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTriplex_lineTriplex_line_configuration_4011(source,
-					target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTriplex_Line_configurationTriplex_line_conductor_4008(
-				simpleGrid.Triplex_Line_configuration source,
-				simpleGrid.Triplex_line_conductor target) {
-			if (source != null) {
-				if (source.getTriplex_line_conductor().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistTriplex_Line_configurationTriplex_line_conductor_4008(
-					source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateHouseParent_4002(simpleGrid.House source,
-				EObject target) {
-			if (source != null) {
-				if (source.getParent() != null) {
-					return false;
-				}
-			}
-
-			return canExistHouseParent_4002(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTriplex_nodeTo_4009(
-				simpleGrid.Triplex_node source, EObject target) {
-			if (source != null) {
-				if (source.getTo() != null) {
-					return false;
-				}
-			}
-
-			return canExistTriplex_nodeTo_4009(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canCreateTransformerTo_4012(
-				simpleGrid.Transformer source, EObject target) {
-			if (source != null) {
-				if (source.getTo() != null) {
-					return false;
-				}
-			}
-
-			return canExistTransformerTo_4012(source, target);
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTriplex_lineTo_4015(
-				simpleGrid.Triplex_line source, EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistWaterheaterHeating_element_capacity_4010(
-				simpleGrid.Waterheater source, EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTriplex_nodeFrom_4004(
-				simpleGrid.Triplex_node source, EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTransformerFrom_4016(
-				simpleGrid.Transformer source, EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistNodeTransformer_4014(simpleGrid.Node source,
-				simpleGrid.Transformer target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTransformerTriplex_node_4013(
-				simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
 			return true;
 		}
 
@@ -626,8 +473,18 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistTriplex_lineFrom_4003(
-				simpleGrid.Triplex_line source, EObject target) {
+		public boolean canExistTriplex_Line_configurationTriplex_line_conductor_4008(
+				simpleGrid.Triplex_Line_configuration source,
+				simpleGrid.Triplex_line_conductor target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistTriplex_lineTriplex_line_configuration_4011(
+				simpleGrid.Triplex_line source,
+				simpleGrid.Triplex_Line_configuration target) {
 			return true;
 		}
 
@@ -636,6 +493,14 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		 */
 		public boolean canExistTriplex_nodeTriplex_line_4005(
 				simpleGrid.Triplex_node source, simpleGrid.Triplex_line target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistNodeTransformer_4014(simpleGrid.Node source,
+				simpleGrid.Transformer target) {
 			return true;
 		}
 
@@ -658,51 +523,8 @@ public class SimpleGridBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canExistTransformerTransformer_configuration_4006(
-				simpleGrid.Transformer source,
-				simpleGrid.Transformer_configuration target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTriplex_lineTriplex_line_configuration_4011(
-				simpleGrid.Triplex_line source,
-				simpleGrid.Triplex_Line_configuration target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTriplex_Line_configurationTriplex_line_conductor_4008(
-				simpleGrid.Triplex_Line_configuration source,
-				simpleGrid.Triplex_line_conductor target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistHouseParent_4002(simpleGrid.House source,
-				EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTriplex_nodeTo_4009(
-				simpleGrid.Triplex_node source, EObject target) {
-			return true;
-		}
-
-		/**
-		 * @generated
-		 */
-		public boolean canExistTransformerTo_4012(
-				simpleGrid.Transformer source, EObject target) {
+		public boolean canExistTransformerTriplex_node_4013(
+				simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
 			return true;
 		}
 	}

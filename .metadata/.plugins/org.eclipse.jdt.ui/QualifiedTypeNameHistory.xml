@@ -4,4 +4,6 @@
 <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.draw2d.ui.render.factory.RenderedImageFactory"/>
 <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.draw2d.ui.render.figures.ScalableImageFigure"/>
 <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.lite.svg.SVGFigure"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="http.Property"/>
 </qualifiedTypeNameHistroy>

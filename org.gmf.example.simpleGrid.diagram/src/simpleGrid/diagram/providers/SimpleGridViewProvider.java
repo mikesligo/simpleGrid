@@ -135,17 +135,17 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 					return false; // foreign diagram
 				}
 				switch (visualID) {
-				case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
 				case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
 				case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
 				case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
-				case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
+				case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(),
@@ -158,17 +158,17 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 				}
 			}
 		}
-		return simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID == visualID
+		return simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID == visualID
 				|| simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID == visualID
+				|| simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID == visualID
 				|| simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID == visualID
 				|| simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID == visualID
-				|| simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID == visualID;
+				|| simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -228,39 +228,39 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 					.getVisualID(semanticHint);
 		}
 		switch (visualID) {
-		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			return createNode_2007(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
-			return createTriplex_meter_2005(domainElement, containerView,
-					index, persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
-			return createTransformer_2010(domainElement, containerView, index,
+		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
+			return createTransformer_configuration_2004(domainElement,
+					containerView, index, persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
+			return createClimate_2009(domainElement, containerView, index,
 					persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
 			return createTriplex_node_2002(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-			return createTriplex_Line_configuration_2001(domainElement,
-					containerView, index, persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
+			return createTransformer_2010(domainElement, containerView, index,
+					persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
+			return createTriplex_meter_2005(domainElement, containerView,
+					index, persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+			return createNode_2007(domainElement, containerView, index,
+					persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
 			return createWaterheater_2003(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
-			return createHouse_2011(domainElement, containerView, index,
-					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
-			return createClimate_2009(domainElement, containerView, index,
-					persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
+			return createTriplex_Line_configuration_2001(domainElement,
+					containerView, index, persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
 			return createTriplex_line_conductor_2008(domainElement,
 					containerView, index, persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
 			return createTriplex_line_2006(domainElement, containerView, index,
 					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
-			return createTransformer_configuration_2004(domainElement,
-					containerView, index, persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
+			return createHouse_2011(domainElement, containerView, index,
+					persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -276,57 +276,33 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 				.getVisualID(elementTypeHint)) {
-		case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:
-			return createTriplex_lineTo_4015(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
-			return createWaterheaterHeating_element_capacity_4010(
+		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
+			return createTransformerTransformer_configuration_4006(
 					containerView, index, persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
-			return createTriplex_nodeFrom_4004(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID:
-			return createTransformerFrom_4016(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
-			return createNodeTransformer_4014(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
-			return createTransformerTriplex_node_4013(containerView, index,
-					persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID:
 			return createHouseWaterheater_4017(containerView, index, persisted,
 					preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
-			return createTriplex_lineFrom_4003(containerView, index, persisted,
-					preferencesHint);
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
+			return createTriplex_Line_configurationTriplex_line_conductor_4008(
+					containerView, index, persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
+			return createTriplex_lineTriplex_line_configuration_4011(
+					containerView, index, persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID:
 			return createTriplex_nodeTriplex_line_4005(containerView, index,
 					persisted, preferencesHint);
+		case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
+			return createNodeTransformer_4014(containerView, index, persisted,
+					preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID:
 			return createTriplex_meterHouse_4001(containerView, index,
 					persisted, preferencesHint);
 		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID:
 			return createTriplex_lineTriplex_meter_4007(containerView, index,
 					persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
-			return createTransformerTransformer_configuration_4006(
-					containerView, index, persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
-			return createTriplex_lineTriplex_line_configuration_4011(
-					containerView, index, persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
-			return createTriplex_Line_configurationTriplex_line_conductor_4008(
-					containerView, index, persisted, preferencesHint);
-		case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
-			return createHouseParent_4002(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
-			return createTriplex_nodeTo_4009(containerView, index, persisted,
-					preferencesHint);
-		case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
-			return createTransformerTo_4012(containerView, index, persisted,
-					preferencesHint);
+		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
+			return createTransformerTriplex_node_4013(containerView, index,
+					persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -335,100 +311,56 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createNode_2007(EObject domainElement, View containerView,
+	public Node createTransformer_configuration_2004(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+				.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createClimate_2009(EObject domainElement, View containerView,
 			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		stampShortcut(containerView, node);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createTriplex_meter_2005(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		stampShortcut(containerView, node);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createTransformer_2010(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -510,13 +442,100 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createTriplex_Line_configuration_2001(EObject domainElement,
+	public Node createTransformer_2010(EObject domainElement,
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createTriplex_meter_2005(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+				.getType(simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
+		ViewUtil.setStructuralFeatureValue(node,
+				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
+				FigureUtilities.RGBToInteger(fillRGB));
+		return node;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Node createNode_2007(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
+		Shape node = NotationFactory.eINSTANCE.createShape();
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+				.getType(simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -598,55 +617,13 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createHouse_2011(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
+	public Node createTriplex_Line_configuration_2001(EObject domainElement,
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
-		ViewUtil.insertChildView(containerView, node, index, persisted);
-		node.setElement(domainElement);
-		stampShortcut(containerView, node);
-		// initializeFromPreferences 
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle nodeFontStyle = (FontStyle) node
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (nodeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			nodeFontStyle.setFontName(fontData.getName());
-			nodeFontStyle.setFontHeight(fontData.getHeight());
-			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node,
-				NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
-		return node;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Node createClimate_2009(EObject domainElement, View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
-		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -772,13 +749,12 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Node createTransformer_configuration_2004(EObject domainElement,
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
+	public Node createHouse_2011(EObject domainElement, View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -816,59 +792,7 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createTriplex_lineTo_4015(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createWaterheaterHeating_element_capacity_4010(
+	public Edge createTransformerTransformer_configuration_4006(
 			View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
@@ -883,215 +807,7 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTriplex_nodeFrom_4004(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTransformerFrom_4016(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createNodeTransformer_4014(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTransformerTriplex_node_4013(View containerView,
-			int index, boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1181,8 +897,9 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createTriplex_lineFrom_4003(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
+	public Edge createTriplex_Line_configurationTriplex_line_conductor_4008(
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
@@ -1195,7 +912,60 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createTriplex_lineTriplex_line_configuration_4011(
+			View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+				.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1248,6 +1018,58 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 				.getType(simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
+				.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
+				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(edge,
+				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle edgeFontStyle = (FontStyle) edge
+				.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore,
+					IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
+					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
+					.intValue());
+		}
+		Routing routing = Routing.get(prefStore
+				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge,
+					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
+					routing);
+		}
+		return edge;
+	}
+
+	/**
+	 * @generated
+	 */
+	public Edge createNodeTransformer_4014(View containerView, int index,
+			boolean persisted, PreferencesHint preferencesHint) {
+		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
+				.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
+				2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
+				.getType(simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
@@ -1389,9 +1211,8 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	public Edge createTransformerTransformer_configuration_4006(
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
+	public Edge createTransformerTriplex_node_4013(View containerView,
+			int index, boolean persisted, PreferencesHint preferencesHint) {
 		Connector edge = NotationFactory.eINSTANCE.createConnector();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
@@ -1404,269 +1225,7 @@ public class SimpleGridViewProvider extends AbstractProvider implements
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTriplex_lineTriplex_line_configuration_4011(
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTriplex_Line_configurationTriplex_line_conductor_4008(
-			View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createHouseParent_4002(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTriplex_nodeTo_4009(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint
-				.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(
-				prefStore, IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge,
-				NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge
-				.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore,
-					IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter
-					.getColor(prefStore, IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB)
-					.intValue());
-		}
-		Routing routing = Routing.get(prefStore
-				.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge,
-					NotationPackage.eINSTANCE.getRoutingStyle_Routing(),
-					routing);
-		}
-		return edge;
-	}
-
-	/**
-	 * @generated
-	 */
-	public Edge createTransformerTo_4012(View containerView, int index,
-			boolean persisted, PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE
-				.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(
-				2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-				.getType(simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID));
+				.getType(simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint

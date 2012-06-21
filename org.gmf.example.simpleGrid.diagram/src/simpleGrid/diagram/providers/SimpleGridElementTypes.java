@@ -49,15 +49,11 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Node_2007 = getElementType("org.gmf.example.simpleGrid.diagram.Node_2007"); //$NON-NLS-1$
+	public static final IElementType Transformer_configuration_2004 = getElementType("org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Triplex_meter_2005 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_meter_2005"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Transformer_2010 = getElementType("org.gmf.example.simpleGrid.diagram.Transformer_2010"); //$NON-NLS-1$
+	public static final IElementType Climate_2009 = getElementType("org.gmf.example.simpleGrid.diagram.Climate_2009"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -65,7 +61,15 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Triplex_Line_configuration_2001 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"); //$NON-NLS-1$
+	public static final IElementType Transformer_2010 = getElementType("org.gmf.example.simpleGrid.diagram.Transformer_2010"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Triplex_meter_2005 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_meter_2005"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Node_2007 = getElementType("org.gmf.example.simpleGrid.diagram.Node_2007"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -73,11 +77,7 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType House_2011 = getElementType("org.gmf.example.simpleGrid.diagram.House_2011"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Climate_2009 = getElementType("org.gmf.example.simpleGrid.diagram.Climate_2009"); //$NON-NLS-1$
+	public static final IElementType Triplex_Line_configuration_2001 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_Line_configuration_2001"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -89,31 +89,11 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Transformer_configuration_2004 = getElementType("org.gmf.example.simpleGrid.diagram.Transformer_configuration_2004"); //$NON-NLS-1$
+	public static final IElementType House_2011 = getElementType("org.gmf.example.simpleGrid.diagram.House_2011"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
-	public static final IElementType Triplex_lineTo_4015 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_lineTo_4015"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType WaterheaterHeating_element_capacity_4010 = getElementType("org.gmf.example.simpleGrid.diagram.WaterheaterHeating_element_capacity_4010"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Triplex_nodeFrom_4004 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_nodeFrom_4004"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType TransformerFrom_4016 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerFrom_4016"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType NodeTransformer_4014 = getElementType("org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType TransformerTriplex_node_4013 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"); //$NON-NLS-1$
+	public static final IElementType TransformerTransformer_configuration_4006 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -121,11 +101,19 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Triplex_lineFrom_4003 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_lineFrom_4003"); //$NON-NLS-1$
+	public static final IElementType Triplex_Line_configurationTriplex_line_conductor_4008 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType Triplex_lineTriplex_line_configuration_4011 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
 	public static final IElementType Triplex_nodeTriplex_line_4005 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_nodeTriplex_line_4005"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType NodeTransformer_4014 = getElementType("org.gmf.example.simpleGrid.diagram.NodeTransformer_4014"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -137,27 +125,7 @@ public class SimpleGridElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType TransformerTransformer_configuration_4006 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerTransformer_configuration_4006"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Triplex_lineTriplex_line_configuration_4011 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_lineTriplex_line_configuration_4011"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Triplex_Line_configurationTriplex_line_conductor_4008 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_Line_configurationTriplex_line_conductor_4008"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType HouseParent_4002 = getElementType("org.gmf.example.simpleGrid.diagram.HouseParent_4002"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Triplex_nodeTo_4009 = getElementType("org.gmf.example.simpleGrid.diagram.Triplex_nodeTo_4009"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType TransformerTo_4012 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerTo_4012"); //$NON-NLS-1$
+	public static final IElementType TransformerTriplex_node_4013 = getElementType("org.gmf.example.simpleGrid.diagram.TransformerTriplex_node_4013"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -273,30 +241,31 @@ public class SimpleGridElementTypes {
 			elements.put(Grid_1000,
 					simpleGrid.SimpleGridPackage.eINSTANCE.getGrid());
 
-			elements.put(Node_2007,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getNode());
+			elements.put(Transformer_configuration_2004,
+					simpleGrid.SimpleGridPackage.eINSTANCE
+							.getTransformer_configuration());
 
-			elements.put(Triplex_meter_2005,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_meter());
-
-			elements.put(Transformer_2010,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getTransformer());
+			elements.put(Climate_2009,
+					simpleGrid.SimpleGridPackage.eINSTANCE.getClimate());
 
 			elements.put(Triplex_node_2002,
 					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_node());
 
-			elements.put(Triplex_Line_configuration_2001,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTriplex_Line_configuration());
+			elements.put(Transformer_2010,
+					simpleGrid.SimpleGridPackage.eINSTANCE.getTransformer());
+
+			elements.put(Triplex_meter_2005,
+					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_meter());
+
+			elements.put(Node_2007,
+					simpleGrid.SimpleGridPackage.eINSTANCE.getNode());
 
 			elements.put(Waterheater_2003,
 					simpleGrid.SimpleGridPackage.eINSTANCE.getWaterheater());
 
-			elements.put(House_2011,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getHouse());
-
-			elements.put(Climate_2009,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getClimate());
+			elements.put(Triplex_Line_configuration_2001,
+					simpleGrid.SimpleGridPackage.eINSTANCE
+							.getTriplex_Line_configuration());
 
 			elements.put(Triplex_line_conductor_2008,
 					simpleGrid.SimpleGridPackage.eINSTANCE
@@ -305,44 +274,33 @@ public class SimpleGridElementTypes {
 			elements.put(Triplex_line_2006,
 					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_line());
 
-			elements.put(Transformer_configuration_2004,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTransformer_configuration());
+			elements.put(House_2011,
+					simpleGrid.SimpleGridPackage.eINSTANCE.getHouse());
 
-			elements.put(Triplex_lineTo_4015,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_line_To());
-
-			elements.put(WaterheaterHeating_element_capacity_4010,
+			elements.put(TransformerTransformer_configuration_4006,
 					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getWaterheater_Heating_element_capacity());
-
-			elements.put(Triplex_nodeFrom_4004,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTriplex_node_From());
-
-			elements.put(TransformerFrom_4016,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTransformer_From());
-
-			elements.put(NodeTransformer_4014,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getNode_Transformer());
-
-			elements.put(TransformerTriplex_node_4013,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTransformer_Triplex_node());
+							.getTransformer_Transformer_configuration());
 
 			elements.put(HouseWaterheater_4017,
 					simpleGrid.SimpleGridPackage.eINSTANCE
 							.getHouse_Waterheater());
 
-			elements.put(Triplex_lineFrom_4003,
+			elements.put(
+					Triplex_Line_configurationTriplex_line_conductor_4008,
 					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTriplex_line_From());
+							.getTriplex_Line_configuration_Triplex_line_conductor());
+
+			elements.put(Triplex_lineTriplex_line_configuration_4011,
+					simpleGrid.SimpleGridPackage.eINSTANCE
+							.getTriplex_line_Triplex_line_configuration());
 
 			elements.put(Triplex_nodeTriplex_line_4005,
 					simpleGrid.SimpleGridPackage.eINSTANCE
 							.getTriplex_node_Triplex_line());
+
+			elements.put(NodeTransformer_4014,
+					simpleGrid.SimpleGridPackage.eINSTANCE
+							.getNode_Transformer());
 
 			elements.put(Triplex_meterHouse_4001,
 					simpleGrid.SimpleGridPackage.eINSTANCE
@@ -352,27 +310,9 @@ public class SimpleGridElementTypes {
 					simpleGrid.SimpleGridPackage.eINSTANCE
 							.getTriplex_line_Triplex_meter());
 
-			elements.put(TransformerTransformer_configuration_4006,
+			elements.put(TransformerTriplex_node_4013,
 					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTransformer_Transformer_configuration());
-
-			elements.put(Triplex_lineTriplex_line_configuration_4011,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTriplex_line_Triplex_line_configuration());
-
-			elements.put(
-					Triplex_Line_configurationTriplex_line_conductor_4008,
-					simpleGrid.SimpleGridPackage.eINSTANCE
-							.getTriplex_Line_configuration_Triplex_line_conductor());
-
-			elements.put(HouseParent_4002,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getHouse_Parent());
-
-			elements.put(Triplex_nodeTo_4009,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getTriplex_node_To());
-
-			elements.put(TransformerTo_4012,
-					simpleGrid.SimpleGridPackage.eINSTANCE.getTransformer_To());
+							.getTransformer_Triplex_node());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -391,36 +331,28 @@ public class SimpleGridElementTypes {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Grid_1000);
-			KNOWN_ELEMENT_TYPES.add(Node_2007);
-			KNOWN_ELEMENT_TYPES.add(Triplex_meter_2005);
-			KNOWN_ELEMENT_TYPES.add(Transformer_2010);
-			KNOWN_ELEMENT_TYPES.add(Triplex_node_2002);
-			KNOWN_ELEMENT_TYPES.add(Triplex_Line_configuration_2001);
-			KNOWN_ELEMENT_TYPES.add(Waterheater_2003);
-			KNOWN_ELEMENT_TYPES.add(House_2011);
+			KNOWN_ELEMENT_TYPES.add(Transformer_configuration_2004);
 			KNOWN_ELEMENT_TYPES.add(Climate_2009);
+			KNOWN_ELEMENT_TYPES.add(Triplex_node_2002);
+			KNOWN_ELEMENT_TYPES.add(Transformer_2010);
+			KNOWN_ELEMENT_TYPES.add(Triplex_meter_2005);
+			KNOWN_ELEMENT_TYPES.add(Node_2007);
+			KNOWN_ELEMENT_TYPES.add(Waterheater_2003);
+			KNOWN_ELEMENT_TYPES.add(Triplex_Line_configuration_2001);
 			KNOWN_ELEMENT_TYPES.add(Triplex_line_conductor_2008);
 			KNOWN_ELEMENT_TYPES.add(Triplex_line_2006);
-			KNOWN_ELEMENT_TYPES.add(Transformer_configuration_2004);
-			KNOWN_ELEMENT_TYPES.add(Triplex_lineTo_4015);
-			KNOWN_ELEMENT_TYPES.add(WaterheaterHeating_element_capacity_4010);
-			KNOWN_ELEMENT_TYPES.add(Triplex_nodeFrom_4004);
-			KNOWN_ELEMENT_TYPES.add(TransformerFrom_4016);
-			KNOWN_ELEMENT_TYPES.add(NodeTransformer_4014);
-			KNOWN_ELEMENT_TYPES.add(TransformerTriplex_node_4013);
-			KNOWN_ELEMENT_TYPES.add(HouseWaterheater_4017);
-			KNOWN_ELEMENT_TYPES.add(Triplex_lineFrom_4003);
-			KNOWN_ELEMENT_TYPES.add(Triplex_nodeTriplex_line_4005);
-			KNOWN_ELEMENT_TYPES.add(Triplex_meterHouse_4001);
-			KNOWN_ELEMENT_TYPES.add(Triplex_lineTriplex_meter_4007);
+			KNOWN_ELEMENT_TYPES.add(House_2011);
 			KNOWN_ELEMENT_TYPES.add(TransformerTransformer_configuration_4006);
-			KNOWN_ELEMENT_TYPES
-					.add(Triplex_lineTriplex_line_configuration_4011);
+			KNOWN_ELEMENT_TYPES.add(HouseWaterheater_4017);
 			KNOWN_ELEMENT_TYPES
 					.add(Triplex_Line_configurationTriplex_line_conductor_4008);
-			KNOWN_ELEMENT_TYPES.add(HouseParent_4002);
-			KNOWN_ELEMENT_TYPES.add(Triplex_nodeTo_4009);
-			KNOWN_ELEMENT_TYPES.add(TransformerTo_4012);
+			KNOWN_ELEMENT_TYPES
+					.add(Triplex_lineTriplex_line_configuration_4011);
+			KNOWN_ELEMENT_TYPES.add(Triplex_nodeTriplex_line_4005);
+			KNOWN_ELEMENT_TYPES.add(NodeTransformer_4014);
+			KNOWN_ELEMENT_TYPES.add(Triplex_meterHouse_4001);
+			KNOWN_ELEMENT_TYPES.add(Triplex_lineTriplex_meter_4007);
+			KNOWN_ELEMENT_TYPES.add(TransformerTriplex_node_4013);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -432,62 +364,46 @@ public class SimpleGridElementTypes {
 		switch (visualID) {
 		case simpleGrid.diagram.edit.parts.GridEditPart.VISUAL_ID:
 			return Grid_1000;
-		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
-			return Node_2007;
-		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
-			return Triplex_meter_2005;
-		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
-			return Transformer_2010;
-		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
-			return Triplex_node_2002;
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
-			return Triplex_Line_configuration_2001;
-		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
-			return Waterheater_2003;
-		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
-			return House_2011;
+		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
+			return Transformer_configuration_2004;
 		case simpleGrid.diagram.edit.parts.ClimateEditPart.VISUAL_ID:
 			return Climate_2009;
+		case simpleGrid.diagram.edit.parts.Triplex_nodeEditPart.VISUAL_ID:
+			return Triplex_node_2002;
+		case simpleGrid.diagram.edit.parts.TransformerEditPart.VISUAL_ID:
+			return Transformer_2010;
+		case simpleGrid.diagram.edit.parts.Triplex_meterEditPart.VISUAL_ID:
+			return Triplex_meter_2005;
+		case simpleGrid.diagram.edit.parts.NodeEditPart.VISUAL_ID:
+			return Node_2007;
+		case simpleGrid.diagram.edit.parts.WaterheaterEditPart.VISUAL_ID:
+			return Waterheater_2003;
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart.VISUAL_ID:
+			return Triplex_Line_configuration_2001;
 		case simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart.VISUAL_ID:
 			return Triplex_line_conductor_2008;
 		case simpleGrid.diagram.edit.parts.Triplex_lineEditPart.VISUAL_ID:
 			return Triplex_line_2006;
-		case simpleGrid.diagram.edit.parts.Transformer_configurationEditPart.VISUAL_ID:
-			return Transformer_configuration_2004;
-		case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:
-			return Triplex_lineTo_4015;
-		case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
-			return WaterheaterHeating_element_capacity_4010;
-		case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
-			return Triplex_nodeFrom_4004;
-		case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID:
-			return TransformerFrom_4016;
-		case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
-			return NodeTransformer_4014;
-		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
-			return TransformerTriplex_node_4013;
+		case simpleGrid.diagram.edit.parts.HouseEditPart.VISUAL_ID:
+			return House_2011;
+		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
+			return TransformerTransformer_configuration_4006;
 		case simpleGrid.diagram.edit.parts.HouseWaterheaterEditPart.VISUAL_ID:
 			return HouseWaterheater_4017;
-		case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
-			return Triplex_lineFrom_4003;
+		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
+			return Triplex_Line_configurationTriplex_line_conductor_4008;
+		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
+			return Triplex_lineTriplex_line_configuration_4011;
 		case simpleGrid.diagram.edit.parts.Triplex_nodeTriplex_lineEditPart.VISUAL_ID:
 			return Triplex_nodeTriplex_line_4005;
+		case simpleGrid.diagram.edit.parts.NodeTransformerEditPart.VISUAL_ID:
+			return NodeTransformer_4014;
 		case simpleGrid.diagram.edit.parts.Triplex_meterHouseEditPart.VISUAL_ID:
 			return Triplex_meterHouse_4001;
 		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_meterEditPart.VISUAL_ID:
 			return Triplex_lineTriplex_meter_4007;
-		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
-			return TransformerTransformer_configuration_4006;
-		case simpleGrid.diagram.edit.parts.Triplex_lineTriplex_line_configurationEditPart.VISUAL_ID:
-			return Triplex_lineTriplex_line_configuration_4011;
-		case simpleGrid.diagram.edit.parts.Triplex_Line_configurationTriplex_line_conductorEditPart.VISUAL_ID:
-			return Triplex_Line_configurationTriplex_line_conductor_4008;
-		case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
-			return HouseParent_4002;
-		case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
-			return Triplex_nodeTo_4009;
-		case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
-			return TransformerTo_4012;
+		case simpleGrid.diagram.edit.parts.TransformerTriplex_nodeEditPart.VISUAL_ID:
+			return TransformerTriplex_node_4013;
 		}
 		return null;
 	}

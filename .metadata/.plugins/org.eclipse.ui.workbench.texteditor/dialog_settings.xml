@@ -3,28 +3,30 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="157" key="DIALOG_Y_ORIGIN"/>
-		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="1000" key="DIALOG_X_ORIGIN"/>
+		<item value="437" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Label" key="selection"/>
+		<item value="EString" key="selection"/>
 		<list key="findhistory">
+			<item value="EObject"/>
+			<item value="EDouble"/>
+			<item value="nameset"/>
+			<item value="double"/>
+			<item value="Air"/>
+			<item value="Ait_temperature"/>
+			<item value="setname"/>
 			<item value="label"/>
-			<item value="createmainfigure"/>
-			<item value="layout"/>
-			<item value="svg"/>
-			<item value=".svg"/>
-			<item value="triplex_line_conductorFigure"/>
-			<item value="primaryshape"/>
-			<item value="seturi"/>
 		</list>
 		<list key="replacehistory">
+			<item value="EString"/>
+			<item value="String"/>
 		</list>
 	</section>
 </section>

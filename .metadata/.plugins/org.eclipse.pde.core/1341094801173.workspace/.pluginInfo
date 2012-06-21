@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="873" class="simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin" localization="plugin" name="%pluginName" project="org.gmf.example.simpleGrid.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="867" localization="plugin" name="%pluginName" project="org.gmf.example.simpleGrid.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="866" class="simpleGrid.presentation.SimpleGridEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="org.gmf.example.simpleGrid.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="858" localization="plugin" name="%pluginName" project="org.gmf.example.simpleGrid" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="865" class="simpleGrid.provider.SimpleGridEditPlugin$Implementation" localization="plugin" name="%pluginName" project="org.gmf.example.simpleGrid.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

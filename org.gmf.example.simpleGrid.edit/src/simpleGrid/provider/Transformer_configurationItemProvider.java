@@ -28,7 +28,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import simpleGrid.SimpleGridFactory;
 import simpleGrid.SimpleGridPackage;
 import simpleGrid.Transformer_configuration;
 
@@ -162,7 +161,7 @@ public class Transformer_configurationItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -269,7 +268,6 @@ public class Transformer_configurationItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE);
 			childrenFeatures.add(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE);
-			childrenFeatures.add(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT);
 		}
 		return childrenFeatures;
 	}
@@ -336,7 +334,6 @@ public class Transformer_configurationItemProvider
 				return;
 			case SimpleGridPackage.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE:
 			case SimpleGridPackage.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE:
-			case SimpleGridPackage.TRANSFORMER_CONFIGURATION__OBJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -357,206 +354,12 @@ public class Transformer_configurationItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
+				 ""));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__PRIMARY_VOLTAGE ||
-			childFeature == SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__SECONDARY_VOLTAGE ||
-			childFeature == SimpleGridPackage.Literals.TRANSFORMER_CONFIGURATION__OBJECT;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				 ""));
 	}
 
 	/**

@@ -66,7 +66,6 @@ public class WaterheaterItemProvider
 
 			addNamePropertyDescriptor(object);
 			addTank_volumePropertyDescriptor(object);
-			addHeating_element_capacityPropertyDescriptor(object);
 			addTank_setpointPropertyDescriptor(object);
 			addTemperaturePropertyDescriptor(object);
 			addThermostat_deadbandPropertyDescriptor(object);
@@ -74,6 +73,7 @@ public class WaterheaterItemProvider
 			addTank_UAPropertyDescriptor(object);
 			addSchedule_skewPropertyDescriptor(object);
 			addDemand_skewPropertyDescriptor(object);
+			addHeating_element_capacityPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -117,29 +117,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Heating element capacity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addHeating_element_capacityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Waterheater_heating_element_capacity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Waterheater_heating_element_capacity_feature", "_UI_Waterheater_type"),
-				 SimpleGridPackage.Literals.WATERHEATER__HEATING_ELEMENT_CAPACITY,
-				 true,
-				 false,
-				 true,
-				 null,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -161,7 +139,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -183,7 +161,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -205,7 +183,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -249,7 +227,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -271,7 +249,7 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -293,7 +271,29 @@ public class WaterheaterItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Heating element capacity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHeating_element_capacityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Waterheater_heating_element_capacity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Waterheater_heating_element_capacity_feature", "_UI_Waterheater_type"),
+				 SimpleGridPackage.Literals.WATERHEATER__HEATING_ELEMENT_CAPACITY,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}

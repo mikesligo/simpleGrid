@@ -1,0 +1,645 @@
+package simpleGrid.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class SimpleGridBaseItemSemanticEditPolicy extends org.eclipse.gmf.runtime.diagram.ui.editpolicies.SemanticEditPolicy {
+
+		/**
+ * Extended request data key to hold editpart visual id.
+ * @generated
+ */
+	public static final String VISUAL_ID_KEY = "visual_id";  //$NON-NLS-1$
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.gmf.runtime.emf.type.core.IElementType myElementType;
+	
+		/**
+ * @generated
+ */
+	protected SimpleGridBaseItemSemanticEditPolicy(org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+		myElementType = elementType;
+	}
+
+	/**
+ * Extended request data key to hold editpart visual id.
+ * Add visual id of edited editpart to extended data of the request
+ * so command switch can decide what kind of diagram element is being edited.
+ * It is done in those cases when it's not possible to deduce diagram
+ * element kind from domain element.
+ * 
+ * @generated
+ */
+	public org.eclipse.gef.commands.Command getCommand(org.eclipse.gef.Request request) {
+		if (request instanceof org.eclipse.gef.requests.ReconnectRequest) {
+			Object view = ((org.eclipse.gef.requests.ReconnectRequest) request).getConnectionEditPart().getModel();
+			if (view instanceof org.eclipse.gmf.runtime.notation.View) {
+				Integer id = new Integer(simpleGrid.diagram.part.SimpleGridVisualIDRegistry.getVisualID((org.eclipse.gmf.runtime.notation.View) view));
+				request.getExtendedData().put(VISUAL_ID_KEY, id);
+			}
+		}
+		return super.getCommand(request);
+	}
+	
+	/**
+ * Returns visual id from request parameters.
+ * @generated
+ */
+	protected int getVisualID(org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest request) {
+		Object id = request.getParameter(VISUAL_ID_KEY);
+		return id instanceof Integer ? ((Integer) id).intValue() : -1;
+	}
+
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getSemanticCommand(org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest request) {
+	org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest completedRequest = completeRequest(request);
+	org.eclipse.gef.commands.Command semanticCommand = getSemanticCommandSwitch(completedRequest);
+	semanticCommand = getEditHelperCommand(completedRequest, semanticCommand);
+	if (completedRequest instanceof org.eclipse.gmf.runtime.emf.type.core.requests.DestroyRequest) {
+		org.eclipse.gmf.runtime.emf.type.core.requests.DestroyRequest destroyRequest = (org.eclipse.gmf.runtime.emf.type.core.requests.DestroyRequest) completedRequest;
+		return shouldProceed(destroyRequest) ? addDeleteViewCommand(semanticCommand, destroyRequest) : null;
+		}
+		return semanticCommand;
+	}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command addDeleteViewCommand(org.eclipse.gef.commands.Command mainCommand, org.eclipse.gmf.runtime.emf.type.core.requests.DestroyRequest completedRequest){
+		org.eclipse.gef.commands.Command deleteViewCommand = getGEFWrapper(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), (org.eclipse.gmf.runtime.notation.View) getHost().getModel()));
+		return mainCommand == null ? deleteViewCommand : mainCommand.chain(deleteViewCommand);
+}
+	
+		/**
+ * @generated
+ */
+	private org.eclipse.gef.commands.Command getEditHelperCommand(org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest request, org.eclipse.gef.commands.Command editPolicyCommand) {
+		if (editPolicyCommand != null) {
+			org.eclipse.gmf.runtime.common.core.command.ICommand command = editPolicyCommand instanceof org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy ? ((org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy) editPolicyCommand).getICommand() : new org.eclipse.gmf.runtime.diagram.ui.commands.CommandProxy(editPolicyCommand);
+			request.setParameter(simpleGrid.diagram.edit.helpers.SimpleGridBaseEditHelper.EDIT_POLICY_COMMAND, command);
+		}
+		org.eclipse.gmf.runtime.emf.type.core.IElementType requestContextElementType = getContextElementType(request);
+		request.setParameter(simpleGrid.diagram.edit.helpers.SimpleGridBaseEditHelper.CONTEXT_ELEMENT_TYPE, requestContextElementType);
+		org.eclipse.gmf.runtime.common.core.command.ICommand command = requestContextElementType.getEditCommand(request);
+		request.setParameter(simpleGrid.diagram.edit.helpers.SimpleGridBaseEditHelper.EDIT_POLICY_COMMAND, null);
+		request.setParameter(simpleGrid.diagram.edit.helpers.SimpleGridBaseEditHelper.CONTEXT_ELEMENT_TYPE, null);
+		if (command != null) {
+			if (!(command instanceof org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand)) {
+				command = new org.eclipse.gmf.runtime.emf.commands.core.command.CompositeTransactionalCommand(getEditingDomain(), command.getLabel()).compose(command);
+			}
+			return new org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy(command);
+		}
+		return editPolicyCommand;
+	}
+	
+		/**
+ * @generated
+ */
+	private org.eclipse.gmf.runtime.emf.type.core.IElementType getContextElementType(org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest request) {
+		org.eclipse.gmf.runtime.emf.type.core.IElementType requestContextElementType = simpleGrid.diagram.providers.SimpleGridElementTypes.getElementType(getVisualID(request));
+		return requestContextElementType != null ? requestContextElementType : myElementType;
+	}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getSemanticCommandSwitch(org.eclipse.gmf.runtime.emf.type.core.requests.IEditCommandRequest req) {
+	if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest) {
+		return getCreateRelationshipCommand((org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest) {
+		return getCreateCommand((org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest) {
+		return getConfigureCommand((org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest) {
+		return getDestroyElementCommand((org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest) {
+		return getDestroyReferenceCommand((org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest) {
+		return getDuplicateCommand((org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.GetEditContextRequest) {
+		return getEditContextCommand((org.eclipse.gmf.runtime.emf.type.core.requests.GetEditContextRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.MoveRequest) {
+		return getMoveCommand((org.eclipse.gmf.runtime.emf.type.core.requests.MoveRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest) {
+		return getReorientReferenceRelationshipCommand((org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest) {
+		return getReorientRelationshipCommand((org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest) req);
+	} else if (req instanceof org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest) {
+		return getSetCommand((org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest) req);
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getConfigureCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ConfigureRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCreateRelationshipCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getSetCommand(org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getEditContextCommand(org.eclipse.gmf.runtime.emf.type.core.requests.GetEditContextRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyElementCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getMoveCommand(org.eclipse.gmf.runtime.emf.type.core.requests.MoveRequest req) {
+	return null;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getReorientReferenceRelationshipCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest req) {
+	return org.eclipse.gef.commands.UnexecutableCommand.INSTANCE;
+}
+
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getReorientRelationshipCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest req) {
+	return org.eclipse.gef.commands.UnexecutableCommand.INSTANCE;
+}
+	
+		/**
+ * @generated
+ */
+	protected final org.eclipse.gef.commands.Command getGEFWrapper(org.eclipse.gmf.runtime.common.core.command.ICommand cmd) {
+		return new org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy(cmd);
+	}
+
+	/**
+ * Returns editing domain from the host edit part.
+ * @generated
+ */
+	protected org.eclipse.emf.transaction.TransactionalEditingDomain getEditingDomain() {
+		return ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	}
+
+		/**
+ * Clean all shortcuts to the host element from the same diagram
+ * @generated
+ */
+	protected void addDestroyShortcutsCommand(org.eclipse.gmf.runtime.common.core.command.ICompositeCommand cmd, org.eclipse.gmf.runtime.notation.View view) {
+		assert view.getEAnnotation("Shortcut") == null; //$NON-NLS-1$
+		for (java.util.Iterator it = view.getDiagram().getChildren().iterator(); it.hasNext();) {
+			org.eclipse.gmf.runtime.notation.View nextView = (org.eclipse.gmf.runtime.notation.View) it.next();
+			if (nextView.getEAnnotation("Shortcut") == null || !nextView.isSetElement() || nextView.getElement() != view.getElement()) { //$NON-NLS-1$
+				continue;
+			}
+			cmd.add(new org.eclipse.gmf.runtime.diagram.core.commands.DeleteCommand(getEditingDomain(), nextView));
+		}
+	}
+
+	
+	/**
+ * @generated
+ */
+	public static LinkConstraints getLinkConstraints() {
+		LinkConstraints cached = simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.getInstance().getLinkConstraints();
+		if (cached == null) {
+			simpleGrid.diagram.part.SimpleGridDiagramEditorPlugin.getInstance().setLinkConstraints(cached = new LinkConstraints());
+		}
+		return cached;
+	}
+
+
+/**
+ * @generated
+ */
+public static class LinkConstraints {
+
+	/**
+ * @generated
+ */
+	LinkConstraints() {
+		// use static method #getLinkConstraints() to access instance
+	}
+
+	
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_lineTo_4015(simpleGrid.Triplex_line source,  target) {
+	if (source != null) {
+	if (source.getTo() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_lineTo_4015(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateWaterheaterHeating_element_capacity_4010(simpleGrid.Waterheater source,  target) {
+	if (source != null) {
+	if (source.getHeating_element_capacity() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistWaterheaterHeating_element_capacity_4010(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_nodeFrom_4004(simpleGrid.Triplex_node source,  target) {
+	if (source != null) {
+	if (source.getFrom() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_nodeFrom_4004(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTransformerFrom_4016(simpleGrid.Transformer source,  target) {
+	if (source != null) {
+	if (source.getFrom() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTransformerFrom_4016(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateNodeTransformer_4014(simpleGrid.Node source, simpleGrid.Transformer target) {
+	if (source != null) {
+	if (source.getTransformer().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistNodeTransformer_4014(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTransformerTriplex_node_4013(simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
+	if (source != null) {
+	if (source.getTriplex_node().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTransformerTriplex_node_4013(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateHouseWaterheater_4017(simpleGrid.House source, simpleGrid.Waterheater target) {
+	if (source != null) {
+	if (source.getWaterheater().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistHouseWaterheater_4017(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_lineFrom_4003(simpleGrid.Triplex_line source,  target) {
+	if (source != null) {
+	if (source.getFrom() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_lineFrom_4003(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_nodeTriplex_line_4005(simpleGrid.Triplex_node source, simpleGrid.Triplex_line target) {
+	if (source != null) {
+	if (source.getTriplex_line().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_nodeTriplex_line_4005(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_meterHouse_4001(simpleGrid.Triplex_meter source, simpleGrid.House target) {
+	if (source != null) {
+	if (source.getHouse().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_meterHouse_4001(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_lineTriplex_meter_4007(simpleGrid.Triplex_line source, simpleGrid.Triplex_meter target) {
+	if (source != null) {
+	if (source.getTriplex_meter().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_lineTriplex_meter_4007(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTransformerTransformer_configuration_4006(simpleGrid.Transformer source, simpleGrid.Transformer_configuration target) {
+	if (source != null) {
+	if (source.getTransformer_configuration().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTransformerTransformer_configuration_4006(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_lineTriplex_line_configuration_4011(simpleGrid.Triplex_line source, simpleGrid.Triplex_Line_configuration target) {
+	if (source != null) {
+	if (source.getTriplex_line_configuration().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_lineTriplex_line_configuration_4011(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_Line_configurationTriplex_line_conductor_4008(simpleGrid.Triplex_Line_configuration source, simpleGrid.Triplex_line_conductor target) {
+	if (source != null) {
+	if (source.getTriplex_line_conductor().contains(target)
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_Line_configurationTriplex_line_conductor_4008(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateHouseParent_4002(simpleGrid.House source,  target) {
+	if (source != null) {
+	if (source.getParent() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistHouseParent_4002(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTriplex_nodeTo_4009(simpleGrid.Triplex_node source,  target) {
+	if (source != null) {
+	if (source.getTo() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTriplex_nodeTo_4009(source, target);
+}
+
+
+/**
+ * @generated
+ */
+public boolean canCreateTransformerTo_4012(simpleGrid.Transformer source,  target) {
+	if (source != null) {
+	if (source.getTo() != null
+) {
+		return false;
+	}
+	}
+
+	return canExistTransformerTo_4012(source, target);
+}
+
+	
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_lineTo_4015(simpleGrid.Triplex_line source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistWaterheaterHeating_element_capacity_4010(simpleGrid.Waterheater source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_nodeFrom_4004(simpleGrid.Triplex_node source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTransformerFrom_4016(simpleGrid.Transformer source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistNodeTransformer_4014(simpleGrid.Node source, simpleGrid.Transformer target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTransformerTriplex_node_4013(simpleGrid.Transformer source, simpleGrid.Triplex_node target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistHouseWaterheater_4017(simpleGrid.House source, simpleGrid.Waterheater target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_lineFrom_4003(simpleGrid.Triplex_line source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_nodeTriplex_line_4005(simpleGrid.Triplex_node source, simpleGrid.Triplex_line target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_meterHouse_4001(simpleGrid.Triplex_meter source, simpleGrid.House target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_lineTriplex_meter_4007(simpleGrid.Triplex_line source, simpleGrid.Triplex_meter target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTransformerTransformer_configuration_4006(simpleGrid.Transformer source, simpleGrid.Transformer_configuration target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_lineTriplex_line_configuration_4011(simpleGrid.Triplex_line source, simpleGrid.Triplex_Line_configuration target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_Line_configurationTriplex_line_conductor_4008(simpleGrid.Triplex_Line_configuration source, simpleGrid.Triplex_line_conductor target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistHouseParent_4002(simpleGrid.House source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTriplex_nodeTo_4009(simpleGrid.Triplex_node source,  target) {
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	public boolean canExistTransformerTo_4012(simpleGrid.Transformer source,  target) {
+		return true;
+	}
+}
+
+	}

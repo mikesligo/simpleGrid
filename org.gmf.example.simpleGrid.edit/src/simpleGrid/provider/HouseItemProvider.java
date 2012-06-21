@@ -29,7 +29,6 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import simpleGrid.House;
-import simpleGrid.SimpleGridFactory;
 import simpleGrid.SimpleGridPackage;
 
 /**
@@ -68,7 +67,6 @@ public class HouseItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addParentPropertyDescriptor(object);
 			addSchedule_skewPropertyDescriptor(object);
 			addAir_temperaturePropertyDescriptor(object);
 			addFloor_areaPropertyDescriptor(object);
@@ -84,6 +82,7 @@ public class HouseItemProvider
 			addAuxiliary_system_typePropertyDescriptor(object);
 			addCooling_COPPropertyDescriptor(object);
 			addWaterheaterPropertyDescriptor(object);
+			addParentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,28 +110,6 @@ public class HouseItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Parent feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addParentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_House_parent_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_House_parent_feature", "_UI_House_type"),
-				 SimpleGridPackage.Literals.HOUSE__PARENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Schedule skew feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -149,7 +126,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -171,7 +148,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -193,7 +170,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -215,7 +192,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -237,7 +214,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -259,7 +236,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -325,7 +302,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -369,7 +346,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -435,7 +412,7 @@ public class HouseItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -458,6 +435,28 @@ public class HouseItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_House_parent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_House_parent_feature", "_UI_House_type"),
+				 SimpleGridPackage.Literals.HOUSE__PARENT,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -567,62 +566,7 @@ public class HouseItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createClimate()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_Line_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTransformer_configuration()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTransformer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_node()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_meter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createHouse()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createWaterheater()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createGrid()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SimpleGridPackage.Literals.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT,
-				 SimpleGridFactory.eINSTANCE.createTriplex_line_conductor()));
+				 ""));
 	}
 
 	/**

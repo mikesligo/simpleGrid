@@ -67,10 +67,10 @@ public class Triplex_lineItemProvider
 			addNamePropertyDescriptor(object);
 			addLengthPropertyDescriptor(object);
 			addPhasesPropertyDescriptor(object);
-			addFromPropertyDescriptor(object);
-			addToPropertyDescriptor(object);
 			addTriplex_line_configurationPropertyDescriptor(object);
 			addTriplex_meterPropertyDescriptor(object);
+			addFromPropertyDescriptor(object);
+			addToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -114,7 +114,7 @@ public class Triplex_lineItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -137,50 +137,6 @@ public class Triplex_lineItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the From feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFromPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Triplex_line_from_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_line_from_feature", "_UI_Triplex_line_type"),
-				 SimpleGridPackage.Literals.TRIPLEX_LINE__FROM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the To feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addToPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Triplex_line_to_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_line_to_feature", "_UI_Triplex_line_type"),
-				 SimpleGridPackage.Literals.TRIPLEX_LINE__TO,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -225,6 +181,50 @@ public class Triplex_lineItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the From feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFromPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Triplex_line_from_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_line_from_feature", "_UI_Triplex_line_type"),
+				 SimpleGridPackage.Literals.TRIPLEX_LINE__FROM,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Triplex_line_to_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Triplex_line_to_feature", "_UI_Triplex_line_type"),
+				 SimpleGridPackage.Literals.TRIPLEX_LINE__TO,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}

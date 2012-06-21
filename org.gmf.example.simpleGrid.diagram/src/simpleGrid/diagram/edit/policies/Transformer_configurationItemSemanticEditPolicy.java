@@ -40,79 +40,7 @@ public class Transformer_configurationItemSemanticEditPolicy extends
 		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
 					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID) {
-				DestroyReferenceRequest r = new DestroyReferenceRequest(
-						incomingLink.getSource().getElement(), null,
-						incomingLink.getTarget().getElement(), false);
-				cmd.add(new DestroyReferenceCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (simpleGrid.diagram.part.SimpleGridVisualIDRegistry
-					.getVisualID(incomingLink) == simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(
 						incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
@@ -148,39 +76,7 @@ public class Transformer_configurationItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003 == req
-				.getElementType()) {
-			return null;
-		}
 		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009 == req
-				.getElementType()) {
-			return null;
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012 == req
 				.getElementType()) {
 			return null;
 		}
@@ -192,49 +88,9 @@ public class Transformer_configurationItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_lineToCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.WaterheaterHeating_element_capacityCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_nodeFromCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerFromCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_lineFromCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
 		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006 == req
 				.getElementType()) {
 			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerTransformer_configurationCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.HouseParentCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_nodeToCreateCommand(
-					req, req.getSource(), req.getTarget()));
-		}
-		if (simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012 == req
-				.getElementType()) {
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerToCreateCommand(
 					req, req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -249,32 +105,8 @@ public class Transformer_configurationItemSemanticEditPolicy extends
 	protected Command getReorientReferenceRelationshipCommand(
 			ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case simpleGrid.diagram.edit.parts.Triplex_lineToEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_lineToReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.WaterheaterHeating_element_capacityEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.WaterheaterHeating_element_capacityReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.Triplex_nodeFromEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_nodeFromReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.TransformerFromEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerFromReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.Triplex_lineFromEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_lineFromReorientCommand(
-					req));
 		case simpleGrid.diagram.edit.parts.TransformerTransformer_configurationEditPart.VISUAL_ID:
 			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerTransformer_configurationReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.HouseParentEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.HouseParentReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.Triplex_nodeToEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.Triplex_nodeToReorientCommand(
-					req));
-		case simpleGrid.diagram.edit.parts.TransformerToEditPart.VISUAL_ID:
-			return getGEFWrapper(new simpleGrid.diagram.edit.commands.TransformerToReorientCommand(
 					req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);

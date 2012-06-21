@@ -66,11 +66,11 @@ public class TransformerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addPhasesPropertyDescriptor(object);
-			addFromPropertyDescriptor(object);
-			addToPropertyDescriptor(object);
 			addTransformer_configurationPropertyDescriptor(object);
 			addGroupidPropertyDescriptor(object);
 			addTriplex_nodePropertyDescriptor(object);
+			addFromPropertyDescriptor(object);
+			addToPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,50 +115,6 @@ public class TransformerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the From feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFromPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Transformer_from_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transformer_from_feature", "_UI_Transformer_type"),
-				 SimpleGridPackage.Literals.TRANSFORMER__FROM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the To feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addToPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Transformer_to_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Transformer_to_feature", "_UI_Transformer_type"),
-				 SimpleGridPackage.Literals.TRANSFORMER__TO,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
@@ -225,6 +181,50 @@ public class TransformerItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the From feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFromPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transformer_from_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transformer_from_feature", "_UI_Transformer_type"),
+				 SimpleGridPackage.Literals.TRANSFORMER__FROM,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the To feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addToPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Transformer_to_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Transformer_to_feature", "_UI_Transformer_type"),
+				 SimpleGridPackage.Literals.TRANSFORMER__TO,
+				 true,
+				 false,
+				 true,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}

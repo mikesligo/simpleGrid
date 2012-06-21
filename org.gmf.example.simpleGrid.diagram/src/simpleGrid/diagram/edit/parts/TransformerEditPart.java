@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
-import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.diagram.ui.editpolicies.FlowLayoutEditPolicy;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -68,18 +69,15 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
-			protected EditPolicy createChildEditPolicy(EditPart child) {
-				EditPolicy result = child
-						.getEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE);
-				if (result == null) {
-					result = new NonResizableEditPolicy();
-				}
-				return result;
+		FlowLayoutEditPolicy lep = new FlowLayoutEditPolicy() {
+
+			protected Command createAddCommand(EditPart child, EditPart after) {
+				return null;
 			}
 
-			protected Command getMoveChildrenCommand(Request request) {
+			protected Command createMoveChildCommand(EditPart child,
+					EditPart after) {
 				return null;
 			}
 
@@ -94,14 +92,14 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new TransformerFigure();
+		return primaryShape = new Transformer_configurationFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public TransformerFigure getPrimaryShape() {
-		return (TransformerFigure) primaryShape;
+	public Transformer_configurationFigure getPrimaryShape() {
+		return (Transformer_configurationFigure) primaryShape;
 	}
 
 	/**
@@ -189,11 +187,9 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnSource() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(4);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
+		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013);
 		return types;
 	}
 
@@ -203,77 +199,11 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013);
-		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006);
 		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.NodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_meterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.TransformerEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
 		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_nodeEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_Line_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.WaterheaterEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.HouseEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.ClimateEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_line_conductorEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Triplex_lineEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
-		}
-		if (targetEditPart instanceof simpleGrid.diagram.edit.parts.Transformer_configurationEditPart) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
+			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013);
 		}
 		return types;
 	}
@@ -283,34 +213,10 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
+		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
 		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTriplex_node_4013) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTransformer_configuration_4006) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_meter_2005);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_Line_configuration_2001);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Climate_2009);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_conductor_2008);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_configuration_2004);
 		}
 		return types;
 	}
@@ -319,16 +225,8 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	public List<IElementType> getMARelTypesOnTarget() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(9);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(1);
 		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.NodeTransformer_4014);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009);
-		types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012);
 		return types;
 	}
 
@@ -337,24 +235,8 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	 */
 	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
 		LinkedList<IElementType> types = new LinkedList<IElementType>();
-		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineTo_4015) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.WaterheaterHeating_element_capacity_4010) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Waterheater_2003);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeFrom_4004) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerFrom_4016) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.NodeTransformer_4014) {
+		if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.NodeTransformer_4014) {
 			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Node_2007);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_lineFrom_4003) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_line_2006);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.HouseParent_4002) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.House_2011);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_nodeTo_4009) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Triplex_node_2002);
-		} else if (relationshipType == simpleGrid.diagram.providers.SimpleGridElementTypes.TransformerTo_4012) {
-			types.add(simpleGrid.diagram.providers.SimpleGridElementTypes.Transformer_2010);
 		}
 		return types;
 	}
@@ -362,13 +244,197 @@ public class TransformerEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class TransformerFigure extends SVGFigure {
+	public class Transformer_configurationFigure extends SVGFigure {
 
 		/**
 		 * @generated
 		 */
-		public TransformerFigure() {
-			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/transformer.svg");
+		private WrappingLabel fFigureTransformer_configurationNameFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationConnect_typeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationInstall_typeFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationPower_ratingFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationImpedenceFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationImpedence1Figure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationImpedence2Figure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationShunt_impedenceFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationPrimary_voltageFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureTransformer_configurationSecondary_voltageFigure;
+
+		/**
+		 * @generated
+		 */
+		public Transformer_configurationFigure() {
+
+			FlowLayout layoutThis = new FlowLayout();
+			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setMinorAlignment(FlowLayout.ALIGN_LEFTTOP);
+
+			layoutThis.setMajorAlignment(FlowLayout.ALIGN_LEFTTOP);
+			layoutThis.setMajorSpacing(5);
+			layoutThis.setMinorSpacing(5);
+			layoutThis.setHorizontal(true);
+
+			this.setLayoutManager(layoutThis);
+
+			this.setURI("file:///home/mike/src/simpleGrid/org.gmf.example.simpleGrid/images/config.svg");
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureTransformer_configurationNameFigure = new WrappingLabel();
+			fFigureTransformer_configurationNameFigure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationNameFigure);
+
+			fFigureTransformer_configurationConnect_typeFigure = new WrappingLabel();
+			fFigureTransformer_configurationConnect_typeFigure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationConnect_typeFigure);
+
+			fFigureTransformer_configurationInstall_typeFigure = new WrappingLabel();
+			fFigureTransformer_configurationInstall_typeFigure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationInstall_typeFigure);
+
+			fFigureTransformer_configurationPower_ratingFigure = new WrappingLabel();
+			fFigureTransformer_configurationPower_ratingFigure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationPower_ratingFigure);
+
+			fFigureTransformer_configurationImpedenceFigure = new WrappingLabel();
+			fFigureTransformer_configurationImpedenceFigure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationImpedenceFigure);
+
+			fFigureTransformer_configurationImpedence1Figure = new WrappingLabel();
+			fFigureTransformer_configurationImpedence1Figure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationImpedence1Figure);
+
+			fFigureTransformer_configurationImpedence2Figure = new WrappingLabel();
+			fFigureTransformer_configurationImpedence2Figure.setText("<...>");
+
+			this.add(fFigureTransformer_configurationImpedence2Figure);
+
+			fFigureTransformer_configurationShunt_impedenceFigure = new WrappingLabel();
+			fFigureTransformer_configurationShunt_impedenceFigure
+					.setText("<...>");
+
+			this.add(fFigureTransformer_configurationShunt_impedenceFigure);
+
+			fFigureTransformer_configurationPrimary_voltageFigure = new WrappingLabel();
+			fFigureTransformer_configurationPrimary_voltageFigure
+					.setText("<...>");
+
+			this.add(fFigureTransformer_configurationPrimary_voltageFigure);
+
+			fFigureTransformer_configurationSecondary_voltageFigure = new WrappingLabel();
+			fFigureTransformer_configurationSecondary_voltageFigure
+					.setText("<...>");
+
+			this.add(fFigureTransformer_configurationSecondary_voltageFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationNameFigure() {
+			return fFigureTransformer_configurationNameFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationConnect_typeFigure() {
+			return fFigureTransformer_configurationConnect_typeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationInstall_typeFigure() {
+			return fFigureTransformer_configurationInstall_typeFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationPower_ratingFigure() {
+			return fFigureTransformer_configurationPower_ratingFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationImpedenceFigure() {
+			return fFigureTransformer_configurationImpedenceFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationImpedence1Figure() {
+			return fFigureTransformer_configurationImpedence1Figure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationImpedence2Figure() {
+			return fFigureTransformer_configurationImpedence2Figure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationShunt_impedenceFigure() {
+			return fFigureTransformer_configurationShunt_impedenceFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationPrimary_voltageFigure() {
+			return fFigureTransformer_configurationPrimary_voltageFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureTransformer_configurationSecondary_voltageFigure() {
+			return fFigureTransformer_configurationSecondary_voltageFigure;
 		}
 
 	}
