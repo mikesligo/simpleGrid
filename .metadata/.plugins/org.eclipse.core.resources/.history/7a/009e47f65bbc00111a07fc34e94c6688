@@ -1,0 +1,34 @@
+package simpleGrid.synch
+
+import java.net.*
+import simpleGrid.*
+import org.eclipse.xtext.xbase.lib.Functions.*
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EStructuralFeature
+
+API GridlabdAPI{
+	mapping House => String{
+		newImage{element.name = core}  	
+	}
+	invocation GetState{
+	    var current:EObject
+	    var efeature : EStructuralFeature
+		operation get *->* {
+			System::out.println(String::format("Get: %s",efeature.name))
+			current = element;
+			efeature = feature; 
+			if (element instanceof House) 
+				"EString".equals(feature.EType.name)
+			else false
+		}
+		pre {true}
+		invoke returning String {
+			System::out.println(String::format("Get: %s",efeature.name))
+			efeature.name
+		}
+		post (String s) {
+			
+			current.eSet(efeature,s)
+		}
+	}
+}

@@ -7,7 +7,7 @@ import java.net.URL;
 
 public class Property {
 
-	public static void printProperties(){
+	public  void printProperties(){
 		try{
 			// name of current object
 			String currentObj = null;
@@ -35,7 +35,7 @@ public class Property {
 		}
 	}
 
-	private static boolean isReturnChar(String strLine) {
+	private  boolean isReturnChar(String strLine) {
 		if (strLine.length() == 0) return true;
 		for (int i=0;i<strLine.length();i++){
 			if ((int)strLine.charAt(i) == 10 || strLine.length() <=1){
@@ -45,14 +45,14 @@ public class Property {
 		return false;
 	}
 
-	private static String getNextLine(BufferedReader br) throws IOException {
+	private  String getNextLine(BufferedReader br) throws IOException {
 		String tmp = br.readLine();
 		// replace isn't working for some reason, I did try
 		tmp.replaceAll(" ", "%20");
 		return tmp;
 	}
 	
-	public static String getValueOfProperty(String currentObj, String strLine) throws IOException {
+	public  String getValueOfProperty(String currentObj, String strLine) throws IOException {
 		URL url = new URL("http://localhost:10001/" + currentObj + "/" + strLine);
 		//System.out.println("Url is " + url.toString());
 		HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -69,7 +69,7 @@ public class Property {
 		return null;
 	}
 	
-	private static String getValueFromString(String s){
+	private  String getValueFromString(String s){
 		try {
 			if (s.contains("<value>")){
 				int startIndex = 8;

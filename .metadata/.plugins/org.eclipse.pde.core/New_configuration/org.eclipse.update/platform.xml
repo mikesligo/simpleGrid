@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1340307624735" transient="false" version="3.0">
+<config date="1340363911781" transient="false" version="3.0">
 <site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
 <feature id="org.eclipse.emf.codegen.ui.source" url="features/org.eclipse.emf.codegen.ui.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
+</feature>
+<feature id="org.eclipse.xtext.ui.source" url="features/org.eclipse.xtext.ui.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.mylyn.wikitext_feature" plugin-identifier="org.eclipse.mylyn" url="features/org.eclipse.mylyn.wikitext_feature_1.5.5.v20120215-0100/" version="1.5.5.v20120215-0100">
 </feature>
@@ -17,6 +19,8 @@
 </feature>
 <feature id="org.eclipse.emf.sdk" url="features/org.eclipse.emf.sdk_2.7.2.v20120130-0943/" version="2.7.2.v20120130-0943">
 </feature>
+<feature id="org.eclipse.ajdt.source" url="features/org.eclipse.ajdt.source_2.1.3.e37x-20110628-1900/" version="2.1.3.e37x-20110628-1900">
+</feature>
 <feature id="org.eclipse.emf.ecoretools.utils.source" url="features/org.eclipse.emf.ecoretools.utils.source_1.0.0.v20110608-1633/" version="1.0.0.v20110608-1633">
 </feature>
 <feature id="org.eclipse.emf.transaction" url="features/org.eclipse.emf.transaction_1.5.0.v20110502-1600-377-8s734C3E7D15D6B/" version="1.5.0.v20110502-1600-377-8s734C3E7D15D6B">
@@ -28,6 +32,8 @@
 <feature id="org.eclipse.gmf.runtime.notation" url="features/org.eclipse.gmf.runtime.notation_1.5.0.v20110426-2159-378-8s73543B4E1689I/" version="1.5.0.v20110426-2159-378-8s73543B4E1689I">
 </feature>
 <feature id="org.eclipse.emf.cdo.epp" url="features/org.eclipse.emf.cdo.epp_4.0.0.v20120214-1021/" version="4.0.0.v20120214-1021">
+</feature>
+<feature id="org.eclipse.ajdt" plugin-identifier="org.eclipse.aspectj" url="features/org.eclipse.ajdt_2.1.3.e37x-20110628-1900/" version="2.1.3.e37x-20110628-1900">
 </feature>
 <feature id="org.eclipse.epp.package.common.feature" url="features/org.eclipse.epp.package.common.feature_1.4.2.20120213-0814/" version="1.4.2.20120213-0814">
 </feature>
@@ -67,6 +73,8 @@
 </feature>
 <feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.7.0.v20120127-1122/" version="2.7.0.v20120127-1122">
 </feature>
+<feature id="org.eclipse.xtext.examples" url="features/org.eclipse.xtext.examples_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.equinox.p2.extras.feature" url="features/org.eclipse.equinox.p2.extras.feature_1.0.1.v20110906-1605-7A4FD4DiVOMap8cHSc6vPuny4gqO/" version="1.0.1.v20110906-1605-7A4FD4DiVOMap8cHSc6vPuny4gqO">
 </feature>
 <feature id="org.eclipse.emf.ecore.edit" url="features/org.eclipse.emf.ecore.edit_2.7.1.v20120130-0943/" version="2.7.1.v20120130-0943">
@@ -76,6 +84,8 @@
 <feature id="org.eclipse.gmf.runtime.thirdparty" url="features/org.eclipse.gmf.runtime.thirdparty_1.5.0.v20110607-1200-7P8W6FHV2CYnrDgDtz-JNaw31221/" version="1.5.0.v20110607-1200-7P8W6FHV2CYnrDgDtz-JNaw31221">
 </feature>
 <feature id="org.eclipse.xsd.mapping" url="features/org.eclipse.xsd.mapping_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
+</feature>
+<feature id="org.eclipse.xtext.xtend2.sdk.source" url="features/org.eclipse.xtext.xtend2.sdk.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.equinox.p2.discovery.feature" url="features/org.eclipse.equinox.p2.discovery.feature_1.0.101.R37x_v20110909-4-8_9oB5885K5B28WKK/" version="1.0.101.R37x_v20110909-4-8_9oB5885K5B28WKK">
 </feature>
@@ -115,21 +125,37 @@
 </feature>
 <feature id="org.eclipse.emf.workspace.doc" url="features/org.eclipse.emf.workspace.doc_1.5.0.v20110502-1600-22-7w311A1238292A/" version="1.5.0.v20110502-1600-22-7w311A1238292A">
 </feature>
+<feature id="org.eclipse.xtext.xtend2.sdk" url="features/org.eclipse.xtext.xtend2.sdk_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
+<feature id="org.eclipse.xtext.ui" url="features/org.eclipse.xtext.ui_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
+<feature id="org.eclipse.xtext.docs" plugin-identifier="org.eclipse.xtext.doc" url="features/org.eclipse.xtext.docs_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.ocl.uml.source" url="features/org.eclipse.ocl.uml.source_3.1.0.v20120206-0606/" version="3.1.0.v20120206-0606">
 </feature>
 <feature id="org.eclipse.emf.ecoretools.sdk" url="features/org.eclipse.emf.ecoretools.sdk_1.0.0.v20110608-1633/" version="1.0.0.v20110608-1633">
 </feature>
+<feature id="org.eclipse.contribution.weaving" url="features/org.eclipse.contribution.weaving_2.1.3.e37x-20110628-1900/" version="2.1.3.e37x-20110628-1900">
+</feature>
 <feature id="org.eclipse.jdt" url="features/org.eclipse.jdt_3.7.2.v20120120-1414-7z8gFcuFMP7BW5XTz0jLTnz0l9B1/" version="3.7.2.v20120120-1414-7z8gFcuFMP7BW5XTz0jLTnz0l9B1">
+</feature>
+<feature id="org.eclipse.xtext.xbase" url="features/org.eclipse.xtext.xbase_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.emf.edit.ui" url="features/org.eclipse.emf.edit.ui_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
 <feature id="org.eclipse.mylyn.java_feature" plugin-identifier="org.eclipse.mylyn" url="features/org.eclipse.mylyn.java_feature_3.6.5.v20120215-0100/" version="3.6.5.v20120215-0100">
 </feature>
+<feature id="org.eclipse.xtext.runtime.source" url="features/org.eclipse.xtext.runtime.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.emf.compare.doc" url="features/org.eclipse.emf.compare.doc_1.2.2.v20120214-0915/" version="1.2.2.v20120214-0915">
 </feature>
 <feature id="org.eclipse.equinox.p2.user.ui.source" url="features/org.eclipse.equinox.p2.user.ui.source_2.1.2.R37x_v20110815-1155-6-Bk8pYWZz0qUTX5I15GZWwbXkrl/" version="2.1.2.R37x_v20110815-1155-6-Bk8pYWZz0qUTX5I15GZWwbXkrl">
 </feature>
+<feature id="org.eclipse.xtext.xtext.ui" url="features/org.eclipse.xtext.xtext.ui_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.gmf.tooling" url="features/org.eclipse.gmf.tooling_2.4.0.v20110520-2359-7_7MFMTFIhIez-z-gNtCLJeJZ/" version="2.4.0.v20110520-2359-7_7MFMTFIhIez-z-gNtCLJeJZ">
+</feature>
+<feature id="org.eclipse.xtext.runtime" url="features/org.eclipse.xtext.runtime_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.equinox.p2.core.feature.source" url="features/org.eclipse.equinox.p2.core.feature.source_1.0.1.v20110906-1605-8290FZ9FVKHVRKtmx3fpNuo02129/" version="1.0.1.v20110906-1605-8290FZ9FVKHVRKtmx3fpNuo02129">
 </feature>
@@ -145,13 +171,15 @@
 </feature>
 <feature id="org.eclipse.equinox.p2.extras.feature.source" url="features/org.eclipse.equinox.p2.extras.feature.source_1.0.1.v20110906-1605-7A4FD4DiVOMap8cHSc6vPuny4gqO/" version="1.0.1.v20110906-1605-7A4FD4DiVOMap8cHSc6vPuny4gqO">
 </feature>
+<feature id="org.eclipse.emf.mapping.ui.source" url="features/org.eclipse.emf.mapping.ui.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
+</feature>
 <feature id="org.eclipse.emf.workspace.source" url="features/org.eclipse.emf.workspace.source_1.5.1.v20110823-1800-37708s734D3C7D3CCC1/" version="1.5.1.v20110823-1800-37708s734D3C7D3CCC1">
 </feature>
 <feature id="org.eclipse.emf.ecoretools" url="features/org.eclipse.emf.ecoretools_1.0.0.v20110608-1633/" version="1.0.0.v20110608-1633">
 </feature>
-<feature id="org.eclipse.emf.mapping.ui.source" url="features/org.eclipse.emf.mapping.ui.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
-</feature>
 <feature id="org.eclipse.help.source" url="features/org.eclipse.help.source_1.3.0.v20110530-0844-7i7uFFmFFl8nvqbDpEqTvx/" version="1.3.0.v20110530-0844-7i7uFFmFFl8nvqbDpEqTvx">
+</feature>
+<feature id="org.eclipse.xtext.xtext.ui.source" url="features/org.eclipse.xtext.xtext.ui.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.emf.ecoretools.utils" url="features/org.eclipse.emf.ecoretools.utils_1.0.0.v20110608-1633/" version="1.0.0.v20110608-1633">
 </feature>
@@ -176,6 +204,8 @@
 <feature id="org.eclipse.emf.ecore.editor.source" url="features/org.eclipse.emf.ecore.editor.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
 <feature id="org.eclipse.equinox.p2.rcp.feature" url="features/org.eclipse.equinox.p2.rcp.feature_1.0.1.v20110906-1605-782EqBqNKGVkiV-PUsgz-uny4gqO/" version="1.0.1.v20110906-1605-782EqBqNKGVkiV-PUsgz-uny4gqO">
+</feature>
+<feature id="org.eclipse.xtext.sdk" plugin-identifier="org.eclipse.xtext" url="features/org.eclipse.xtext.sdk_2.2.1.v201112130541/" version="2.2.1.v201112130541">
 </feature>
 <feature id="org.eclipse.net4j.db.derby" url="features/org.eclipse.net4j.db.derby_4.0.0.v20110607-1031/" version="4.0.0.v20110607-1031">
 </feature>
@@ -205,19 +235,23 @@
 </feature>
 <feature id="org.eclipse.mylyn.bugzilla_feature" plugin-identifier="org.eclipse.mylyn" url="features/org.eclipse.mylyn.bugzilla_feature_3.6.5.v20120215-0100/" version="3.6.5.v20120215-0100">
 </feature>
+<feature id="org.eclipse.xtext.examples.source" url="features/org.eclipse.xtext.examples.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.emf.ecoretools.source" url="features/org.eclipse.emf.ecoretools.source_1.0.0.v20110608-1633/" version="1.0.0.v20110608-1633">
 </feature>
 <feature id="org.eclipse.emf.databinding.source" url="features/org.eclipse.emf.databinding.source_1.2.0.v20120130-0943/" version="1.2.0.v20120130-0943">
 </feature>
 <feature id="org.eclipse.emf.mapping.source" url="features/org.eclipse.emf.mapping.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
+<feature id="org.eclipse.xtext.xbase.source" url="features/org.eclipse.xtext.xbase.source_2.2.1.v201112130541/" version="2.2.1.v201112130541">
+</feature>
 <feature id="org.eclipse.uml2.examples" url="features/org.eclipse.uml2.examples_3.2.0.v201103291514/" version="3.2.0.v201103291514">
 </feature>
 <feature id="org.eclipse.emf.validation.source" url="features/org.eclipse.emf.validation.source_1.5.0.v20110502-1600-479-9oB56N5BBR6LCA6/" version="1.5.0.v20110502-1600-479-9oB56N5BBR6LCA6">
 </feature>
-<feature id="org.eclipse.xsd.mapping.editor.source" url="features/org.eclipse.xsd.mapping.editor.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
-</feature>
 <feature id="org.eclipse.gmf.sdk" url="features/org.eclipse.gmf.sdk_2.4.0.v20110607-2359-777B-95pDdE_mTYphvVQ8LWuGUjo/" version="2.4.0.v20110607-2359-777B-95pDdE_mTYphvVQ8LWuGUjo">
+</feature>
+<feature id="org.eclipse.xsd.mapping.editor.source" url="features/org.eclipse.xsd.mapping.editor.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
 <feature id="org.eclipse.emf.doc.source" url="features/org.eclipse.emf.doc.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
@@ -243,6 +277,8 @@
 </feature>
 <feature id="org.eclipse.gmf.examples.runtime.ui.pde" url="features/org.eclipse.gmf.examples.runtime.ui.pde_1.5.0.v20110607-1200-2307w3121182703341/" version="1.5.0.v20110607-1200-2307w3121182703341">
 </feature>
+<feature id="org.eclipse.equinox.weaving.sdk" url="features/org.eclipse.equinox.weaving.sdk_1.0.100.HEAD/" version="1.0.100.HEAD">
+</feature>
 <feature id="org.eclipse.emf.codegen.ecore.source" url="features/org.eclipse.emf.codegen.ecore.source_2.7.0.v20120130-0943/" version="2.7.0.v20120130-0943">
 </feature>
 <feature id="org.eclipse.emf.databinding.edit.source" url="features/org.eclipse.emf.databinding.edit.source_1.2.0.v20120130-0943/" version="1.2.0.v20120130-0943">
@@ -255,9 +291,11 @@
 </feature>
 <feature id="org.eclipse.ocl.doc" url="features/org.eclipse.ocl.doc_3.1.1.v20120206-0606/" version="3.1.1.v20120206-0606">
 </feature>
+<feature id="org.eclipse.ocl.all" url="features/org.eclipse.ocl.all_3.1.2.v20120206-0606/" version="3.1.2.v20120206-0606">
+</feature>
 <feature id="org.eclipse.xsd.sdk" url="features/org.eclipse.xsd.sdk_2.7.1.v20120130-0943/" version="2.7.1.v20120130-0943">
 </feature>
-<feature id="org.eclipse.ocl.all" url="features/org.eclipse.ocl.all_3.1.2.v20120206-0606/" version="3.1.2.v20120206-0606">
+<feature id="org.eclipse.contribution.weaving.source" url="features/org.eclipse.contribution.weaving.source_2.1.3.e37x-20110628-1900/" version="2.1.3.e37x-20110628-1900">
 </feature>
 <feature id="org.eclipse.ocl.source" url="features/org.eclipse.ocl.source_3.1.2.v20120206-0606/" version="3.1.2.v20120206-0606">
 </feature>

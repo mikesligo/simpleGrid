@@ -6,4 +6,6 @@
 <fullyQualifiedTypeName name="org.eclipse.gmf.runtime.lite.svg.SVGFigure"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="http.Property"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
 </qualifiedTypeNameHistroy>

@@ -6,7 +6,12 @@
  */
 package simpleGrid.impl;
 
+import http.Property;
+
+import java.io.IOException;
 import java.util.Collection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -425,10 +430,19 @@ public class HouseImpl extends EObjectImpl implements House {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * <!-- end-user-doc --> 
+	 * @generated NOT
 	 */
 	public String getName() {
+		if(name != null && name != ""){
+			Property prop = null;
+			try {
+				//System.out.println(name+"\n\n\n---\n\n\n");
+				//System.out.println(prop.getValueOfProperty(name, "air_temperature"));
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		}
 		return name;
 	}
 
@@ -800,42 +814,42 @@ public class HouseImpl extends EObjectImpl implements House {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SimpleGridPackage.HOUSE__NAME:
-				return getName();
-			case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
-				return getSchedule_skew();
-			case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
-				return getAir_temperature();
-			case SimpleGridPackage.HOUSE__FLOOR_AREA:
-				return getFloor_area();
-			case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
-				return getCooling_setpoint();
-			case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
-				return getHeating_setpoint();
-			case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
-				return getThermal_integrity_level();
-			case SimpleGridPackage.HOUSE__MOTOR_MODEL:
-				return getMotor_model();
-			case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
-				return getMotor_efficiency();
-			case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
-				return getMass_temperature();
-			case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
-				return getHeating_system_type();
-			case SimpleGridPackage.HOUSE__HEATING_COP:
-				return getHeating_COP();
-			case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
-				return getAuxiliary_strategy();
-			case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
-				return getAuxiliary_system_type();
-			case SimpleGridPackage.HOUSE__COOLING_COP:
-				return getCooling_COP();
-			case SimpleGridPackage.HOUSE__WATERHEATER:
-				return getWaterheater();
-			case SimpleGridPackage.HOUSE__PARENT:
-				return getParent();
-			case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
-				return getAux_heat_temperature_lockout();
+		case SimpleGridPackage.HOUSE__NAME:
+			return getName();
+		case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
+			return getSchedule_skew();
+		case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
+			return getAir_temperature();
+		case SimpleGridPackage.HOUSE__FLOOR_AREA:
+			return getFloor_area();
+		case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
+			return getCooling_setpoint();
+		case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
+			return getHeating_setpoint();
+		case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
+			return getThermal_integrity_level();
+		case SimpleGridPackage.HOUSE__MOTOR_MODEL:
+			return getMotor_model();
+		case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
+			return getMotor_efficiency();
+		case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
+			return getMass_temperature();
+		case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
+			return getHeating_system_type();
+		case SimpleGridPackage.HOUSE__HEATING_COP:
+			return getHeating_COP();
+		case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
+			return getAuxiliary_strategy();
+		case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
+			return getAuxiliary_system_type();
+		case SimpleGridPackage.HOUSE__COOLING_COP:
+			return getCooling_COP();
+		case SimpleGridPackage.HOUSE__WATERHEATER:
+			return getWaterheater();
+		case SimpleGridPackage.HOUSE__PARENT:
+			return getParent();
+		case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
+			return getAux_heat_temperature_lockout();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -849,61 +863,61 @@ public class HouseImpl extends EObjectImpl implements House {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SimpleGridPackage.HOUSE__NAME:
-				setName((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
-				setSchedule_skew((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
-				setAir_temperature((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__FLOOR_AREA:
-				setFloor_area((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
-				setCooling_setpoint((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
-				setHeating_setpoint((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
-				setThermal_integrity_level((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__MOTOR_MODEL:
-				setMotor_model((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
-				setMotor_efficiency((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
-				setMass_temperature((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
-				setHeating_system_type((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_COP:
-				setHeating_COP((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
-				setAuxiliary_strategy((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
-				setAuxiliary_system_type((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__COOLING_COP:
-				setCooling_COP((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__WATERHEATER:
-				getWaterheater().clear();
-				getWaterheater().addAll((Collection<? extends Waterheater>)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__PARENT:
-				setParent((String)newValue);
-				return;
-			case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
-				setAux_heat_temperature_lockout((String)newValue);
-				return;
+		case SimpleGridPackage.HOUSE__NAME:
+			setName((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
+			setSchedule_skew((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
+			setAir_temperature((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__FLOOR_AREA:
+			setFloor_area((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
+			setCooling_setpoint((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
+			setHeating_setpoint((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
+			setThermal_integrity_level((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__MOTOR_MODEL:
+			setMotor_model((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
+			setMotor_efficiency((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
+			setMass_temperature((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
+			setHeating_system_type((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_COP:
+			setHeating_COP((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
+			setAuxiliary_strategy((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
+			setAuxiliary_system_type((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__COOLING_COP:
+			setCooling_COP((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__WATERHEATER:
+			getWaterheater().clear();
+			getWaterheater().addAll((Collection<? extends Waterheater>)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__PARENT:
+			setParent((String)newValue);
+			return;
+		case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
+			setAux_heat_temperature_lockout((String)newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -916,60 +930,60 @@ public class HouseImpl extends EObjectImpl implements House {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SimpleGridPackage.HOUSE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
-				setSchedule_skew(SCHEDULE_SKEW_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
-				setAir_temperature(AIR_TEMPERATURE_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__FLOOR_AREA:
-				setFloor_area(FLOOR_AREA_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
-				setCooling_setpoint(COOLING_SETPOINT_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
-				setHeating_setpoint(HEATING_SETPOINT_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
-				setThermal_integrity_level(THERMAL_INTEGRITY_LEVEL_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__MOTOR_MODEL:
-				setMotor_model(MOTOR_MODEL_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
-				setMotor_efficiency(MOTOR_EFFICIENCY_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
-				setMass_temperature(MASS_TEMPERATURE_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
-				setHeating_system_type(HEATING_SYSTEM_TYPE_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__HEATING_COP:
-				setHeating_COP(HEATING_COP_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
-				setAuxiliary_strategy(AUXILIARY_STRATEGY_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
-				setAuxiliary_system_type(AUXILIARY_SYSTEM_TYPE_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__COOLING_COP:
-				setCooling_COP(COOLING_COP_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__WATERHEATER:
-				getWaterheater().clear();
-				return;
-			case SimpleGridPackage.HOUSE__PARENT:
-				setParent(PARENT_EDEFAULT);
-				return;
-			case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
-				setAux_heat_temperature_lockout(AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT);
-				return;
+		case SimpleGridPackage.HOUSE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
+			setSchedule_skew(SCHEDULE_SKEW_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
+			setAir_temperature(AIR_TEMPERATURE_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__FLOOR_AREA:
+			setFloor_area(FLOOR_AREA_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
+			setCooling_setpoint(COOLING_SETPOINT_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
+			setHeating_setpoint(HEATING_SETPOINT_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
+			setThermal_integrity_level(THERMAL_INTEGRITY_LEVEL_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__MOTOR_MODEL:
+			setMotor_model(MOTOR_MODEL_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
+			setMotor_efficiency(MOTOR_EFFICIENCY_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
+			setMass_temperature(MASS_TEMPERATURE_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
+			setHeating_system_type(HEATING_SYSTEM_TYPE_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__HEATING_COP:
+			setHeating_COP(HEATING_COP_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
+			setAuxiliary_strategy(AUXILIARY_STRATEGY_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
+			setAuxiliary_system_type(AUXILIARY_SYSTEM_TYPE_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__COOLING_COP:
+			setCooling_COP(COOLING_COP_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__WATERHEATER:
+			getWaterheater().clear();
+			return;
+		case SimpleGridPackage.HOUSE__PARENT:
+			setParent(PARENT_EDEFAULT);
+			return;
+		case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
+			setAux_heat_temperature_lockout(AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -982,42 +996,42 @@ public class HouseImpl extends EObjectImpl implements House {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SimpleGridPackage.HOUSE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
-				return SCHEDULE_SKEW_EDEFAULT == null ? schedule_skew != null : !SCHEDULE_SKEW_EDEFAULT.equals(schedule_skew);
-			case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
-				return AIR_TEMPERATURE_EDEFAULT == null ? air_temperature != null : !AIR_TEMPERATURE_EDEFAULT.equals(air_temperature);
-			case SimpleGridPackage.HOUSE__FLOOR_AREA:
-				return FLOOR_AREA_EDEFAULT == null ? floor_area != null : !FLOOR_AREA_EDEFAULT.equals(floor_area);
-			case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
-				return COOLING_SETPOINT_EDEFAULT == null ? cooling_setpoint != null : !COOLING_SETPOINT_EDEFAULT.equals(cooling_setpoint);
-			case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
-				return HEATING_SETPOINT_EDEFAULT == null ? heating_setpoint != null : !HEATING_SETPOINT_EDEFAULT.equals(heating_setpoint);
-			case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
-				return THERMAL_INTEGRITY_LEVEL_EDEFAULT == null ? thermal_integrity_level != null : !THERMAL_INTEGRITY_LEVEL_EDEFAULT.equals(thermal_integrity_level);
-			case SimpleGridPackage.HOUSE__MOTOR_MODEL:
-				return MOTOR_MODEL_EDEFAULT == null ? motor_model != null : !MOTOR_MODEL_EDEFAULT.equals(motor_model);
-			case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
-				return MOTOR_EFFICIENCY_EDEFAULT == null ? motor_efficiency != null : !MOTOR_EFFICIENCY_EDEFAULT.equals(motor_efficiency);
-			case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
-				return MASS_TEMPERATURE_EDEFAULT == null ? mass_temperature != null : !MASS_TEMPERATURE_EDEFAULT.equals(mass_temperature);
-			case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
-				return HEATING_SYSTEM_TYPE_EDEFAULT == null ? heating_system_type != null : !HEATING_SYSTEM_TYPE_EDEFAULT.equals(heating_system_type);
-			case SimpleGridPackage.HOUSE__HEATING_COP:
-				return HEATING_COP_EDEFAULT == null ? heating_COP != null : !HEATING_COP_EDEFAULT.equals(heating_COP);
-			case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
-				return AUXILIARY_STRATEGY_EDEFAULT == null ? auxiliary_strategy != null : !AUXILIARY_STRATEGY_EDEFAULT.equals(auxiliary_strategy);
-			case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
-				return AUXILIARY_SYSTEM_TYPE_EDEFAULT == null ? auxiliary_system_type != null : !AUXILIARY_SYSTEM_TYPE_EDEFAULT.equals(auxiliary_system_type);
-			case SimpleGridPackage.HOUSE__COOLING_COP:
-				return COOLING_COP_EDEFAULT == null ? cooling_COP != null : !COOLING_COP_EDEFAULT.equals(cooling_COP);
-			case SimpleGridPackage.HOUSE__WATERHEATER:
-				return waterheater != null && !waterheater.isEmpty();
-			case SimpleGridPackage.HOUSE__PARENT:
-				return PARENT_EDEFAULT == null ? parent != null : !PARENT_EDEFAULT.equals(parent);
-			case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
-				return AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT == null ? aux_heat_temperature_lockout != null : !AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT.equals(aux_heat_temperature_lockout);
+		case SimpleGridPackage.HOUSE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case SimpleGridPackage.HOUSE__SCHEDULE_SKEW:
+			return SCHEDULE_SKEW_EDEFAULT == null ? schedule_skew != null : !SCHEDULE_SKEW_EDEFAULT.equals(schedule_skew);
+		case SimpleGridPackage.HOUSE__AIR_TEMPERATURE:
+			return AIR_TEMPERATURE_EDEFAULT == null ? air_temperature != null : !AIR_TEMPERATURE_EDEFAULT.equals(air_temperature);
+		case SimpleGridPackage.HOUSE__FLOOR_AREA:
+			return FLOOR_AREA_EDEFAULT == null ? floor_area != null : !FLOOR_AREA_EDEFAULT.equals(floor_area);
+		case SimpleGridPackage.HOUSE__COOLING_SETPOINT:
+			return COOLING_SETPOINT_EDEFAULT == null ? cooling_setpoint != null : !COOLING_SETPOINT_EDEFAULT.equals(cooling_setpoint);
+		case SimpleGridPackage.HOUSE__HEATING_SETPOINT:
+			return HEATING_SETPOINT_EDEFAULT == null ? heating_setpoint != null : !HEATING_SETPOINT_EDEFAULT.equals(heating_setpoint);
+		case SimpleGridPackage.HOUSE__THERMAL_INTEGRITY_LEVEL:
+			return THERMAL_INTEGRITY_LEVEL_EDEFAULT == null ? thermal_integrity_level != null : !THERMAL_INTEGRITY_LEVEL_EDEFAULT.equals(thermal_integrity_level);
+		case SimpleGridPackage.HOUSE__MOTOR_MODEL:
+			return MOTOR_MODEL_EDEFAULT == null ? motor_model != null : !MOTOR_MODEL_EDEFAULT.equals(motor_model);
+		case SimpleGridPackage.HOUSE__MOTOR_EFFICIENCY:
+			return MOTOR_EFFICIENCY_EDEFAULT == null ? motor_efficiency != null : !MOTOR_EFFICIENCY_EDEFAULT.equals(motor_efficiency);
+		case SimpleGridPackage.HOUSE__MASS_TEMPERATURE:
+			return MASS_TEMPERATURE_EDEFAULT == null ? mass_temperature != null : !MASS_TEMPERATURE_EDEFAULT.equals(mass_temperature);
+		case SimpleGridPackage.HOUSE__HEATING_SYSTEM_TYPE:
+			return HEATING_SYSTEM_TYPE_EDEFAULT == null ? heating_system_type != null : !HEATING_SYSTEM_TYPE_EDEFAULT.equals(heating_system_type);
+		case SimpleGridPackage.HOUSE__HEATING_COP:
+			return HEATING_COP_EDEFAULT == null ? heating_COP != null : !HEATING_COP_EDEFAULT.equals(heating_COP);
+		case SimpleGridPackage.HOUSE__AUXILIARY_STRATEGY:
+			return AUXILIARY_STRATEGY_EDEFAULT == null ? auxiliary_strategy != null : !AUXILIARY_STRATEGY_EDEFAULT.equals(auxiliary_strategy);
+		case SimpleGridPackage.HOUSE__AUXILIARY_SYSTEM_TYPE:
+			return AUXILIARY_SYSTEM_TYPE_EDEFAULT == null ? auxiliary_system_type != null : !AUXILIARY_SYSTEM_TYPE_EDEFAULT.equals(auxiliary_system_type);
+		case SimpleGridPackage.HOUSE__COOLING_COP:
+			return COOLING_COP_EDEFAULT == null ? cooling_COP != null : !COOLING_COP_EDEFAULT.equals(cooling_COP);
+		case SimpleGridPackage.HOUSE__WATERHEATER:
+			return waterheater != null && !waterheater.isEmpty();
+		case SimpleGridPackage.HOUSE__PARENT:
+			return PARENT_EDEFAULT == null ? parent != null : !PARENT_EDEFAULT.equals(parent);
+		case SimpleGridPackage.HOUSE__AUX_HEAT_TEMPERATURE_LOCKOUT:
+			return AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT == null ? aux_heat_temperature_lockout != null : !AUX_HEAT_TEMPERATURE_LOCKOUT_EDEFAULT.equals(aux_heat_temperature_lockout);
 		}
 		return super.eIsSet(featureID);
 	}

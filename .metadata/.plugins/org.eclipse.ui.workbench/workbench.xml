@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="37" version="2.0">
+<workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
 <window height="744" maximized="true" width="1020" x="0" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -12,22 +12,22 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.amalgam.discovery.modeling.toolbars.sampleToolbar" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="152" y="30"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.emf.ecore.presentation.EcoreEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typePlaceholder" x="40" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.gmf.codegen.gmfgen.presentation.GMFGenEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.gmf.tooldef.presentation.GMFToolEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.gmf.tooldef.presentation.GMFToolEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.gmf.mappings.presentation.GMFMapEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" itemType="typePlaceholder" x="1132" y="30"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -43,26 +43,25 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.emf.ecore.presentation.EcoreEditorID" name="simpleGrid.ecore" partName="simpleGrid.ecore" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid/model/simpleGrid.ecore" title="simpleGrid.ecore" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.ecore" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid/model/simpleGrid.ecore"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseImpl.java" partName="HouseImpl.java" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java" title="HouseImpl.java" tooltip="org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12956" selectionTopPixel="6960"/>
 </editor>
-<editor id="org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID" name="simpleGrid.genmodel" partName="simpleGrid.genmodel" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid/model/simpleGrid.genmodel" title="simpleGrid.genmodel" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.genmodel" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid/model/simpleGrid.genmodel"/>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ClassLoader.class" partName="ClassLoader.class" title="ClassLoader.class" tooltip="java.lang.ClassLoader" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(ClassLoader.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.gmf.tooldef.presentation.GMFToolEditorID" name="simpleGrid.gmftool" partName="simpleGrid.gmftool" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid/model/simpleGrid.gmftool" title="simpleGrid.gmftool" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.gmftool" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmftool"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetState.java" partName="GetState.java" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java" title="GetState.java" tooltip="org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="96"/>
 </editor>
-<editor id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" name="simpleGrid.gmfgraph" partName="simpleGrid.gmfgraph" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph" title="simpleGrid.gmfgraph" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClimateEditPart.java" partName="ClimateEditPart.java" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java" title="ClimateEditPart.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="877" selectionTopPixel="237"/>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="simplegrid.evedsl" partName="simplegrid.evedsl" path="/home/mike/src/simpleGrid/org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl" title="simplegrid.evedsl" tooltip="org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="221" selectionTopPixel="157"/>
 </editor>
 </editors>
 <views>
@@ -72,12 +71,11 @@
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
 <viewState/>
 </view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (98 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="397" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="616"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -94,34 +92,50 @@
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.ajdt.javamodel.CompilationUnitFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.ajdt.ui.editor.outline.PointcutFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.gmf.codegen.ui.hide_generated" isEnabled="false"/>
+<child filterId="_patternFilterId_*.ajsym" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.ajdt.ui.editor.outline.IntroductionFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.ajdt.ui.editor.outline.AdviceFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.gmf.codegen.ui.hide_generated" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.ajdt.ui.editor.outline.DeclarationFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
-<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.DefaultTextEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -142,6 +156,10 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="ajelementCreation"/>
+<alwaysOnActionSet id="ajnavigation"/>
+<alwaysOnActionSet id="ajrefactoring"/>
+<alwaysOnActionSet id="org.eclipse.contribution.xref.ui.XRefActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -198,15 +216,15 @@
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@b1406b" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.26568267" ratioLeft="360" ratioRight="995" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.5178849" ratioLeft="333" ratioRight="310" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.gmf.bridge.ui.dashboard.DashboardPart" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.65163296" ratioLeft="419" ratioRight="224" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -242,134 +260,256 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.6687403" ratioLeft="430" ratioRight="213" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.42154565" ratioLeft="180" ratioRight="247" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.genmodel"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid/src/simpleGrid/util/SimpleGridAdapterFactory.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseParentCreateCommand.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.EcoreEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.ecore"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/TransformerFromCreateCommand.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.ecorediag"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.gmf.tooldef.presentation.GMFToolEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmftool"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecore.presentation.ReflectiveEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseCreateCommand.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseWaterheaterCreateCommand.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/HouseItemSemanticEditPolicy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/SimpleGridBaseItemSemanticEditPolicy.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.gmf.mappings.presentation.GMFMapEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid1.gmfmap"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.gmf.mappings.presentation.GMFMapEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmfmap"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/GridEditPart.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.gmf.codegen.gmfgen.presentation.GMFGenEditorID" path="/org.gmf.example.simpleGrid/model/simpleGrid.gmfgen"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid/src/http/Property.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/gridlabdConnection/src/Property.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(Throwable.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.io(PrintStream.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(String.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(Class.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.io(Writer.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.io(BufferedWriter.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(ClassLoader.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl"/>
 </editors>
-<item historyLabel="SimpleGridAdapterFactory.java" index="1">
+<item historyLabel="Property.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Property.java" index="2">
+<position info="not_deleted" x="272" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12788" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12969" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12941" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12929" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12941" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12941" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12888" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="0"/>
+</item>
+<item historyLabel="Property.java" index="1">
+<position info="not_deleted" x="744" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="0"/>
+</item>
+<item historyLabel="Property.java" index="2">
+<position info="not_deleted" x="272" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13011" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13037" y="0"/>
+</item>
+<item historyLabel="Throwable.class" index="3">
+<position/>
+</item>
+<item historyLabel="PrintStream.class" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="String.class" index="5">
+<position/>
+</item>
+<item historyLabel="Throwable.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Class.class" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Throwable.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="String.class" index="5">
+<position/>
+</item>
+<item historyLabel="PrintStream.class" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Writer.class" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="String.class" index="5">
+<position/>
+</item>
+<item historyLabel="Writer.class" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BufferedWriter.class" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="String.class" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13037" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13362" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="73"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="73"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12945" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12889" y="0"/>
+</item>
+<item historyLabel="ClassLoader.class" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="12937" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13066" y="0"/>
+</item>
+<item historyLabel="ClassLoader.class" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13066" y="0"/>
+</item>
+<item historyLabel="ClassLoader.class" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="0">
+<position info="not_deleted" x="13066" y="0"/>
+</item>
+<item historyLabel="GetState.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="simplegrid.evedsl" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HouseImpl.java" index="12">
 <position info="not_deleted" x="4" y="0"/>
 </item>
-<item historyLabel="simpleGrid.genmodel" index="0"/>
-<item historyLabel="HouseParentCreateCommand.java" index="2">
-<position/>
+<item historyLabel="HouseImpl.java" index="12">
+<position info="not_deleted" x="12956" y="0"/>
 </item>
-<item historyLabel="simpleGrid.ecore" index="3"/>
-<item historyLabel="HouseParentCreateCommand.java" index="2">
-<position/>
-</item>
-<item historyLabel="simpleGrid.ecore" index="3"/>
-<item historyLabel="TransformerFromCreateCommand.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid.ecore" index="3"/>
-<item historyLabel="simpleGrid.ecorediag" index="5"/>
-<item historyLabel="simpleGrid.ecore" index="3"/>
-<item historyLabel="simpleGrid.gmftool" index="6"/>
-<item historyLabel="simpleGrid.gmfgraph" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid.gmfgraph" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid.gmfgraph" index="7"/>
-<item historyLabel="simpleGrid.genmodel" index="0"/>
-<item historyLabel="HouseParentCreateCommand.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseCreateCommand.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseWaterheaterCreateCommand.java" index="9">
-<position info="not_deleted" x="2265" y="9"/>
-</item>
-<item historyLabel="HouseCreateCommand.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseParentCreateCommand.java" index="2">
-<position info="not_deleted" x="2062" y="0"/>
-</item>
-<item historyLabel="HouseCreateCommand.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ClimateEditPart.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HouseItemSemanticEditPolicy.java" index="11">
-<position info="not_deleted" x="5725" y="0"/>
-</item>
-<item historyLabel="SimpleGridBaseItemSemanticEditPolicy.java" index="12">
-<position/>
-</item>
-<item historyLabel="HouseItemSemanticEditPolicy.java" index="11">
-<position info="not_deleted" x="5725" y="0"/>
-</item>
-<item historyLabel="SimpleGridBaseItemSemanticEditPolicy.java" index="12">
-<position info="not_deleted" x="11754" y="0"/>
-</item>
-<item historyLabel="simpleGrid.genmodel" index="0"/>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="simpleGrid.gmfmap" index="14"/>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="ClimateEditPart.java" index="15">
-<position info="not_deleted" x="1088" y="0"/>
-</item>
-<item historyLabel="simpleGrid.gmfmap" index="14"/>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="ClimateEditPart.java" index="16">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="ClimateEditPart.java" index="17">
-<position info="not_deleted" x="869" y="0"/>
-</item>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="ClimateEditPart.java" index="18">
-<position/>
-</item>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="GridEditPart.java" index="19">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ClimateEditPart.java" index="18">
-<position/>
-</item>
-<item historyLabel="GridEditPart.java" index="19">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item historyLabel="ClimateEditPart.java" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid.gmfgraph" index="7"/>
-<item historyLabel="ClimateEditPart.java" index="18">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="simpleGrid.gmfgraph" index="7"/>
-<item historyLabel="simpleGrid.gmfgen" index="20"/>
-<item historyLabel="simpleGrid1.gmfmap" index="13"/>
-<item active="true" historyLabel="ClimateEditPart.java" index="18">
+<item active="true" historyLabel="simplegrid.evedsl" index="13">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -378,12 +518,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -396,6 +530,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="simplegrid.evedsl" tooltip="org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl">
+<persistable path="/org.gmf.example.simpleGrid.sync/src/simpleGrid/sync/simplegrid.evedsl"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GetState.java" tooltip="org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java">
+<persistable path="/org.gmf.example.simpleGrid.sync/src-gen/simpleGrid/synch/GetState.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ClassLoader.class" tooltip="java.lang.ClassLoader">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(ClassLoader.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Throwable.class" tooltip="java.lang.Throwable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=gridlabdConnection/\/usr\/lib\/jvm\/java-6-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(Throwable.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" tooltip="org.gmf.example.simpleGrid/src/http/Property.java">
+<persistable path="/org.gmf.example.simpleGrid/src/http/Property.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Property.java" tooltip="gridlabdConnection/src/Property.java">
+<persistable path="/gridlabdConnection/src/Property.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="House.java" tooltip="org.gmf.example.simpleGrid/src/simpleGrid/House.java">
+<persistable path="/org.gmf.example.simpleGrid/src/simpleGrid/House.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseImpl.java" tooltip="org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java">
+<persistable path="/org.gmf.example.simpleGrid/src/simpleGrid/impl/HouseImpl.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ClimateEditPart.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java">
 <persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/parts/ClimateEditPart.java"/>
 </file>
@@ -416,30 +574,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleGridBaseItemSemanticEditPolicy.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/SimpleGridBaseItemSemanticEditPolicy.java">
 <persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/SimpleGridBaseItemSemanticEditPolicy.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseItemSemanticEditPolicy.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/HouseItemSemanticEditPolicy.java">
-<persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/policies/HouseItemSemanticEditPolicy.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseWaterheaterCreateCommand.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseWaterheaterCreateCommand.java">
-<persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseWaterheaterCreateCommand.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseCreateCommand.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseCreateCommand.java">
-<persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseCreateCommand.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HouseParentCreateCommand.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseParentCreateCommand.java">
-<persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/HouseParentCreateCommand.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="simpleGrid.gmfgraph" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph">
-<persistable path="/org.gmf.example.simpleGrid/model/simpleGrid.gmfgraph"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.gmf.tooldef.presentation.GMFToolEditorID" name="simpleGrid.gmftool" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.gmftool">
-<persistable path="/org.gmf.example.simpleGrid/model/simpleGrid.gmftool"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" name="simpleGrid.ecorediag" tooltip="org.gmf.example.simpleGrid/model/simpleGrid.ecorediag">
-<persistable path="/org.gmf.example.simpleGrid/model/simpleGrid.ecorediag"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TransformerFromCreateCommand.java" tooltip="org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/TransformerFromCreateCommand.java">
-<persistable path="/org.gmf.example.simpleGrid.diagram/src/simpleGrid/diagram/edit/commands/TransformerFromCreateCommand.java"/>
 </file>
 </mruList>
 </workbench>
