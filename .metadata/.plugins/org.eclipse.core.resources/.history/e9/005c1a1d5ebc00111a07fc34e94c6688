@@ -1,0 +1,69 @@
+package simpleGrid.synch;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import simpleGrid.House;
+import simpleGrid.synch.GridlabdAPI;
+
+@Aspect
+public class GetState {
+  private EObject current = null;
+  
+  private EStructuralFeature efeature = null;
+  
+  public GridlabdAPI apiRoot;
+  
+  public boolean _operation_GET_Any_Any(final EObject element, final EStructuralFeature feature, final Object value) {
+    try{
+    	
+    	boolean _xblockexpression = false;
+    	{
+    	  this.current = element;
+    	  this.efeature = feature;
+    	  boolean _xifexpression = false;
+    	  if ((element instanceof House)) {
+    	    EClassifier _eType = feature.getEType();
+    	    String _name = _eType.getName();
+    	    boolean _equals = "EString".equals(_name);
+    	    _xifexpression = _equals;
+    	  } else {
+    	    _xifexpression = false;
+    	  }
+    	  _xblockexpression = (_xifexpression);
+    	}
+    	if(!_xblockexpression)
+    		return false;
+    	if(!precondition())
+    		return false;
+    	String result = invoke();
+    	postcondition(result);
+    	return true;
+    }
+    catch(Exception e){
+    	e.printStackTrace();
+    	return false;
+    }
+  }
+  
+  @Before("call(* *.eGet(org.eclipse.emf.ecore.EStructuralFeature,boolean)) && target(elem) &&  args(feature,*) && (!cflow(call(* simpleGrid.synch.*._operation_*(*,*,*))))")
+  public void _listen__operation_GET_Any_Any(final EObject elem, final EStructuralFeature feature) {
+    apiRoot = GridlabdAPI.resolveInstance(elem.eResource());
+    _operation_GET_Any_Any(elem, feature, null);
+    
+  }
+  
+  public boolean precondition() {
+    return true;
+  }
+  
+  public void postcondition(final String s) {
+    this.current.eSet(this.efeature, s);
+  }
+  
+  public String invoke() throws Exception {
+    return null;
+  }
+}

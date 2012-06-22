@@ -5,10 +5,10 @@ com.ibm.icu,4.4.2.v20110823,file:/home/mike/eclipse/plugins/com.ibm.icu_4.4.2.v2
 com.jcraft.jsch,0.1.44.v201101211721,file:/home/mike/eclipse/plugins/com.jcraft.jsch_0.1.44.v201101211721.jar,4,false
 com.sun.syndication,0.9.0.v200803061811,file:/home/mike/eclipse/plugins/com.sun.syndication_0.9.0.v200803061811.jar,4,false
 de.itemis.xtext.antlr,2.0.0.v201108011202,file:/home/mike/eclipse/plugins/de.itemis.xtext.antlr_2.0.0.v201108011202.jar,4,false
-ie.tcd.everm.evedsl,1.0.0,file:/home/mike/src/tmp/ie.tcd.everm.evedsl/,4,false
-ie.tcd.everm.evedsl.tests,1.0.0,file:/home/mike/src/tmp/ie.tcd.everm.evedsl.tests/,4,false
-ie.tcd.everm.evedsl.ui,1.0.0,file:/home/mike/src/tmp/ie.tcd.everm.evedsl.ui/,4,false
-ie.tcd.everm.runtime,1.0.0,file:/home/mike/src/tmp/ie.tcd.everm.runtime/,4,false
+ie.tcd.everm.evedsl,1.0.0,file:/home/mike/eclipse/plugins/ie.tcd.everm.evedsl_1.0.0.jar,4,false
+ie.tcd.everm.evedsl.tests,1.0.0,file:/home/mike/eclipse/plugins/ie.tcd.everm.evedsl.tests_1.0.0.jar,4,false
+ie.tcd.everm.evedsl.ui,1.0.0,file:/home/mike/eclipse/plugins/ie.tcd.everm.evedsl.ui_1.0.0.jar,4,false
+ie.tcd.everm.runtime,1.0.0,file:/home/mike/eclipse/plugins/ie.tcd.everm.runtime_1.0.0.jar,4,false
 javax.activation,1.1.0.v201108011116,file:/home/mike/eclipse/plugins/javax.activation_1.1.0.v201108011116.jar,4,false
 javax.inject,1.0.0.v20091030,file:/home/mike/eclipse/plugins/javax.inject_1.0.0.v20091030.jar,4,false
 javax.servlet,2.5.0.v201103041518,file:/home/mike/eclipse/plugins/javax.servlet_2.5.0.v201103041518.jar,4,false
@@ -585,8 +585,8 @@ org.gmf.example.simpleGrid.tests,1.0.0.qualifier,file:/home/mike/src/simpleGrid/
 org.h2,1.1.117.v201105142352,file:/home/mike/eclipse/plugins/org.h2_1.1.117.v201105142352.jar,4,false
 org.hamcrest.core,1.1.0.v20090501071000,file:/home/mike/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar,4,false
 org.jdom,1.1.1.v201101151400,file:/home/mike/eclipse/plugins/org.jdom_1.1.1.v201101151400.jar,4,false
-org.junit,4.8.2.v4_8_2_v20110321-1705,file:/home/mike/eclipse/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/,4,false
 org.junit,3.8.2.v3_8_2_v20100427-1100,file:/home/mike/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/,4,false
+org.junit,4.8.2.v4_8_2_v20110321-1705,file:/home/mike/eclipse/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/,4,false
 org.junit4,4.8.1.v20100525,file:/home/mike/eclipse/plugins/org.junit4_4.8.1.v20100525/,4,false
 org.mortbay.jetty.server,6.1.23.v201012071420,file:/home/mike/eclipse/plugins/org.mortbay.jetty.server_6.1.23.v201012071420.jar,4,false
 org.mortbay.jetty.util,6.1.23.v201012071420,file:/home/mike/eclipse/plugins/org.mortbay.jetty.util_6.1.23.v201012071420.jar,4,false

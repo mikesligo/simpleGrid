@@ -1,10 +1,11 @@
-package simpleGrid.synch
+package simpleGrid.synch   
 
 import java.net.*
 import simpleGrid.*
 import org.eclipse.xtext.xbase.lib.Functions.*
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EStructuralFeature
+import http.*
 
 API GridlabdAPI{
 	mapping House => String{
@@ -16,12 +17,22 @@ API GridlabdAPI{
 		operation get *->* {
 			current = element;
 			efeature = feature; 
+			
 			if (element instanceof House) 
-				"EString".equals(feature.EType.name)
+				if ("EString".equals(feature.EType.name))
+				  if(efeature.name.equals("name"))
+				   false
+				  else
+				   true
+				else
+				   false
 			else false
 		}
 		pre {true}
 		invoke returning String {
+			
+			val Property prop = new Property()
+			prop.getValueOfProperty((current as House).name,efeature.name)
 			
 		}
 		post (String s) {
@@ -30,3 +41,6 @@ API GridlabdAPI{
 		}
 	}
 }
+
+
+

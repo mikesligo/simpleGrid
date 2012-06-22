@@ -6,8 +6,6 @@
  */
 package simpleGrid.impl;
 
-import http.Property;
-
 import java.io.IOException;
 import java.util.Collection;
 import java.util.regex.Matcher;
@@ -434,15 +432,6 @@ public class HouseImpl extends EObjectImpl implements House {
 	 * @generated NOT
 	 */
 	public String getName() {
-		if(name != null && name != ""){
-			Property prop = null;
-			try {
-				//System.out.println(name+"\n\n\n---\n\n\n");
-				//System.out.println(prop.getValueOfProperty(name, "air_temperature"));
-			} catch (Exception e){
-				e.printStackTrace();
-			}
-		}
 		return name;
 	}
 
